@@ -1,0 +1,24 @@
+| scenario | Moves not allowed | dir |
+| When the player goes @dir |
+| Then a NO_PASSAGE message is given |
+| Then the player is in cavern $startingCavern |
+
+-|script|
+|Given cavern 1 connects to cavern 2 going east|
+|Given the player is in cavern 1|
+
+|Moves not allowed|
+|dir|
+|west|
+|north|
+|south|
+
+-|script|
+|Given the player is in cavern 2|
+
+|Moves not allowed|
+|dir|
+|east|
+|west|
+|north|
+|south|

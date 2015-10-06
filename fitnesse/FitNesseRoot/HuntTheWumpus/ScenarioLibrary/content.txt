@@ -11,5 +11,67 @@
 |scenario|Then the player is in cavern|c|
 |check|get player cavern|@c|
 
-|scenario|Then a _ error is raised|err|
-|ensure|Error id|@err|was raised|
+|scenario|Then a _ message is given|msg|
+|ensure|Message id|@msg|was given|
+
+|Scenario|Cavern Connections _ _ _|start,end,direction|
+|Given cavern @start connects to cavern @end going @direction|
+
+|scenario|Moving _ ends in cavern _|direction,cavern|
+|When the player goes @direction|
+|Then the player is in cavern @cavern|
+
+#Donut Map
+#
+#[1]->[2]->[3]
+# ^         |
+# |         v
+#[8]       [4]
+# ^         |
+# |         v
+#[7]<-[6]<-[5]
+
+|scenario|Given Donut Map|
+|Connect Cavern|1|to|2|going|West|
+|Connect Cavern|2|to|3|going|West|
+|Connect Cavern|3|to|4|going|South|
+|Connect Cavern|4|to|5|going|South|
+|Connect Cavern|5|to|6|going|East|
+|Connect Cavern|6|to|7|going|East|
+|Connect Cavern|7|to|8|going|North|
+|Connect Cavern|8|to|1|going|North|
+
+#Cross Map 
+# (Bidirectional links)
+#
+#                 [ Top  ]
+#
+#                 [Above ]
+#
+#[FarLeft] [Left] [Middle] [Right] |FarRight|
+#
+#                 [Below ]
+#
+#                 [Bottom]
+
+|scenario|Given Cross Map|
+|Connect Cavern|FarLeft|to|Left|going|West|
+|Connect Cavern|Left|to|FarLeft|going|East|
+|Connect Cavern|Left|to|Middle|going|West|
+|Connect Cavern|Middle|to|Left|going|East|
+|Connect Cavern|Middle|to|Right|going|West|
+|Connect Cavern|Right|to|Middle|going|East|
+|Connect Cavern|Right|to|FarRight|going|West|
+|Connect Cavern|FarRight|to|Right|going|East|
+|Connect Cavern|Top|to|Above|going|South|
+|Connect Cavern|Above|to|Top|going|North|
+|Connect Cavern|Above|to|Middle|going|South|
+|Connect Cavern|Middle|to|Above|going|North|
+|Connect Cavern|Middle|to|Below|going|South|
+|Connect Cavern|Below|to|Middle|going|North|
+|Connect Cavern|Bottom|to|Below|going|South|
+|Connect Cavern|Below|to|Bottom|going|South|
+
+
+
+

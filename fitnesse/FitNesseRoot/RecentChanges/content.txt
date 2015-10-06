@@ -1,4 +1,6 @@
-|HuntTheWumpus.ScenarioLibrary||13:10:44 Fri, Sep 04, 2015|
+|HuntTheWumpus.ScenarioLibrary||12:31:56 Tue, Oct 06, 2015|
+|HuntTheWumpus.ReleaseOne.PlayerCanMoveThroughTheMap.CanNotMoveThroughUndeclaredConnections||12:30:54 Tue, Oct 06, 2015|
+|HuntTheWumpus.ReleaseOne.PlayerCanMoveThroughTheMap.CanMoveThroughASeriesOfConnections||12:10:32 Tue, Oct 06, 2015|
 |HuntTheWumpus.ReleaseOne.PlayerCanMoveThroughTheMap.CantMoveThroughUndeclaredConnections||13:09:30 Fri, Sep 04, 2015|
 |HuntTheWumpus.ReleaseOne.PlayerCanMoveThroughTheMap.CanMoveThroughConnections||12:32:51 Fri, Sep 04, 2015|
 |HuntTheWumpus||10:41:08 Fri, Sep 04, 2015|

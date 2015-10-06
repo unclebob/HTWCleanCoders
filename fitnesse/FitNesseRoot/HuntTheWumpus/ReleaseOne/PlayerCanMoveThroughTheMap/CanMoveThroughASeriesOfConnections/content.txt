@@ -1,0 +1,17 @@
+
+-|script|
+|Given Donut Map|
+|Given the player is in cavern 1|
+
+|Moving ends in cavern|
+|direction|cavern|
+|West|2|
+|West|3|
+|South|4|
+|South|5|
+|East|6|
+|East|7|
+|North|8|
+|North|1|
+
+

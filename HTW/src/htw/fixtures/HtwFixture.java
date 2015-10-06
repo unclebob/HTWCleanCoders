@@ -17,7 +17,7 @@ public class HtwFixture {
     return -1;
   }
 
-  public boolean ErrorIdWasRaised(String id) {
+  public boolean MessageIdWasGiven(String id) {
     return false;
   }
 }
