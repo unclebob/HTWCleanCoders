@@ -17,9 +17,24 @@ public class HtwFixture {
     return null;
   }
 
+  public boolean putWumpusInCavern(String c) {
+    return false;
+  }
+
+  public String getWumpusCavern() {
+    return null;
+  }
+
+  public boolean freezeWumpus() {return false;}
+
   public boolean MessageIdWasGiven(String id) {
     return false;
   }
+
+  public boolean MessageIdWasNotGiven(String id) {
+    return false;
+  }
+
 
   public boolean rest() {return false;}
 }

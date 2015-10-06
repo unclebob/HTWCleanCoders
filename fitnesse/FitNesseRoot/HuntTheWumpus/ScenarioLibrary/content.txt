@@ -1,5 +1,12 @@
+### Cavern Connections Scenarios
+
 |scenario|Given cavern|c1|connects to cavern|c2|going|dir|
 |Connect cavern|@c1|to|@c2|going|@dir|
+
+|Scenario|Cavern Connections _ _ _|start,end,direction|
+|Given cavern @start connects to cavern @end going @direction|
+
+### Player Scenarios
 
 |scenario|Given the player is in cavern|c|
 |put player in cavern|@c|
@@ -14,15 +21,31 @@
 |scenario|Then the player is in cavern|c|
 |check|get player cavern|@c|
 
+### Wumpus Scenarios
+
+|scenario|Given the wumpus is in cavern|c|
+|put wumpus in cavern|@c|
+|$startingWumpusCavern=|get wumpus cavern|
+
+|scenario|Given the wumpus is frozen|
+|freeze wumpus|
+
+### Message Scenarios
+
 |scenario|Then a _ message is given|msg|
 |ensure|Message id|@msg|was given|
 
-|Scenario|Cavern Connections _ _ _|start,end,direction|
-|Given cavern @start connects to cavern @end going @direction|
+|scenario|Then a _ message is not given|msg|
+|ensure|Message id|@msg|was not given|
+
+### Movement Scenarios
 
 |scenario|Moving _ ends in cavern _|direction,cavern|
 |When the player goes @direction|
 |Then the player is in cavern @cavern|
+
+
+### Common Maps
 
 #Donut Map
 #

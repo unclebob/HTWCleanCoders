@@ -1,0 +1,20 @@
+!|scenario|Can smell wumpus after moving _ _|start,direction|
+|Given the player is in cavern @start|
+|When the player rests|
+|Then a SMELL_WUMPUS message is not given|
+|When the player goes @direction|
+|Then a SMELL_WUMPUS message is given|
+
+-!|script|
+|Given Cross Map|
+|Given the wumpus is in cavern Middle|
+|Given the wumpus is frozen|
+
+!|Can smell wumpus after moving|
+|start|direction|
+|FarLeft|West|
+|Top|South|
+|FarRight|East|
+|Bottom|North|
+
+
