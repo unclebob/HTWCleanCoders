@@ -1,11 +1,11 @@
 package htw.fixtures;
 
 public class HtwFixture {
-  public boolean ConnectCavernToGoing(int c1, int c2, String dir) {
+  public boolean ConnectCavernToGoing(String c1, String c2, String dir) {
     return false;
   }
 
-  public boolean putPlayerInCavern(int c) {
+  public boolean putPlayerInCavern(String c) {
     return false;
   }
 
@@ -13,11 +13,13 @@ public class HtwFixture {
     return false;
   }
 
-  public int getPlayerCavern() {
-    return -1;
+  public String getPlayerCavern() {
+    return null;
   }
 
   public boolean MessageIdWasGiven(String id) {
     return false;
   }
+
+  public boolean rest() {return false;}
 }

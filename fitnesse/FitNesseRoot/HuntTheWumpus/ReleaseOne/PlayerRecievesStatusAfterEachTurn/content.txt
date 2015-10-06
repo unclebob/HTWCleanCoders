@@ -1,0 +1,2 @@
+!1 Test suite Player Recieves Status After Each Turn
+!contents -R2 -g -p -f -h

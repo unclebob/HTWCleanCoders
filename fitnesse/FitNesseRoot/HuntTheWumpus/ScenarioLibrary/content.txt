@@ -8,6 +8,9 @@
 |scenario|When the player goes|dir|
 |move player|@dir|
 
+|scenario|When the player rests|
+|rest|
+
 |scenario|Then the player is in cavern|c|
 |check|get player cavern|@c|
 
@@ -54,7 +57,7 @@
 #
 #                 [Bottom]
 
-|scenario|Given Cross Map|
+!|scenario|Given Cross Map|
 |Connect Cavern|FarLeft|to|Left|going|West|
 |Connect Cavern|Left|to|FarLeft|going|East|
 |Connect Cavern|Left|to|Middle|going|West|

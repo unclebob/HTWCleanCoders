@@ -1,0 +1,23 @@
+-!|script|
+|Given Cross Map|
+|Given the player is in cavern FarLeft|
+
+-!|script|
+|When the player rests|
+|Then a WEST_PASSAGE message is given|
+
+-!|script|
+|When the player goes West|
+|Then a EAST_PASSAGE message is given|
+|Then a WEST_PASSAGE message is given|
+
+-!|script|
+|When the player goes West|
+|Then a EAST_PASSAGE message is given|
+|Then a WEST_PASSAGE message is given|
+|Then a NORTH_PASSAGE message is given|
+|Then a SOUTH_PASSAGE message is given|
+
+
+
+
