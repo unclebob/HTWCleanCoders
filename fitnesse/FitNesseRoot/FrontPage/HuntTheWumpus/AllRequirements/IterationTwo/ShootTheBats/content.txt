@@ -1,0 +1,1 @@
+If you shoot into a bat cave, the bats move to a different random cave.

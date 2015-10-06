@@ -1,0 +1,4 @@
+!3 When the player is adjacent to a cavern with bats, he should hear chirping sounds.
+
+|tbd|
+

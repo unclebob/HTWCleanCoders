@@ -1,0 +1,12 @@
+{{{[1][2]}}}
+
+|Make map|
+|start|end|direction|
+|1|2|E|
+
+|put|trap |in cavern|2|
+|put|wumpus|in cavern|1|
+|make wumpus go|east|
+|check|message|Wumpus squeals in pain as the trap severs his jugular.|was printed|true|
+|check|message|You have killed the Wumpus.|was printed|true|
+|check|game terminated|

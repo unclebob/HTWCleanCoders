@@ -1,0 +1,69 @@
+At the beginning of each turn the game reports the directions that the player can go in.
+Directions are listed in the order of north, south, east, west.
+
+!include <HuntTheWumpus.DonutMap
+
+!|script|
+|put|player|in cavern|1|
+|enter command|Rest|
+|check|message|You can go south and east from here.|was printed|true|
+||
+|enter command|East|
+|check|message|You can go east and west from here.|was printed|true|
+||
+|enter command|East|
+|check|message|You can go south and west from here.|was printed|true|
+||
+|enter command|South|
+|check|message|You can go north and south from here.|was printed|true|
+||
+|enter command|South|
+|check|message|You can go north and west from here.|was printed|true|
+||
+|enter command|West|
+|check|message|You can go east and west from here.|was printed|true|
+||
+|enter command|West|
+|check|message|You can go north and east from here.|was printed|true|
+||
+|enter command|North|
+|check|message|You can go north and south from here.|was printed|true|
+||
+||''Now clear the map''|
+|clear map|
+
+''Add a new map that looks like this.''
+{{{
+       [11][9][10]
+           [8]
+     [1][2][3][4][5]
+           [6]
+           [7]
+}}}
+!|Make map.|
+|start|end|direction|
+|1|2|E|
+|2|3|E|
+|3|4|E|
+|4|5|E|
+|11|9|E|
+|9|10|E|
+|9|8|S|
+|8|3|S|
+|3|6|S|
+|6|7|S|
+
+!|script|
+|put|player|in cavern|3|
+|enter command|rest|
+|check|message|You can go north, south, east and west from here.|was printed|true|
+||
+|put|player|in cavern|9|
+|enter command|rest|
+|check|message|You can go south, east and west from here.|was printed|true|
+||
+|put|player|in cavern|1|
+|enter command|rest|
+|check|message|You can go east from here.|was printed|true|
+||
+

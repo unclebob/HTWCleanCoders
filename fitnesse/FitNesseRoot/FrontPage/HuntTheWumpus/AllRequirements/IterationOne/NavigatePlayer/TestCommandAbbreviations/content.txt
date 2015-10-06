@@ -1,0 +1,126 @@
+There are a number of abbreviations for the navigation commands.  You can see them being used below:
+
+!include <HuntTheWumpus.DonutMap
+
+!|script|
+||''Go East''|
+|put|player|in cavern|1|
+|enter command|Go East|
+|check|cavern|2|has|player|true|
+||
+||''E -> Go East''|
+|put|player|in cavern|1|
+|enter command|E|
+|check|cavern|2|has|player|true|
+||
+||''e -> Go East''|
+|put|player|in cavern|1|
+|enter command|e|
+|check|cavern|2|has|player|true|
+||
+||''go east -> Go East''|
+|put|player|in cavern|1|
+|enter command|go east|
+|check|cavern|2|has|player|true|
+||
+||''East -> Go East''|
+|put|player|in cavern|1|
+|enter command|East|
+|check|cavern|2|has|player|true|
+||
+||''east -> Go East''|
+|put|player|in cavern|1|
+|enter command|east|
+|check|cavern|2|has|player|true|
+||
+||''Go South''|
+|put|player|in cavern|1|
+|enter command|Go South|
+|check|cavern|8|has|player|true|
+||
+||''S -> Go South''|
+|put|player|in cavern|1|
+|enter command|S|
+|check|cavern|8|has|player|true|
+||
+||''s -> Go South''|
+|put|player|in cavern|1|
+|enter command|s|
+|check|cavern|8|has|player|true|
+||
+||''go south-> Go South''|
+|put|player|in cavern|1|
+|enter command|go south|
+|check|cavern|8|has|player|true|
+||
+||''South -> Go South''|
+|put|player|in cavern|1|
+|enter command|South|
+|check|cavern|8|has|player|true|
+||
+||''south -> Go South''|
+|put|player|in cavern|1|
+|enter command|south|
+|check|cavern|8|has|player|true|
+||
+||''Go West''|
+|put|player|in cavern|5|
+|enter command|Go West|
+|check|cavern|6|has|player|true|
+||
+||''W -> Go West''|
+|put|player|in cavern|5|
+|enter command|W|
+|check|cavern|6|has|player|true|
+||
+||''w -> Go West''|
+|put|player|in cavern|5|
+|enter command|w|
+|check|cavern|6|has|player|true|
+||
+||''go west -> Go West''|
+|put|player|in cavern|5|
+|enter command|go west|
+|check|cavern|6|has|player|true|
+||
+||''West -> Go West''|
+|put|player|in cavern|5|
+|enter command|West|
+|check|cavern|6|has|player|true|
+||
+||''west -> Go West''|
+|put|player|in cavern|5|
+|enter command|west|
+|check|cavern|6|has|player|true|
+||
+||''Go North''|
+|put|player|in cavern|5|
+|enter command|Go North|
+|check|cavern|4|has|player|true|
+||
+||''N -> Go North''|
+|put|player|in cavern|5|
+|enter command|N|
+|check|cavern|4|has|player|true|
+||
+||''n -> Go North''|
+|put|player|in cavern|5|
+|enter command|n|
+|check|cavern|4|has|player|true|
+||
+||''go north -> Go North''|
+|put|player|in cavern|5|
+|enter command|go north|
+|check|cavern|4|has|player|true|
+||
+||''North -> Go North''|
+|put|player|in cavern|5|
+|enter command|North|
+|check|cavern|4|has|player|true|
+||
+||''north -> Go North''|
+|put|player|in cavern|5|
+|enter command|north|
+|check|cavern|4|has|player|true|
+
+

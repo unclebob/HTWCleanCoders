@@ -1,0 +1,18 @@
+If a wumpus moves into a cavern where there is one arrow, the wumpus picks up the arrow.
+
+{{{
+[1][2]
+}}}
+
+|Make map|
+|start|end|direction|
+|1|2|E|
+
+|put|arrow|in cavern|2|
+|put|wumpus|in cavern|1|
+|tell wumpus to go|east|
+|enter command|r|
+|check|arrows in cavern|2|0|
+|check|message|Crunch, crunch, crunch.  The wumpus ate an arrow.|was printed|true|
+
+

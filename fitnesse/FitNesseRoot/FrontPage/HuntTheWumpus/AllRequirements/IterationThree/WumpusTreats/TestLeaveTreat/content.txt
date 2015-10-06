@@ -1,0 +1,12 @@
+If the player has a treat he is allowed to leave it in a cavern.
+
+{{{[1][2]}}}
+
+|give|player|treat|
+|put|player|in cavern|1|
+|enter command|leave treat|
+|check|message|You have left the treat.|was printed|true|
+|enter command|go east|
+|check cavern|1|has|treat|true|
+|check player|has|treat|false|
+

@@ -1,0 +1,17 @@
+If the player shoots in a direction that the arrow cannot go in, then the arrow bounces off the wall and kills the player.
+
+Create a very simple map. [1]-[2]
+
+|Make Map|
+|start|end|direction|
+|1|2|E|
+
+|script|
+|put|player|in cavern|1|
+|set quiver to|1|
+|enter command|shoot west|
+|check|message|The arrow bounced off the wall and killed you.|was printed|true|
+|check|message|Game over.|was printed|true|
+|check|game terminated|true|
+
+

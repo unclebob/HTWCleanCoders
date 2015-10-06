@@ -1,0 +1,4 @@
+|^WumpusTrap|''Set down a trap that kills the wumpus''|
+|^WumpusTreats|''Treats attract wumpus and lets you escape being eaten''|
+|^PostitNotes |''Leave markers in caverns to be discovered later''|
+|^MultipleHits|''Find potions of strength to allow an extra hit.''|

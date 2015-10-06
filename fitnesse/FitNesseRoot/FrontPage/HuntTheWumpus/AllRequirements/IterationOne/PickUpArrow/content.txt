@@ -1,0 +1,19 @@
+When a player moves into a cavern with arrows in it, he automatically picks those arrows up.   The games tells the player that he picked up an arrow, and also tells the player how many arrows he has.
+
+!include <HuntTheWumpus.DonutMap
+
+!|script|
+|put|player|in cavern|1|
+|set quiver to|0|
+|enter command|rest|
+|check|message|You have no arrows.|was printed|true|
+||
+|put|arrow|in cavern|2|
+|enter command|east|
+|check|message|You found an arrow.|was printed|true|
+|check|message|You have 1 arrow.|was printed|true|
+|check|arrows in cavern|2|0|
+||
+|put|arrow|in cavern|3|
+|enter command|east|
+|check|message|You have 2 arrows.|was printed|true|

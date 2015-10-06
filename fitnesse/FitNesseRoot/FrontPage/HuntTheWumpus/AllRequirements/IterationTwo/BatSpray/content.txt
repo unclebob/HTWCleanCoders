@@ -1,0 +1,5 @@
+If you have the bat spray, you can walk through a bat cave once.  Then the bat spray is gone.
+
+^PickUpBatSpray
+^UseBatSpray
+

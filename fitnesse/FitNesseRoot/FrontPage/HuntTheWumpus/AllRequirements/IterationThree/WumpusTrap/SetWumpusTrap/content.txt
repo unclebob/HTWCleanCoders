@@ -1,0 +1,12 @@
+If the player has a trap he is allowed to leave it in a cavern so that the wumpus will encounter it.
+
+{{{[1][2]}}}
+
+|Give|player|trap|
+|put|player|in cavern|1|
+|enter command|set trap|
+|check|message|You have set the trap.|was printed|true|
+|enter command|go east|
+|check cavern|1|has|trap|true|
+|check player|has|trap|false|
+

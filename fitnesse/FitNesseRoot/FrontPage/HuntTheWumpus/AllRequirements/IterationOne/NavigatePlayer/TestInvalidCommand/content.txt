@@ -1,0 +1,9 @@
+|script|
+|reject|enter command|zorch|
+|ensure|message|I don't know how to zorch.|was printed|
+||
+|note|!meta Make sure valid commands don't cause error messages.|
+||
+|enter command|rest|
+|check|message|I don't know how to rest.|was printed|false|
+

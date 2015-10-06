@@ -1,0 +1,12 @@
+When a user attempts to log in with an incorrect pin number, they are asked to retry
+
+-| script | Atm User |
+| Screen Prompt | Insert Card |
+| User inserts card with account 314159 |
+| Screen Prompt | Enter pin |
+| User Enters | 7734 |
+| Screen Prompt | Pin Failed, Retry |
+
+
+
+

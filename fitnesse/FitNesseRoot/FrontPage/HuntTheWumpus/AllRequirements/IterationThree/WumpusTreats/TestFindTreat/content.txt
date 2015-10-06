@@ -1,0 +1,15 @@
+If the player moves into a room with a treat, the player picks up the treat.
+
+{{{[1][2]}}}
+|Make map.|
+|start|end|direction|
+|1|2|E|
+
+|put|player|in cavern|1|
+|put|treat|in cavern|2|
+|enter command|go east|
+|check|message|You found a treat.|was printed|true|
+|check player has|treat|
+|check cavern|2|has|treat|false|
+
+

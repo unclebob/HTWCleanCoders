@@ -1,0 +1,13 @@
+If the player enters a cavern that contains a pit, then the player dies and the game is over.
+
+|Make map|
+|start|end|direction|
+|1|2|E|
+
+!|script|
+|put|player|in cavern|1|
+|put|pit|in cavern|2|
+|enter command|e|
+|check|message|You fall into a pit and die.|was printed|true|
+|check|message|Game over.|was printed|true|
+|check|game terminated|true|

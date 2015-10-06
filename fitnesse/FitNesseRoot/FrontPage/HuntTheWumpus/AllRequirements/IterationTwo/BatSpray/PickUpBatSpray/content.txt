@@ -1,0 +1,16 @@
+If you walk into a cavern with bat spray, you pick up the bat spray.
+{{{
+[1][2]
+}}}
+
+|Make map|
+|start|end|direction|
+|1|2|E|
+
+|put|bat spray|in cavern|2|
+|put|player|in cavern|1|
+|enter command|E|
+|check|message|You found some bat spray.|was printed|true|
+|check|player has bat spray|true|
+|check|cavern|2|has|bat spray|false|
+

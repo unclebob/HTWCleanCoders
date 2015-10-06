@@ -1,0 +1,46 @@
+Test that we can walk around the map, and back again.  This makes sure we can move both directions through each corridor.
+
+!include <HuntTheWumpus.DonutMap
+
+ * Walk Clockwise around the donut.
+
+!|script|
+|put|player|in cavern|1|
+|enter command|E|
+|check|cavern|2|has|player|true|
+|enter command|E|
+|check|cavern|3|has|player|true|
+|enter command|S|
+|check|cavern|4|has|player|true|
+|enter command|S|
+|check|cavern|5|has|player|true|
+|enter command|W|
+|check|cavern|6|has|player|true|
+|enter command|W|
+|check|cavern|7|has|player|true|
+|enter command|N|
+|check|cavern|8|has|player|true|
+|enter command|N|
+|check|cavern|1|has|player|true|
+
+ * Walk Counter-clockwise around the donut.
+
+!|script|
+|put|player|in cavern|1|
+|enter command|S|
+|check|cavern|8|has|player|true|
+|enter command|S|
+|check|cavern|7|has|player|true|
+|enter command|E|
+|check|cavern|6|has|player|true|
+|enter command|E|
+|check|cavern|5|has|player|true|
+|enter command|N|
+|check|cavern|4|has|player|true|
+|enter command|N|
+|check|cavern|3|has|player|true|
+|enter command|W|
+|check|cavern|2|has|player|true|
+|enter command|W|
+|check|cavern|1|has|player|true|
+

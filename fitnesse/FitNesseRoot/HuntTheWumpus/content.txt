@@ -1,0 +1,5 @@
+!define TEST_SYSTEM {slim}
+!path ../HTW/out/production/HTW
+!path ../HTW/out/test/HTW
+
+!contents -R2 -g -p -f -h

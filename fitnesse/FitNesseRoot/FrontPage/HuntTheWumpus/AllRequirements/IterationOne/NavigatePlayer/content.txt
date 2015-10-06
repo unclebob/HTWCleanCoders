@@ -1,0 +1,9 @@
+We need to be able to move the player around in the map.  First we'll need a simple map to move around in.   Let's say it looks like this:
+
+|1|2|3|
+|8|-|4|
+|7|6|5|
+
+We need to:
+!contents -R2 -g
+

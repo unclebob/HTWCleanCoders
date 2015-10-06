@@ -1,0 +1,2 @@
+This is the junk page.
+BobMartin is using it to demonstrate fitnesse.

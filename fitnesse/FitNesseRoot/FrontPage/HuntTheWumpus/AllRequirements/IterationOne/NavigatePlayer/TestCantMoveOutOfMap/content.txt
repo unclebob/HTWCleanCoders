@@ -1,0 +1,16 @@
+If the player tries to move out of the map, the game should say: ''"You can't go {} from here."''; where {} is the direction.
+
+!include <HuntTheWumpus.DonutMap
+
+
+!|script|
+|put|player|in cavern|1|
+|enter command|W|
+|check|message was printed|You can't go west from here.|true|
+|enter command|N|
+|check|message was printed|You can't go north from here.|true|
+|put|player|in cavern|5|
+|enter command|E|
+|check|message was printed|You can't go east from here.|true|
+|enter command|S|
+|check|message was printed|You can't go south from here.|true|

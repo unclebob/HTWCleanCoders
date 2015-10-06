@@ -1,0 +1,82 @@
+Check all the abbreviations of the shoot command.
+
+!include <HuntTheWumpus.CrossMap
+
+|script|
+|note|lets have lots of arrows to shoot|
+|set quiver to|100|
+|put|player|in cavern|3|
+
+!define destination {6}
+
+ * Try the north abbreviations.
+|script|
+|enter command|shoot north|
+|check|arrows in cavern|${destination}|1|
+||
+|enter command|s north|
+|check|arrows in cavern|${destination}|2|
+||
+|enter command|shoot n|
+|check|arrows in cavern|${destination}|3|
+||
+|enter command|s n|
+|check|arrows in cavern|${destination}|4|
+||
+|enter command|sn|
+|check|arrows in cavern|${destination}|5|
+
+!define destination {9}
+ * Try the south abbreviations.
+|script|
+|enter command|shoot south|
+|check|arrows in cavern|${destination}|1|
+||
+|enter command|s south|
+|check|arrows in cavern|${destination}|2|
+||
+|enter command|shoot s|
+|check|arrows in cavern|${destination}|3|
+||
+|enter command|s s|
+|check|arrows in cavern|${destination}|4|
+||
+|enter command|ss|
+|check|arrows in cavern|${destination}|5|
+
+!define destination {1}
+ * Try the west abbreviations.
+|script|
+|enter command|shoot west|
+|check|arrows in cavern|${destination}|1|
+||
+|enter command|s west|
+|check|arrows in cavern|${destination}|2|
+||
+|enter command|shoot w|
+|check|arrows in cavern|${destination}|3|
+||
+|enter command|s w|
+|check|arrows in cavern|${destination}|4|
+||
+|enter command|sw|
+|check|arrows in cavern|${destination}|5|
+
+!define destination {5}
+
+ * Try the east abbreviations.
+|script|
+|enter command|shoot east|
+|check|arrows in cavern|${destination}|1|
+||
+|enter command|s east|
+|check|arrows in cavern|${destination}|2|
+||
+|enter command|shoot e|
+|check|arrows in cavern|${destination}|3|
+||
+|enter command|s e|
+|check|arrows in cavern|${destination}|4|
+||
+|enter command|se|
+|check|arrows in cavern|${destination}|5|

@@ -1,0 +1,30 @@
+If the Wumpus moves into a cavern that has both the player and the treat, the Wumpus eats the treat, not the player.
+{{{
+      [6]
+      [7]
+[1][2][3][4][5]
+      [8]
+      [9]
+}}}
+
+|Make map|
+|start|end|direction|
+|1|2|E|
+|2|3|E|
+|3|4|E|
+|4|5|E|
+|6|7|S|
+|7|3|S|
+|3|8|S|
+|8|9|S|
+
+|put|treat|in cavern|3|
+|put|wumpus|in cavern|6|
+|put|player|in cavern|3|
+|make wumpus move|south|
+|check|cavern|3|has|wumpus|true|
+|check|cavern|3|has|treat|false|
+|check|message|You hear a joyous moan of delight as the Wumpus gobbles down your treat.|was printed|true|
+|check|message|The sated Wumpus ignores you for the moment.|was printed|true|
+|check|game terminated|false|
+

@@ -1,0 +1,14 @@
+ * You can find treats in the map.
+ * If you find them you pick them up.
+ * You can leave a treat in any cavern.
+ * If the wumpus gets one cavern away from a treat, it'll move into the cavern with the treat.
+ * If the wumpus moves into the cavern with the treat, it will eat the treat.
+ * If the player is in the cavern with the treat, and the wumpus moves in, the wumpus will eat the treat instead of the player.
+  * Unless the player is holding the treat.  Then the wumpus eats him AND the treat.
+  * Wumpus does not smell treats held by the player.
+
+^TestFindTreat
+^TestLeaveTreat
+^TestWumpusSmellsTreatAndMovesIn
+^TestWumpusEatsTreatInsteadOfPlayer
+^TestWumpusEatsTreatAndPlayerHoldingTreat

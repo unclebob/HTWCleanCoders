@@ -1,0 +1,28 @@
+If there are arrows in the quiver, we ought to be able to shoot.
+The arrow should go as far as possible, and then hit a wall.
+The arrow should be left in that cavern where it stopped.
+The quiver should have one less arrow.
+
+!include <HuntTheWumpus.CrossMap
+
+|script|
+|set quiver to|5|
+|put player in cavern|3|
+|enter command|shoot east|
+|check|message|The arrow flies away in silence.|was printed|true|
+|check|arrows in quiver|4|
+|check|arrows in cavern|5|1|
+||
+|enter command|shoot south|
+|check|arrows in quiver|3|
+|check|arrows in cavern|9|1|
+||
+|enter command|shoot west|
+|check|arrows in quiver|2|
+|check|arrows in cavern|1|1|
+||
+|enter command|shoot north|
+|check|arrows in quiver|1|
+|check|arrows in cavern|6|1|
+
+

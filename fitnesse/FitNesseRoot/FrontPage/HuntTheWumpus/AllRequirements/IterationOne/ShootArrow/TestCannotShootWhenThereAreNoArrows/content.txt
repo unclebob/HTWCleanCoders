@@ -1,0 +1,9 @@
+If there are no arrows, then the player should not be able to shoot.
+
+!include <HuntTheWumpus.CrossMap
+
+|script|
+|put|player|in cavern|3|
+|set quiver to|0|
+|enter command|shoot east|
+|check|message|You don't have any arrows.|was printed|true|

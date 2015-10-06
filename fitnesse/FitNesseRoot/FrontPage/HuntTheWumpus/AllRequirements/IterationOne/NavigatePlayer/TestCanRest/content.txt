@@ -1,0 +1,22 @@
+A player can rest for his turn.  This is a valid command that does not move the player.
+
+!include <HuntTheWumpus.DonutMap
+
+!|script|
+|put|player|in cavern|1|
+|enter command|Rest|
+|check|cavern|1|has|player|true|
+|check|message|I don't know how to Rest.|was printed|false|
+||
+|enter command|rest|
+|check|cavern|1|has|player|true|
+|check|message|I don't know how to rest.|was printed|false|
+||
+|enter command|r|
+|check|cavern|1|has|player|true|
+|check|message|I don't know how to r.|was printed|false|
+||
+|enter command|R|
+|check|cavern|1|has|player|true|
+|check|message|I don't know how to R.|was printed|false|
+

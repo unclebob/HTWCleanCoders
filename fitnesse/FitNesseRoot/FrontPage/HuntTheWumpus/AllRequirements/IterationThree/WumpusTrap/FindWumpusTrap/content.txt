@@ -1,0 +1,16 @@
+Whenever the player moves into a cavern that has a trap, the player picks up the trap.
+
+{{{[1][2]}}}
+|Make map.|
+|start|end|direction|
+|1|2|E|
+
+-|script|
+|put|player|in cavern|1|
+|put|trap|in cavern|2|
+|enter command|go east|
+|check|message|You found a trap.|was printed|true|
+|check player has|trap|
+|check cavern|2|has|trap|false|
+
+

@@ -1,0 +1,2 @@
+!3 Test suite for Story: Player can move through the map.
+!contents -R2 -g -p -f -h

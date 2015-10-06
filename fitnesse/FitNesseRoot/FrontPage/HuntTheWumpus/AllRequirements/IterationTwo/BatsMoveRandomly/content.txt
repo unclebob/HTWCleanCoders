@@ -1,0 +1,32 @@
+The bats move from cavern to cavern every 15 turns approximately.
+
+Make sure the Bats move randomly.
+
+use a tiny cross map
+{{{
+   [4]
+[1][2][3]
+   [5]
+}}}
+
+|Make map.|
+|start|end|direction|
+|1|2|E|
+|2|3|E|
+|4|2|S|
+|2|5|S|
+
+Now repeat the following 10000 times.
+ 1 Put the bats in cavern 2.
+ 2 rest
+ 3 note where the bats are.
+
+|Check random bat movement|
+|cavern|count?|
+|1|>90|
+|2|>9000|
+|3|>90|
+|4|>90|
+|5|>90|
+
+

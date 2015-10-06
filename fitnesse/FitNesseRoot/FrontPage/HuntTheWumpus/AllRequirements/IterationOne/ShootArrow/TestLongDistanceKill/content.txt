@@ -1,0 +1,22 @@
+Given the following map:
+{{{
+[1][2][3][4][5]
+ p    ->     w
+}}}
+If the player (in cavern 1) shoots east, the wumpus (in cavern 5) should die.
+
+|Make map.|
+|start|end|direction|
+|1|2|E|
+|2|3|E|
+|3|4|E|
+|4|5|E|
+
+|script|
+|put|player|in cavern|1|
+|put|wumpus|in cavern|5|
+|set quiver to|1|
+|enter command|shoot east|
+|check|game terminated|true|
+|check|message|You have killed the Wumpus.|was printed|true|
+

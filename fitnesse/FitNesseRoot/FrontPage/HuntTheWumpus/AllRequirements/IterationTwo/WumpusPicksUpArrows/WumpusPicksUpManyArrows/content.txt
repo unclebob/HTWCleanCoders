@@ -1,0 +1,20 @@
+If a wumpus moves into a cavern where there are many arrows, the wumpus eats up all the arrows.
+
+{{{
+[1][2]
+}}}
+
+!define ARROWS {3}
+
+|Make map|
+|start|end|direction|
+|1|2|E|
+
+|put|${ARROWS}|arrows in cavern|2|
+|put|wumpus|in cavern|1|
+|tell wumpus to go|east|
+|enter command|r|
+|check|arrows in cavern|2|0|
+|check|message|Crunch, crunch, crunch.  The wumpus ate ${ARROWS} arrows.|was printed|true|
+
+

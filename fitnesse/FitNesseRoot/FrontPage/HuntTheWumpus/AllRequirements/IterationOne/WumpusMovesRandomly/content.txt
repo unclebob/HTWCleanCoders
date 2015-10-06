@@ -1,0 +1,30 @@
+Make sure the wumpus moves randomly.
+
+use a tiny cross map
+{{{
+   [4]
+[1][2][3]
+   [5]
+}}}
+
+|Make map.|
+|start|end|direction|
+|1|2|E|
+|2|3|E|
+|4|2|S|
+|2|5|S|
+
+Now repeat the following 1000 times.
+ 1 Put the wumpus in cavern 2.
+ 2 rest
+ 3 note where the wumpus is.
+
+|Check random wumpus movement|
+|cavern|count?|
+|1|>150|
+|2|>150|
+|3|>150|
+|4|>150|
+|5|>150|
+
+

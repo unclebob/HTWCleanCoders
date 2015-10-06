@@ -1,0 +1,32 @@
+If the wumpus moves into a bat cave, the bats transport it randomly.
+
+Use the Large Cross map.
+{{{
+      [6]
+   [2][3][4]
+      [8]
+}}}
+
+|Make map|
+|start|end|direction|
+|2    |3  |E        |
+|3    |4  |E        |
+|6    |3  |S        |
+|3    |8  |S        |
+
+
+ 0 1000 times.
+ 1 Put the bats into cavern 3.
+ 2 Put the wumpus in cavern 2.
+ 3 Change Random wumpus movement to East movement.
+ 4 Rest
+ 5 Count where the wumpus is.
+
+
+|Check bats transport wumpus randomly|
+|cavern|count?|
+|2     |>200  |
+|3     |0     |
+|4     |>200  |
+|6     |>200  |
+|8     |>200  |

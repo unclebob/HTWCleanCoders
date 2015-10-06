@@ -1,0 +1,19 @@
+Create a convenient map that looks like this:
+{{{
+         [6]
+         [7]
+   [1][2][3][4][5]
+         [8]
+         [9]
+}}}
+
+!|Make map|
+|start|end|direction|
+|1|2|E|
+|2|3|E|
+|3|4|E|
+|4|5|E|
+|6|7|S|
+|7|3|S|
+|3|8|S|
+|8|9|S|

@@ -1,0 +1,12 @@
+Check that a valid user can enter their card and pin, and be logged into the system.
+
+| Valid Users | |
+| Name | Account | Pin |
+| Bob | 314159 | 7734 |
+
+-| script | Atm User |
+| Screen Prompt | Insert Card |
+| User inserts card with account 314159 |
+| Screen Prompt | Enter pin |
+| User Enters | 7734 |
+| Screen Prompt | Welcome Bob |

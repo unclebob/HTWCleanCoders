@@ -1,0 +1,48 @@
+If the wumpus is in any adjacent cavern, you should be able to smell it.
+
+To do this we'll freeze the wumpus so that it doesn't move around.  Then we'll place the player near the Wumpus and see if the "Smell" message is emitted.
+
+!include <HuntTheWumpus.CrossMap
+
+!define SMELL {You smell the Wumpus.}
+
+
+
+!|script|
+||''Approach from West.''|
+||
+|freeze wumpus|true|
+|put|wumpus|in cavern|1|
+|put|player|in cavern|3|
+|enter command|w|
+|check|message|${SMELL}|was printed|true|
+|enter command|e|
+|check|message|${SMELL}|was printed|false|
+||
+||''Approach from North.''|
+||
+|put|wumpus|in cavern|6|
+|put|player|in cavern|3|
+|enter command|n|
+|check|message|${SMELL}|was printed|true|
+|enter command|s|
+|check|message|${SMELL}|was printed|false|
+||
+||''Approach from East.''|
+||
+|put|wumpus|in cavern|5|
+|put|player|in cavern|3|
+|enter command|e|
+|check|message|${SMELL}|was printed|true|
+|enter command|w|
+|check|message|${SMELL}|was printed|false|
+||
+||''Approach from South.''|
+||
+|put|wumpus|in cavern|9|
+|put|player|in cavern|3|
+|enter command|s|
+|check|message|${SMELL}|was printed|true|
+|enter command|n|
+|check|message|${SMELL}|was printed|false|
+
