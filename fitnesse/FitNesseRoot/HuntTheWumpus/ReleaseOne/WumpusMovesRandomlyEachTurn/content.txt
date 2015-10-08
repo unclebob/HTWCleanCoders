@@ -1,0 +1,20 @@
+|scenario|Try _ rests with wumpus in _ for each|number,cavern|
+|Rest|@number|times with wumpus in|@cavern|each time|
+
+-|script|
+|Given cross map|
+|Try 1000 rests with wumpus in Middle for each|
+
+!|Wumpus was in|
+|cavern|times?|
+|Middle|150<_<250|
+|Left|150<_<250|
+|Right|150<_<250|
+|Below|150<_<250|
+|Above|150<_<250|
+|Top|0|
+|Bottom|0|
+|FarLeft|0|
+|FarRight|0|
+
+

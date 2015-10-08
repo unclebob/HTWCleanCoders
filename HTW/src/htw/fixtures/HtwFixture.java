@@ -25,7 +25,9 @@ public class HtwFixture {
     return null;
   }
 
-  public boolean freezeWumpus() {return false;}
+  public boolean freezeWumpus() {
+    return false;
+  }
 
   public boolean MessageIdWasGiven(String id) {
     return false;
@@ -35,6 +37,19 @@ public class HtwFixture {
     return false;
   }
 
+  public boolean setCavernAsPit(String cavern) {
+    return false;
+  }
 
-  public boolean rest() {return false;}
+  public boolean setCavernAsBats(String cavern) {
+    return false;
+  }
+
+  public boolean rest() {
+    return false;
+  }
+
+  public boolean RestTimesWithWumpusInEachTime(int times, String cavern) {
+    return false;
+  }
 }

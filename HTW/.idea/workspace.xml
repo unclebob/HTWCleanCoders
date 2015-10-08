@@ -26,17 +26,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HtwFixture.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HtwFixture.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/htw/fixtures/HtwFixture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45333335" vertical-offset="0" max-vertical-offset="1050">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1372">
+              <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
               <folding>
                 <element signature="e#191#192#0" expanded="true" />
                 <element signature="e#213#214#0" expanded="true" />
                 <element signature="e#384#385#0" expanded="true" />
                 <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
+                <element signature="e#716#717#0" expanded="true" />
+                <element signature="e#738#739#0" expanded="true" />
+                <element signature="e#789#790#0" expanded="true" />
+                <element signature="e#811#812#0" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#936#937#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WumpusWasIn.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/htw/fixtures/WumpusWasIn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.10666667" vertical-offset="0" max-vertical-offset="1050">
+              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -47,6 +67,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/htw/fixtures/HtwFixture.java" />
+        <option value="$PROJECT_DIR$/src/htw/fixtures/WumpusWasIn.java" />
       </list>
     </option>
   </component>
@@ -289,12 +310,12 @@
       <workItem from="1442321281660" duration="2350000" />
       <workItem from="1443025109974" duration="9000" />
       <workItem from="1444054290445" duration="99000" />
-      <workItem from="1444152831796" duration="856000" />
+      <workItem from="1444152831796" duration="2178000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6783000" />
+    <option name="totallyTimeSpent" value="8105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
@@ -351,6 +372,16 @@
             <element signature="e#213#214#0" expanded="true" />
             <element signature="e#384#385#0" expanded="true" />
             <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -364,6 +395,16 @@
             <element signature="e#213#214#0" expanded="true" />
             <element signature="e#384#385#0" expanded="true" />
             <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -377,6 +418,16 @@
             <element signature="e#213#214#0" expanded="true" />
             <element signature="e#384#385#0" expanded="true" />
             <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -390,20 +441,48 @@
             <element signature="e#213#214#0" expanded="true" />
             <element signature="e#384#385#0" expanded="true" />
             <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/htw/fixtures/HtwFixture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45333335" vertical-offset="0" max-vertical-offset="1050">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1372">
+          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
           <folding>
             <element signature="e#191#192#0" expanded="true" />
             <element signature="e#213#214#0" expanded="true" />
             <element signature="e#384#385#0" expanded="true" />
             <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/fixtures/WumpusWasIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10666667" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>

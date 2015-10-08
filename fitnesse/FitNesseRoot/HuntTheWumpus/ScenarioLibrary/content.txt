@@ -1,10 +1,16 @@
-### Cavern Connections Scenarios
+### Cavern Scenarios
 
 |scenario|Given cavern|c1|connects to cavern|c2|going|dir|
 |Connect cavern|@c1|to|@c2|going|@dir|
 
 |Scenario|Cavern Connections _ _ _|start,end,direction|
 |Given cavern @start connects to cavern @end going @direction|
+
+|scenario|Given the _ cavern has a pit|cavern|
+|set cavern|@cavern|as pit|
+
+|scenario|Given the _ cavern has bats|cavern|
+|set cavern|@cavern|as bats|
 
 ### Player Scenarios
 
