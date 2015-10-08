@@ -52,4 +52,8 @@ public class HtwFixture {
   public boolean RestTimesWithWumpusInEachTime(int times, String cavern) {
     return false;
   }
+
+  public boolean MovePlayerTimesWithPlayerInEachTime(int times, String direction, String startingCavern) {
+    return false;
+  }
 }

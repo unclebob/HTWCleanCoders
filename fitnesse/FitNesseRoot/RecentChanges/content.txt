@@ -1,3 +1,4 @@
+|HuntTheWumpus.ReleaseOne.BatsCarryPlayerToRandomCavern||11:27:07 Thu, Oct 08, 2015|
 |HuntTheWumpus.ReleaseOne.WumpusMovesRandomlyEachTurn||10:52:50 Thu, Oct 08, 2015|
 |HuntTheWumpus.ScenarioLibrary||10:33:55 Thu, Oct 08, 2015|
 |HuntTheWumpus.ReleaseOne.PlayerRecievesStatusAfterEachTurn.PlayerHearsBats||10:32:38 Thu, Oct 08, 2015|

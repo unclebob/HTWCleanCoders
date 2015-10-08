@@ -1,0 +1,18 @@
+|scenario|Try _ moves _ with player in _ cavern for each|number,direction,cavern|
+|Move player|@number|times|@direction|with player in|@cavern|each time|
+
+-|script|
+|Given cross map|
+|Try 1000 moves RIGHT with player in Left cavern for each|
+
+!|Player landed in|
+|cavern|times?|
+|Middle|0|
+|Left|100<_<150|
+|Right|100<_<150|
+|Below|100<_<150|
+|Above|100<_<150|
+|Top|100<_<150|
+|Bottom|100<_<150|
+|FarLeft|100<_<150|
+|FarRight|100<_<150|
