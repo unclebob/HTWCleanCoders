@@ -1,0 +1,17 @@
+-!|script|
+|Given Cross Map|
+|Given the player is in cavern Middle|
+|Given the player has 4 arrows|
+
+|scenario|after shooting _ _ _|direction,quiver,cavernWithArrow|
+|When the player shoots @direction|
+|Then the player has @quiver arrows|
+|Then there is 1 arrow in cavern @cavernWithArrow|
+|Then a|ARROW_SHOT|message is given|
+
+!|after shooting|
+|direction|quiver|cavernWithArrow|
+|East|3|FarLeft|
+|West|2|FarRight|
+|North|1|Top|
+|South|0|Bottom|

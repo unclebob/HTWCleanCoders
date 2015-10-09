@@ -1,0 +1,12 @@
+-!|script|
+|Given Cross Map|
+|Given the player is in cavern FarLeft|
+|Given the player has 2 arrows|
+|When the player shoots West|
+|Then the player has 1 arrow|
+|Then there is 1 arrow in cavern FarRight|
+|When the player moves West 4 times|
+|Then the player is in cavern FarRight|
+|Then there are no arrows in cavern FarRight|
+|Then the player has 2 arrows|
+|Then a|ARROW_FOUND|message is given|

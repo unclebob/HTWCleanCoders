@@ -1,0 +1,11 @@
+-!|script|
+|Given Cross Map|
+|Given the player is in cavern FarLeft|
+|Given the player has 3 arrows|
+|When the player shoots West|
+|Then there is 1 arrow in cavern FarRight|
+|When the player shoots West|
+|Then there are 2 arrows in cavern FarRight|
+|When the player shoots West|
+|Then there are 3 arrows in cavern FarRight|
+|Then the player has no arrows|

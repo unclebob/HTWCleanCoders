@@ -56,4 +56,20 @@ public class HtwFixture {
   public boolean MovePlayerTimesWithPlayerInEachTime(int times, String direction, String startingCavern) {
     return false;
   }
+
+  public boolean setArrowsInQuiverTo(int arrows) {
+    return false;
+  }
+
+  public boolean shootArrow(String direction) {
+    return false;
+  }
+
+  public int arrowsInQuiver() {
+    return -1;
+  }
+
+  public int arrowsInCavern(String cavern) {
+    return -1;
+  }
 }

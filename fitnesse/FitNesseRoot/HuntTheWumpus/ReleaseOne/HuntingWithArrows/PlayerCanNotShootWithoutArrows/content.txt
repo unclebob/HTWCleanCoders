@@ -1,0 +1,8 @@
+-|script|
+|Given Cross map|
+|Given the player is in cavern Middle|
+|Given the player has no arrows|
+|When the player shoots East|
+|Then a message|NO_ARROWS|is given|
+'
+
