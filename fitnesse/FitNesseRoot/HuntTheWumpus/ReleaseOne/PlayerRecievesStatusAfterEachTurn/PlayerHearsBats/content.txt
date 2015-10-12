@@ -1,4 +1,5 @@
 !|scenario|Can hear bats after moving _ _|start,direction|
+|clear messages|
 |Given the player is in cavern @start|
 |When the player rests|
 |Then a HEAR_BATS message is not given|
@@ -11,9 +12,9 @@
 
 !|Can hear bats after moving|
 |start|direction|
-|FarLeft|West|
+|FarLeft|East|
 |Top|South|
-|FarRight|East|
+|FarRight|West|
 |Bottom|North|
 
 

@@ -1,0 +1,6 @@
+-!|script|
+|Given cavern Left connects to cavern Right going East|
+|Given the player is in cavern Left|
+|Given the wumpus is in cavern Right|
+|When the player goes East|
+|Then a|PLAYER_MOVES_TO_WUMPUS|message is given|

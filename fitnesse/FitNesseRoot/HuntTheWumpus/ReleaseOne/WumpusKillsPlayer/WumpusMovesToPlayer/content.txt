@@ -1,0 +1,7 @@
+-!|script|
+|Given cavern Left connects to cavern Right going East|
+|Given the player is in cavern Right|
+|Given the wumpus is in cavern Left|
+|When the player rests until killed|
+|Then the wumpus is in cavern Right|
+|Then a WUMPUS_MOVES_TO_PLAYER message is given|

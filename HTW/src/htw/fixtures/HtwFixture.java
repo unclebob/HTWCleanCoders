@@ -1,75 +1,124 @@
 package htw.fixtures;
 
+import htw.HuntTheWumpus;
+
+import static htw.fixtures.TestContext.game;
+
 public class HtwFixture {
   public boolean ConnectCavernToGoing(String c1, String c2, String dir) {
-    return false;
+    game.connectCavern(c1,c2,toDirection(dir));
+    return true;
   }
 
   public boolean putPlayerInCavern(String c) {
-    return false;
+    game.setPlayerCavern(c);
+    return true;
   }
 
   public boolean movePlayer(String dir) {
-    return false;
+    game.makeMoveCommand(toDirection(dir)).execute();
+    return true;
   }
 
   public String getPlayerCavern() {
-    return null;
+    return game.getPlayerCavern();
   }
 
   public boolean putWumpusInCavern(String c) {
-    return false;
+    game.setWumpusCavern(c);
+    return true;
   }
 
   public String getWumpusCavern() {
-    return null;
+    return game.getWumpusCavern();
   }
 
   public boolean freezeWumpus() {
-    return false;
+    game.freezeWumpus();
+    return true;
   }
 
-  public boolean MessageIdWasGiven(String id) {
-    return false;
+  public boolean MessageIdWasGiven(String message) {
+    return (TestContext.messages.contains(message));
   }
 
-  public boolean MessageIdWasNotGiven(String id) {
-    return false;
+  public boolean MessageIdWasNotGiven(String message) {
+    return !MessageIdWasGiven(message);
+  }
+
+  public boolean clearMessages() {
+    TestContext.messages.clear();
+    return true;
   }
 
   public boolean setCavernAsPit(String cavern) {
-    return false;
+    game.addPitCavern(cavern);
+    return true;
   }
 
   public boolean setCavernAsBats(String cavern) {
-    return false;
+    game.addBatCavern(cavern);
+    return true;
   }
 
   public boolean rest() {
-    return false;
+    game.makeRestCommand().execute();
+    return true;
   }
 
   public boolean RestTimesWithWumpusInEachTime(int times, String cavern) {
-    return false;
+    TestContext.wumpusCaverns.clear();
+    for (int i=0; i<times; i++) {
+      putWumpusInCavern(cavern);
+      game.makeRestCommand().execute();
+      int wumpusCavernCount = zeroIfNull(TestContext.wumpusCaverns.get(game.getWumpusCavern()));
+      TestContext.wumpusCaverns.put(game.getWumpusCavern(), wumpusCavernCount+1);
+    }
+    return true;
+  }
+
+  private int zeroIfNull(Integer integer) {
+    return integer == null ? 0 : integer;
   }
 
   public boolean MovePlayerTimesWithPlayerInEachTime(int times, String direction, String startingCavern) {
-    return false;
+    TestContext.batTransportCaverns.clear();
+    for (int i=0; i<times; i++) {
+      putPlayerInCavern(startingCavern);
+      game.makeMoveCommand(toDirection(direction)).execute();
+      int batTransportCavernCount = zeroIfNull(TestContext.batTransportCaverns.get(game.getPlayerCavern()));
+      TestContext.batTransportCaverns.put(game.getPlayerCavern(), batTransportCavernCount+1);
+    }
+    return true;
   }
 
+  public boolean restUntilKilled() {
+    while (!getPlayerCavern().equals(getWumpusCavern()))
+      game.makeRestCommand().execute();
+
+    return true;
+  }
+
+
   public boolean setArrowsInQuiverTo(int arrows) {
-    return false;
+    game.setQuiver(arrows);
+    return true;
   }
 
   public boolean shootArrow(String direction) {
-    return false;
+    game.makeShootCommand(toDirection(direction)).execute();
+    return true;
+  }
+
+  private HuntTheWumpus.Direction toDirection(String direction) {
+    return HuntTheWumpus.Direction.valueOf(direction.toUpperCase());
   }
 
   public int arrowsInQuiver() {
-    return -1;
+    return game.getQuiver();
   }
 
   public int arrowsInCavern(String cavern) {
-    return -1;
+    return game.getArrowsInCavern(cavern);
   }
 }

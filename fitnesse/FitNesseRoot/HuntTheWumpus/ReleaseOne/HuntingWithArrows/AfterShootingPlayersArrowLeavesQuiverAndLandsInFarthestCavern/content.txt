@@ -11,7 +11,7 @@
 
 !|after shooting|
 |direction|quiver|cavernWithArrow|
-|East|3|FarLeft|
-|West|2|FarRight|
+|East|3|FarRight|
+|West|2|FarLeft|
 |North|1|Top|
 |South|0|Bottom|

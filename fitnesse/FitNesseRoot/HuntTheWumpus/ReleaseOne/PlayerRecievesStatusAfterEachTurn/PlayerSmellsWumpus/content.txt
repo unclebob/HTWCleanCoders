@@ -1,4 +1,5 @@
 !|scenario|Can smell wumpus after moving _ _|start,direction|
+|clear messages|
 |Given the player is in cavern @start|
 |When the player rests|
 |Then a SMELL_WUMPUS message is not given|
@@ -12,9 +13,9 @@
 
 !|Can smell wumpus after moving|
 |start|direction|
-|FarLeft|West|
+|FarLeft|East|
 |Top|South|
-|FarRight|East|
+|FarRight|West|
 |Bottom|North|
 
 

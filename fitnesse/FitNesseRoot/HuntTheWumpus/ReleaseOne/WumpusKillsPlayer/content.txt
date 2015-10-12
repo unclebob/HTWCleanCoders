@@ -1,0 +1,2 @@
+!1 Wumpus Kills Player
+!contents -R2 -g -p -f -h

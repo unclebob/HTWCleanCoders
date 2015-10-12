@@ -1,7 +1,6 @@
 -!|script|
 |Given Cross Map|
 |Given the player is in cavern FarLeft|
-|Given the wumpus is in cavern Middle|
 |Given the player has 1 arrow|
-|When the player shoots East|
-|Then a|ARROW_BOUNCES_OFF_WALL_KILLS_PLAYER|message is given|
+|When the player shoots North|
+|Then a|PLAYER_SHOOTS_WALL|message is given|

@@ -12,6 +12,9 @@
 |scenario|Given the _ cavern has bats|cavern|
 |set cavern|@cavern|as bats|
 
+|scenario|Given the _ cavern has a pit|cavern|
+|set cavern|@cavern|as pit|
+
 !3 Player Scenarios
 
 |scenario|Given the player is in cavern|c|
@@ -21,17 +24,20 @@
 |scenario|When the player goes|dir|
 |move player|@dir|
 
-|scenario|When the player moves West 4 times|
-|move player|West|
-|move player|West|
-|move player|West|
-|move player|West|
+|scenario|When the player moves _ 4 times|direction|
+|move player|@direction|
+|move player|@direction|
+|move player|@direction|
+|move player|@direction|
 
 |scenario|When the player rests|
 |rest|
 
 |scenario|Then the player is in cavern|c|
 |check|get player cavern|@c|
+
+|scenario|When the player rests until killed|
+|rest until killed|
 
 !3 Arrow Scenarios
 |scenario|Given the player has no arrows|
@@ -70,6 +76,9 @@
 
 |scenario|Given the wumpus is frozen|
 |freeze wumpus|
+
+|scenario|Then the wumpus is in cavern|c|
+|check|get wumpus cavern|@c|
 
 !3 Message Scenarios
 
@@ -119,7 +128,7 @@ Cross Map
 
                  [Above ]
 
-[FarLeft] [Left] [Middle] [Right] |FarRight|
+[FarLeft] [Left] [Middle] [Right] [FarRight]
 
                  [Below ]
 
@@ -127,21 +136,21 @@ Cross Map
 
 }}}
 !|scenario|Given Cross Map|
-|Connect Cavern|FarLeft|to|Left|going|West|
-|Connect Cavern|Left|to|FarLeft|going|East|
-|Connect Cavern|Left|to|Middle|going|West|
-|Connect Cavern|Middle|to|Left|going|East|
-|Connect Cavern|Middle|to|Right|going|West|
-|Connect Cavern|Right|to|Middle|going|East|
-|Connect Cavern|Right|to|FarRight|going|West|
-|Connect Cavern|FarRight|to|Right|going|East|
+|Connect Cavern|FarLeft|to|Left|going|East|
+|Connect Cavern|Left|to|FarLeft|going|West|
+|Connect Cavern|Left|to|Middle|going|East|
+|Connect Cavern|Middle|to|Left|going|West|
+|Connect Cavern|Middle|to|Right|going|East|
+|Connect Cavern|Right|to|Middle|going|West|
+|Connect Cavern|Right|to|FarRight|going|East|
+|Connect Cavern|FarRight|to|Right|going|West|
 |Connect Cavern|Top|to|Above|going|South|
 |Connect Cavern|Above|to|Top|going|North|
 |Connect Cavern|Above|to|Middle|going|South|
 |Connect Cavern|Middle|to|Above|going|North|
 |Connect Cavern|Middle|to|Below|going|South|
 |Connect Cavern|Below|to|Middle|going|North|
-|Connect Cavern|Bottom|to|Below|going|South|
+|Connect Cavern|Bottom|to|Below|going|North|
 |Connect Cavern|Below|to|Bottom|going|South|
 
 

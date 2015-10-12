@@ -3,16 +3,17 @@
 
 -|script|
 |Given cross map|
-|Try 1000 moves RIGHT with player in Left cavern for each|
+|Given the Middle cavern has bats|
+|Try 1000 moves East with player in Left cavern for each|
 
 !|Player landed in|
 |cavern|times?|
 |Middle|0|
-|Left|100<_<150|
-|Right|100<_<150|
-|Below|100<_<150|
-|Above|100<_<150|
-|Top|100<_<150|
-|Bottom|100<_<150|
-|FarLeft|100<_<150|
-|FarRight|100<_<150|
+|Left|75<_<175|
+|Right|75<_<175|
+|Below|75<_<175|
+|Above|75<_<175|
+|Top|75<_<175|
+|Bottom|75<_<175|
+|FarLeft|75<_<175|
+|FarRight|75<_<175|
