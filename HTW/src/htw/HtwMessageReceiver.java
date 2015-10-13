@@ -15,4 +15,5 @@ public interface HtwMessageReceiver {
   void fellInPit();
   void playerMovesToWumpus();
   void wumpusMovesToPlayer();
+  void batsTransport();
 }

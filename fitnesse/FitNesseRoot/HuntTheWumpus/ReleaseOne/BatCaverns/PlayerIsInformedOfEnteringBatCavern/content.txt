@@ -1,0 +1,6 @@
+-!|script|
+|Given Cross Map|
+|Given the Middle cavern has bats|
+|Given the player is in cavern Left|
+|When the player goes East|
+|Then a BAT_TRANSPORT message is given|

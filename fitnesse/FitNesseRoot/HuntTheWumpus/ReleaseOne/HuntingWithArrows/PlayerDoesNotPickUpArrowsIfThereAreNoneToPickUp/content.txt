@@ -1,0 +1,9 @@
+-!|script|
+|Given Cross Map|
+|Given the player is in cavern FarLeft|
+|Given the player has 2 arrows|
+|Then there are 0 arrows in cavern FarRight|
+|When the player moves East 4 times|
+|Then the player is in cavern FarRight|
+|Then the player has 2 arrows|
+|Then a|0_ARROW_FOUND|message is not given|

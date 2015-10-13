@@ -249,8 +249,10 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     private void checkForBats() {
-      if (batCaverns.contains(playerCavern))
+      if (batCaverns.contains(playerCavern)) {
+        messageReceiver.batsTransport();
         randomlyTransportPlayer();
+      }
     }
 
     public boolean movePlayer(Direction direction) {
@@ -270,7 +272,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
     private void checkForArrows() {
       Integer arrowsFound = getArrowsInCavern(playerCavern);
-      messageReceiver.arrowsFound(arrowsFound);
+      if (arrowsFound > 0)
+        messageReceiver.arrowsFound(arrowsFound);
       quiver += arrowsFound;
       arrowsIn.put(playerCavern, 0);
     }

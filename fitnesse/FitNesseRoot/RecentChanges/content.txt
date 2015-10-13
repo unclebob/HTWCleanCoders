@@ -1,3 +1,8 @@
+|HuntTheWumpus.ReleaseOne.PitCaverns.PlayerIsInformedAboutFallingIntoPit||06:57:44 Tue, Oct 13, 2015|
+|HuntTheWumpus.ReleaseOne.PitCaverns||06:55:37 Tue, Oct 13, 2015|
+|HuntTheWumpus.ReleaseOne.BatCaverns.PlayerIsInformedOfEnteringBatCavern||06:52:28 Tue, Oct 13, 2015|
+|HuntTheWumpus.ReleaseOne.BatCaverns||06:49:25 Tue, Oct 13, 2015|
+|HuntTheWumpus.ReleaseOne.HuntingWithArrows.PlayerDoesNotPickUpArrowsIfThereAreNoneToPickUp||16:17:11 Mon, Oct 12, 2015|
 |HuntTheWumpus.ReleaseOne.BatsCarryPlayerToRandomCavern||15:14:18 Fri, Oct 09, 2015|
 |HuntTheWumpus.ReleaseOne.PlayerFallsIntoPitAndDies||14:36:28 Fri, Oct 09, 2015|
 |HuntTheWumpus.ScenarioLibrary||14:19:16 Fri, Oct 09, 2015|
