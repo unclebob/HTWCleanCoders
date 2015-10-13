@@ -1,7 +1,0 @@
--!|script|
-|Given Cross Map|
-|Given the Middle cavern has a pit|
-|Given the player is in cavern Left|
-|When the player goes East|
-|Then a FELL_IN_PIT message is given|
-
