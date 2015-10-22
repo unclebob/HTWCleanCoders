@@ -41,11 +41,10 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private boolean reportNearby(Predicate<Connection> nearTest) {
-    boolean nearby = false;
     for (Connection c : connections)
       if (playerCavern.equals(c.from) && nearTest.test(c))
-        nearby |= true;
-    return nearby;
+        return true;
+    return false;
   }
 
   private void reportAvailableDirections() {
@@ -140,6 +139,24 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   public Command makeMoveCommand(Direction direction) {
     return new MoveCommand(direction);
   }
+
+  public abstract class GameCommand implements Command {
+    public void execute() {
+      processCommand();
+      moveWumpus();
+      checkWumpusMovedToPlayer();
+      reportStatus();
+    }
+
+    protected void checkWumpusMovedToPlayer() {
+      if (playerCavern.equals(wumpusCavern))
+        messageReceiver.wumpusMovesToPlayer();
+    }
+
+    protected abstract void processCommand();
+
+  }
+
 
   private class RestCommand extends GameCommand {
     public void processCommand() {
@@ -277,22 +294,5 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       quiver += arrowsFound;
       arrowsIn.put(playerCavern, 0);
     }
-  }
-
-  public abstract class GameCommand implements Command {
-    public void execute() {
-      processCommand();
-      moveWumpus();
-      checkWumpusMovedToPlayer();
-      reportStatus();
-    }
-
-    protected void checkWumpusMovedToPlayer() {
-      if (playerCavern.equals(wumpusCavern))
-        messageReceiver.wumpusMovesToPlayer();
-    }
-
-    protected abstract void processCommand();
-
   }
 }
