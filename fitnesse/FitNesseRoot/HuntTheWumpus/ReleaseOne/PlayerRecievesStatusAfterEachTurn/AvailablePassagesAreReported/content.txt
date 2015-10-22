@@ -5,6 +5,9 @@
 -!|script|
 |When the player rests|
 |Then a EAST_PASSAGE message is given|
+|Then a WEST_PASSAGE message is not given|
+|Then a NORTH_PASSAGE message is not given|
+|Then a SOUTH_PASSAGE message is not given|
 
 |clear messages|
 
@@ -12,6 +15,8 @@
 |When the player goes East|
 |Then a EAST_PASSAGE message is given|
 |Then a WEST_PASSAGE message is given|
+|Then a NORTH_PASSAGE message is not given|
+|Then a SOUTH_PASSAGE message is not given|
 
 |clear messages|
 
@@ -22,7 +27,24 @@
 |Then a NORTH_PASSAGE message is given|
 |Then a SOUTH_PASSAGE message is given|
 
+|clear messages|
 
+-!|script|
+|When the player goes North|
+|Then a EAST_PASSAGE message is not given|
+|Then a WEST_PASSAGE message is not given|
+|Then a NORTH_PASSAGE message is given|
+|Then a SOUTH_PASSAGE message is given|
+
+
+|clear messages|
+
+-!|script|
+|When the player goes North|
+|Then a EAST_PASSAGE message is not given|
+|Then a WEST_PASSAGE message is not given|
+|Then a NORTH_PASSAGE message is not given|
+|Then a SOUTH_PASSAGE message is given|
 
 
 
