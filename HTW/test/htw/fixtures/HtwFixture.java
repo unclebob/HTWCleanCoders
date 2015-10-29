@@ -87,9 +87,7 @@ public class HtwFixture {
     for (int i=0; i<times; i++) {
       putPlayerInCavern(startingCavern);
       game.makeMoveCommand(toDirection(direction)).execute();
-      Map<String, Integer> counterMap = TestContext.batTransportCaverns;
-      String cavern = game.getPlayerCavern();
-      incrementCounter(counterMap, cavern);
+      incrementCounter(TestContext.batTransportCaverns, game.getPlayerCavern());
     }
     return true;
   }

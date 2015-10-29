@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HtwFixture.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HtwFixture.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="676" max-vertical-offset="3172">
-              <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.13555788" vertical-offset="1612" max-vertical-offset="3120">
+              <caret line="75" column="74" selection-start-line="75" selection-start-column="74" selection-end-line="75" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestContext.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestContext.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38686132" vertical-offset="227" max-vertical-offset="1612">
+            <state vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="1612">
               <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -352,8 +352,8 @@
         <option value="$PROJECT_DIR$/src/htw/factory/HtwFactory.java" />
         <option value="$PROJECT_DIR$/src/htw/console/Main.java" />
         <option value="$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java" />
-        <option value="$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java" />
         <option value="$PROJECT_DIR$/test/htw/fixtures/TestContext.java" />
+        <option value="$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java" />
       </list>
     </option>
   </component>
@@ -722,12 +722,12 @@
       <workItem from="1444421868573" duration="12255000" />
       <workItem from="1445622964943" duration="3623000" />
       <workItem from="1445650461595" duration="143000" />
-      <workItem from="1445975192471" duration="5907000" />
+      <workItem from="1445975192471" duration="6181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47991000" />
+    <option name="totallyTimeSpent" value="48265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="116" width="1910" height="1082" extended-state="0" />
@@ -1594,16 +1594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/htw/factory/HtwFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
-          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/htw/HuntTheWumpus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1023">
@@ -1641,20 +1631,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java">
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="676" max-vertical-offset="3172">
-          <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="1612">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestContext.java">
+    <entry file="file://$PROJECT_DIR$/src/htw/factory/HtwFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38686132" vertical-offset="227" max-vertical-offset="1612">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13555788" vertical-offset="1612" max-vertical-offset="3120">
+          <caret line="75" column="74" selection-start-line="75" selection-start-column="74" selection-end-line="75" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
