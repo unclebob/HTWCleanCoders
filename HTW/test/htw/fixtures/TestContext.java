@@ -2,6 +2,7 @@ package htw.fixtures;
 
 import htw.HtwMessageReceiver;
 import htw.HuntTheWumpus;
+import htw.factory.HtwFactory;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -17,7 +18,10 @@ public class TestContext implements HtwMessageReceiver {
   public static Map<String, Integer> batTransportCaverns = new HashMap<>();
 
   public TestContext() {
-    game = new TestableHuntTheWumpus(this);
+    game = (TestableHuntTheWumpus) HtwFactory.makeGame("htw.fixtures.TestableHuntTheWumpus", this);
+    messages.clear();
+    wumpusCaverns.clear();
+    batTransportCaverns.clear();
   }
 
   public void fellInPit() {

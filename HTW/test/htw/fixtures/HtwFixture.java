@@ -2,6 +2,8 @@ package htw.fixtures;
 
 import htw.HuntTheWumpus;
 
+import java.util.Map;
+
 import static htw.fixtures.TestContext.game;
 
 public class HtwFixture {
@@ -71,8 +73,7 @@ public class HtwFixture {
     for (int i=0; i<times; i++) {
       putWumpusInCavern(cavern);
       game.makeRestCommand().execute();
-      int wumpusCavernCount = zeroIfNull(TestContext.wumpusCaverns.get(game.getWumpusCavern()));
-      TestContext.wumpusCaverns.put(game.getWumpusCavern(), wumpusCavernCount+1);
+      incrementCounter(TestContext.wumpusCaverns, game.getWumpusCavern());
     }
     return true;
   }
@@ -86,10 +87,15 @@ public class HtwFixture {
     for (int i=0; i<times; i++) {
       putPlayerInCavern(startingCavern);
       game.makeMoveCommand(toDirection(direction)).execute();
-      int batTransportCavernCount = zeroIfNull(TestContext.batTransportCaverns.get(game.getPlayerCavern()));
-      TestContext.batTransportCaverns.put(game.getPlayerCavern(), batTransportCavernCount+1);
+      Map<String, Integer> counterMap = TestContext.batTransportCaverns;
+      String cavern = game.getPlayerCavern();
+      incrementCounter(counterMap, cavern);
     }
     return true;
+  }
+
+  private void incrementCounter(Map<String, Integer> counterMap, String cavern) {
+    counterMap.put(cavern, zeroIfNull(counterMap.get(cavern)) + 1);
   }
 
   public boolean restUntilKilled() {

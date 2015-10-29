@@ -29,8 +29,8 @@
       <file leaf-file-name="HtwFixture.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="16.148148" vertical-offset="700" max-vertical-offset="3248">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="676" max-vertical-offset="3172">
+              <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,18 +38,215 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestContext.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestContext.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="1680">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38686132" vertical-offset="227" max-vertical-offset="1612">
+              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
-                <element signature="e#780#781#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
-                <element signature="e#867#868#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/htw" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/htw">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>htw</OriginalElement>
+              <nodes>
+                <node x="680.5" y="370.0">htw.console</node>
+                <node x="0.0" y="548.62890625">htw.factory</node>
+                <node x="98.75" y="80.0">htw.HuntTheWumpus.Command</node>
+                <node x="195.46590909090915" y="370.0">htw.game.HuntTheWumpusGame</node>
+                <node x="433.5" y="250.0">htw.game.HuntTheWumpusGame.ShootCommand</node>
+                <node x="391.0700757575758" y="450.0">htw.fixtures</node>
+                <node x="481.7575757575758" y="160.0">htw.game.HuntTheWumpusGame.ShootCommand.ArrowTracker</node>
+                <node x="81.25" y="160.0">htw.game.HuntTheWumpusGame.GameCommand</node>
+                <node x="587.5" y="250.0">htw.HtwMessageReceiver</node>
+                <node x="307.5" y="250.0">htw.game.HuntTheWumpusGame.Connection</node>
+                <node x="190.68087121212122" y="0.0">htw.HuntTheWumpus</node>
+                <node x="156.50000000000003" y="250.0">htw.game.HuntTheWumpusGame.MoveCommand</node>
+                <node x="10.5" y="250.0">htw.game.HuntTheWumpusGame.RestCommand</node>
+                <node x="284.46117424242425" y="160.0">htw.HuntTheWumpus.Direction</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="htw.game.HuntTheWumpusGame.ShootCommand" target="htw.game.HuntTheWumpusGame.GameCommand">
+                  <point x="-50.25" y="-15.0" />
+                  <point x="450.25" y="220.0" />
+                  <point x="197.625" y="220.0" />
+                  <point x="49.875" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.ShootCommand" target="htw.game.HuntTheWumpusGame">
+                  <point x="33.5" y="15.0" />
+                  <point x="534.0" y="340.0" />
+                  <point x="350.3409090909091" y="340.0" />
+                  <point x="66.375" y="-15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.GameCommand" target="htw.HuntTheWumpus.Command">
+                  <point x="0.0" y="-15.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.Connection" target="htw.game.HuntTheWumpusGame">
+                  <point x="35.33333333333337" y="15.0" />
+                  <point x="395.83333333333337" y="320.0" />
+                  <point x="320.8409090909091" y="320.0" />
+                  <point x="36.875" y="-15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.RestCommand" target="htw.game.HuntTheWumpusGame.GameCommand">
+                  <point x="0.0" y="-15.0" />
+                  <point x="73.0" y="230.0" />
+                  <point x="97.875" y="230.0" />
+                  <point x="-49.875" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.MoveCommand" target="htw.game.HuntTheWumpusGame.GameCommand">
+                  <point x="-32.75" y="-15.0" />
+                  <point x="189.25000000000003" y="230.0" />
+                  <point x="164.375" y="230.0" />
+                  <point x="16.625" y="15.0" />
+                </edge>
+                <edge source="htw.fixtures" target="htw.HtwMessageReceiver">
+                  <point x="34.5" y="-15.0" />
+                  <point x="494.5700757575758" y="425.0" />
+                  <point x="670.0" y="425.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame" target="htw.game.HuntTheWumpusGame.RestCommand">
+                  <point x="-66.375" y="-15.0" />
+                  <point x="217.59090909090915" y="340.0" />
+                  <point x="41.75" y="340.0" />
+                  <point x="-31.25" y="15.0" />
+                </edge>
+                <edge source="htw.console" target="htw.HtwMessageReceiver">
+                  <point x="-34.5" y="-15.0" />
+                  <point x="715.0" y="350.0" />
+                  <point x="725.0" y="350.0" />
+                  <point x="55.0" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.MoveCommand" target="htw.game.HuntTheWumpusGame">
+                  <point x="32.75" y="15.0" />
+                  <point x="254.75000000000003" y="300.0" />
+                  <point x="276.5909090909091" y="300.0" />
+                  <point x="-7.375" y="-15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame" target="htw.game.HuntTheWumpusGame.ShootCommand">
+                  <point x="51.625" y="-15.0" />
+                  <point x="335.5909090909091" y="330.0" />
+                  <point x="467.0" y="330.0" />
+                  <point x="-33.5" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame" target="htw.HtwMessageReceiver">
+                  <point x="81.125" y="-15.0" />
+                  <point x="365.0909090909091" y="350.0" />
+                  <point x="615.0" y="350.0" />
+                  <point x="-55.0" y="15.0" />
+                </edge>
+                <edge source="htw.fixtures" target="htw.fixtures">
+                  <point x="0.0" y="15.0" />
+                  <point x="460.0700757575758" y="500.0" />
+                  <point x="371.0700757575758" y="500.0" />
+                  <point x="371.0700757575758" y="465.0" />
+                  <point x="-69.0" y="-0.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.GameCommand" target="htw.game.HuntTheWumpusGame">
+                  <point x="-16.625" y="15.0" />
+                  <point x="131.125" y="230.0" />
+                  <point x="146.00000000000003" y="230.0" />
+                  <point x="146.00000000000003" y="320.0" />
+                  <point x="247.09090909090915" y="320.0" />
+                  <point x="-36.875" y="-15.0" />
+                </edge>
+                <edge source="htw.HuntTheWumpus.Direction" target="htw.HuntTheWumpus">
+                  <point x="0.0" y="-15.0" />
+                  <point x="330.46117424242425" y="60.0" />
+                  <point x="279.43087121212125" y="60.0" />
+                  <point x="17.75" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.ShootCommand" target="htw.game.HuntTheWumpusGame.ShootCommand.ArrowTracker">
+                  <point x="16.75" y="-15.0" />
+                  <point x="517.25" y="230.0" />
+                  <point x="511.2575757575758" y="230.0" />
+                  <point x="-29.5" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.ShootCommand" target="htw.HuntTheWumpus.Direction">
+                  <point x="-16.75" y="-15.0" />
+                  <point x="483.75" y="210.0" />
+                  <point x="361.127840909091" y="210.0" />
+                  <point x="30.666666666666686" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.RestCommand" target="htw.game.HuntTheWumpusGame">
+                  <point x="31.25" y="15.0" />
+                  <point x="104.25" y="330.0" />
+                  <point x="232.34090909090915" y="330.0" />
+                  <point x="-51.625" y="-15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.MoveCommand" target="htw.HuntTheWumpus.Direction">
+                  <point x="32.75" y="-15.0" />
+                  <point x="254.75000000000003" y="230.0" />
+                  <point x="299.7945075757576" y="230.0" />
+                  <point x="-30.666666666666657" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.ShootCommand.ArrowTracker" target="htw.game.HuntTheWumpusGame.ShootCommand">
+                  <point x="29.5" y="15.0" />
+                  <point x="570.2575757575758" y="230.0" />
+                  <point x="550.75" y="230.0" />
+                  <point x="50.25" y="-15.0" />
+                </edge>
+                <edge source="htw.fixtures" target="htw.game.HuntTheWumpusGame">
+                  <point x="-34.5" y="-15.0" />
+                  <point x="425.5700757575758" y="425.0" />
+                  <point x="283.9659090909091" y="425.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="htw.console" target="htw.HuntTheWumpus">
+                  <point x="34.5" y="-15.0" />
+                  <point x="784.0" y="50.0" />
+                  <point x="314.93087121212125" y="50.0" />
+                  <point x="53.25" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame" target="htw.HuntTheWumpus">
+                  <point x="-81.125" y="-15.0" />
+                  <point x="202.84090909090915" y="350.0" />
+                  <point x="0.0" y="350.0" />
+                  <point x="0.0" y="50.0" />
+                  <point x="208.43087121212122" y="50.0" />
+                  <point x="-53.25" y="15.0" />
+                </edge>
+                <edge source="htw.HuntTheWumpus.Command" target="htw.HuntTheWumpus">
+                  <point x="0.0" y="-15.0" />
+                  <point x="147.75" y="60.0" />
+                  <point x="243.93087121212122" y="60.0" />
+                  <point x="-17.75" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame" target="htw.game.HuntTheWumpusGame.MoveCommand">
+                  <point x="-22.125" y="-15.0" />
+                  <point x="261.8409090909091" y="310.0" />
+                  <point x="189.25000000000003" y="310.0" />
+                  <point x="-32.75" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame.Connection" target="htw.HuntTheWumpus.Direction">
+                  <point x="0.0" y="-15.0" />
+                  <point x="360.5" y="230.0" />
+                  <point x="330.46117424242425" y="230.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="htw.game.HuntTheWumpusGame" target="htw.game.HuntTheWumpusGame.Connection">
+                  <point x="7.375" y="-15.0" />
+                  <point x="291.3409090909091" y="300.0" />
+                  <point x="325.16666666666674" y="300.0" />
+                  <point x="-35.333333333333314" y="15.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.4000000000000004" x="100.92857142857153" y="149.1428571428572" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Inner Classes</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -57,38 +254,24 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/htw/console/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3546" max-vertical-offset="4480">
-              <caret line="151" column="28" selection-start-line="151" selection-start-column="28" selection-end-line="151" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="3484">
+              <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3381#3382#0" expanded="true" />
-                <element signature="e#3424#3425#0" expanded="true" />
-                <element signature="e#3452#3453#0" expanded="true" />
-                <element signature="e#3502#3503#0" expanded="true" />
-                <element signature="e#3529#3530#0" expanded="true" />
-                <element signature="e#3575#3576#0" expanded="true" />
-                <element signature="e#3606#3607#0" expanded="true" />
-                <element signature="e#3664#3665#0" expanded="true" />
-                <element signature="e#3724#3725#0" expanded="true" />
-                <element signature="e#3786#3787#0" expanded="true" />
-                <element signature="e#3814#3815#0" expanded="true" />
-                <element signature="e#3865#3866#0" expanded="true" />
-                <element signature="e#3894#3895#0" expanded="true" />
-                <element signature="e#3933#3934#0" expanded="true" />
-                <element signature="e#3975#3976#0" expanded="true" />
-                <element signature="e#4037#4038#0" expanded="true" />
-                <element signature="e#4074#4075#0" expanded="true" />
-                <element signature="e#4128#4129#0" expanded="true" />
-                <element signature="e#4164#4165#0" expanded="true" />
-                <element signature="e#4214#4215#0" expanded="true" />
-                <element signature="e#4398#4399#0" expanded="true" />
-                <element signature="e#4448#4449#0" expanded="true" />
-                <element signature="e#4487#4488#0" expanded="true" />
-                <element signature="e#4566#4567#0" expanded="true" />
-                <element signature="e#4605#4606#0" expanded="true" />
-                <element signature="e#4662#4663#0" expanded="true" />
-                <element signature="e#4695#4696#0" expanded="true" />
-                <element signature="e#4754#4755#0" expanded="true" />
+                <element signature="e#4715#4716#0" expanded="true" />
+                <element signature="e#4774#4775#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HtwFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/htw/factory/HtwFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+              <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,21 +280,21 @@
       <file leaf-file-name="TestableHuntTheWumpus.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestableHuntTheWumpus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="644">
-              <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HuntTheWumpusGame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HuntTheWumpusGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5579809" vertical-offset="779" max-vertical-offset="8778">
-              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6009" max-vertical-offset="6968">
+              <caret line="286" column="23" selection-start-line="286" selection-start-column="8" selection-end-line="286" selection-end-column="23" />
               <folding>
+                <element signature="e#3650#3651#0" expanded="true" />
+                <element signature="e#3693#3694#0" expanded="true" />
                 <element signature="e#6535#6536#0" expanded="true" />
                 <element signature="e#6575#6576#0" expanded="true" />
               </folding>
@@ -122,8 +305,8 @@
       <file leaf-file-name="HuntTheWumpus.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/htw/HuntTheWumpus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
-              <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="806">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,8 +315,8 @@
       <file leaf-file-name="HtwMessageReceiver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/htw/HtwMessageReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
-              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,18 +325,8 @@
       <file leaf-file-name="PlayerLandedIn.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/htw/fixtures/PlayerLandedIn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="364" max-vertical-offset="616">
+            <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="416">
               <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WumpusWasIn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/htw/fixtures/WumpusWasIn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="588">
-              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -175,10 +348,12 @@
         <option value="$PROJECT_DIR$/src/htw/HuntTheWumpus.java" />
         <option value="$PROJECT_DIR$/src/htw/console/main.java" />
         <option value="$PROJECT_DIR$/src/htw/HtwMessageReceiver.java" />
-        <option value="$PROJECT_DIR$/test/htw/fixtures/TestContext.java" />
-        <option value="$PROJECT_DIR$/src/htw/console/Main.java" />
         <option value="$PROJECT_DIR$/src/htw/fixtures/TestContext.java" />
+        <option value="$PROJECT_DIR$/src/htw/factory/HtwFactory.java" />
+        <option value="$PROJECT_DIR$/src/htw/console/Main.java" />
         <option value="$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java" />
+        <option value="$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java" />
+        <option value="$PROJECT_DIR$/test/htw/fixtures/TestContext.java" />
       </list>
     </option>
   </component>
@@ -186,9 +361,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1919" />
-    <option name="height" value="1173" />
+    <option name="x" value="-1" />
+    <option name="y" value="116" />
+    <option name="width" value="1910" />
+    <option name="height" value="1082" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -213,8 +389,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,8 +465,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,11 +532,17 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="htw.game" />
       <recent name="htw" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="htw.factory.HtwFactory" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="htw.fixtures" />
@@ -368,6 +594,9 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -382,22 +611,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -419,6 +632,19 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -431,6 +657,14 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
       <envs />
       <method />
     </configuration>
@@ -453,14 +687,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
       <method />
     </configuration>
     <list size="1">
@@ -494,51 +720,57 @@
       <workItem from="1444054290445" duration="99000" />
       <workItem from="1444152831796" duration="20136000" />
       <workItem from="1444421868573" duration="12255000" />
+      <workItem from="1445622964943" duration="3623000" />
+      <workItem from="1445650461595" duration="143000" />
+      <workItem from="1445975192471" duration="5907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38318000" />
+    <option name="totallyTimeSpent" value="47991000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1919" height="1173" extended-state="6" />
+    <frame x="-1" y="116" width="1910" height="1082" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15654951" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32848233" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283859" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15663293" sideWeight="0.500657" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15663293" sideWeight="0.5009276" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15663293" sideWeight="0.49934298" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2940631" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15738758" sideWeight="0.49907234" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2940631" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15654951" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931355" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283859" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15654951" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15663293" sideWeight="0.5009276" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15654951" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15738758" sideWeight="0.49907234" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2940631" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -568,6 +800,384 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/htw/console/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="3484">
+          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4715#4716#0" expanded="true" />
+            <element signature="e#4774#4775#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/factory/HtwFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="338" max-vertical-offset="702">
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestableHuntTheWumpus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="104" max-vertical-offset="572">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="6864">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding>
+            <element signature="e#3650#3651#0" expanded="true" />
+            <element signature="e#3693#3694#0" expanded="true" />
+            <element signature="e#6535#6536#0" expanded="true" />
+            <element signature="e#6575#6576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/HuntTheWumpus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="806">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/HtwMessageReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="650">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/PlayerLandedIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="416">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="3016">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="1534">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/htw">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>htw</OriginalElement>
+          <nodes>
+            <node x="594.9024621212121" y="370.0">htw.console</node>
+            <node x="0.0" y="548.62890625">htw.factory</node>
+            <node x="28.0" y="80.0">htw.HuntTheWumpus.Command</node>
+            <node x="109.86837121212125" y="370.0">htw.game.HuntTheWumpusGame</node>
+            <node x="347.9024621212122" y="250.0">htw.game.HuntTheWumpusGame.ShootCommand</node>
+            <node x="305.4725378787879" y="450.0">htw.fixtures</node>
+            <node x="396.16003787878793" y="160.0">htw.game.HuntTheWumpusGame.ShootCommand.ArrowTracker</node>
+            <node x="10.5" y="160.0">htw.game.HuntTheWumpusGame.GameCommand</node>
+            <node x="501.9024621212121" y="250.0">htw.HtwMessageReceiver</node>
+            <node x="221.90246212121215" y="250.0">htw.game.HuntTheWumpusGame.Connection</node>
+            <node x="70.90246212121215" y="250.0">htw.game.HuntTheWumpusGame.MoveCommand</node>
+            <node x="99.93750000000003" y="0.0">htw.HuntTheWumpus</node>
+            <node x="37.423295454545496" y="263.0">htw.game.HuntTheWumpusGame.RestCommand</node>
+            <node x="199.74905303030306" y="160.0">htw.HuntTheWumpus.Direction</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="htw.game.HuntTheWumpusGame.ShootCommand" target="htw.game.HuntTheWumpusGame.GameCommand">
+              <point x="-50.25" y="-15.0" />
+              <point x="364.6524621212122" y="220.0" />
+              <point x="126.875" y="220.0" />
+              <point x="49.875" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.GameCommand" target="htw.game.HuntTheWumpusGame">
+              <point x="-49.875" y="15.0" />
+              <point x="27.125" y="230.0" />
+              <point x="18.6875" y="230.0" />
+              <point x="18.6875" y="340.0" />
+              <point x="131.99337121212125" y="340.0" />
+              <point x="-66.375" y="-15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.ShootCommand" target="htw.game.HuntTheWumpusGame">
+              <point x="33.500000000000014" y="15.0" />
+              <point x="448.4024621212122" y="340.0" />
+              <point x="264.74337121212125" y="340.0" />
+              <point x="66.375" y="-15.0" />
+            </edge>
+            <edge source="htw.HuntTheWumpus.Direction" target="htw.HuntTheWumpus">
+              <point x="0.0" y="-15.0" />
+              <point x="245.74905303030306" y="60.0" />
+              <point x="188.68750000000003" y="60.0" />
+              <point x="17.75" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.GameCommand" target="htw.HuntTheWumpus.Command">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.Connection" target="htw.game.HuntTheWumpusGame">
+              <point x="35.33333333333337" y="15.0" />
+              <point x="310.2357954545455" y="320.0" />
+              <point x="235.24337121212125" y="320.0" />
+              <point x="36.875" y="-15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.RestCommand" target="htw.game.HuntTheWumpusGame">
+              <point x="1.0" y="2.0" />
+              <point x="40.423295454545496" y="320.0" />
+              <point x="161.49337121212125" y="320.0" />
+              <point x="-36.875" y="-15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.RestCommand" target="htw.game.HuntTheWumpusGame.GameCommand">
+              <point x="0.0" y="-2.0" />
+              <point x="39.423295454545496" y="230.0" />
+              <point x="60.375" y="230.0" />
+              <point x="-16.625" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.ShootCommand.ArrowTracker" target="htw.game.HuntTheWumpusGame.ShootCommand">
+              <point x="29.5" y="15.0" />
+              <point x="484.66003787878793" y="230.0" />
+              <point x="465.1524621212122" y="230.0" />
+              <point x="50.250000000000014" y="-15.0" />
+            </edge>
+            <edge source="htw.fixtures" target="htw.game.HuntTheWumpusGame">
+              <point x="-34.5" y="-15.0" />
+              <point x="339.9725378787879" y="425.0" />
+              <point x="198.36837121212125" y="425.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.MoveCommand" target="htw.game.HuntTheWumpusGame.GameCommand">
+              <point x="-32.75" y="-15.0" />
+              <point x="103.65246212121215" y="230.0" />
+              <point x="93.625" y="230.0" />
+              <point x="16.625" y="15.0" />
+            </edge>
+            <edge source="htw.fixtures" target="htw.HtwMessageReceiver">
+              <point x="34.5" y="-15.0" />
+              <point x="408.9725378787879" y="425.0" />
+              <point x="584.4024621212121" y="425.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame" target="htw.HuntTheWumpus">
+              <point x="-81.125" y="-15.0" />
+              <point x="117.24337121212125" y="350.0" />
+              <point x="0.0" y="350.0" />
+              <point x="0.0" y="50.0" />
+              <point x="117.68750000000003" y="50.0" />
+              <point x="-53.25" y="15.0" />
+            </edge>
+            <edge source="htw.HuntTheWumpus.Command" target="htw.HuntTheWumpus">
+              <point x="0.0" y="-15.0" />
+              <point x="77.0" y="60.0" />
+              <point x="153.18750000000003" y="60.0" />
+              <point x="-17.75" y="15.0" />
+            </edge>
+            <edge source="htw.console" target="htw.HtwMessageReceiver">
+              <point x="-34.5" y="-15.0" />
+              <point x="629.4024621212121" y="350.0" />
+              <point x="639.4024621212121" y="350.0" />
+              <point x="55.0" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.MoveCommand" target="htw.game.HuntTheWumpusGame">
+              <point x="32.75" y="15.0" />
+              <point x="169.15246212121215" y="300.0" />
+              <point x="190.99337121212125" y="300.0" />
+              <point x="-7.375" y="-15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="799.0" y="487.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/console/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="3484">
+          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4715#4716#0" expanded="true" />
+            <element signature="e#4774#4775#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/factory/HtwFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="338" max-vertical-offset="702">
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestableHuntTheWumpus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="104" max-vertical-offset="572">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="6864">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding>
+            <element signature="e#3650#3651#0" expanded="true" />
+            <element signature="e#3693#3694#0" expanded="true" />
+            <element signature="e#6535#6536#0" expanded="true" />
+            <element signature="e#6575#6576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/HuntTheWumpus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="806">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/HtwMessageReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="650">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/PlayerLandedIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="416">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="3828">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="429" max-vertical-offset="1980">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/console/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4983" max-vertical-offset="5280">
+          <caret line="151" column="28" selection-start-line="151" selection-start-column="28" selection-end-line="151" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4715#4716#0" expanded="true" />
+            <element signature="e#4774#4775#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestableHuntTheWumpus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="759">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8778">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3650#3651#0" expanded="true" />
+            <element signature="e#3693#3694#0" expanded="true" />
+            <element signature="e#6535#6536#0" expanded="true" />
+            <element signature="e#6575#6576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/HuntTheWumpus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="693">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/HtwMessageReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="825">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/PlayerLandedIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="528">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/WumpusWasIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="495">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <element signature="e#119#120#0" expanded="false" />
+            <element signature="e#149#150#0" expanded="false" />
+            <element signature="e#172#173#0" expanded="false" />
+            <element signature="e#238#239#0" expanded="false" />
+            <element signature="e#283#284#0" expanded="false" />
+            <element signature="e#329#330#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1148" max-vertical-offset="3528">
@@ -584,10 +1194,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -596,9 +1202,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="756">
           <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -633,7 +1237,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="588">
           <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="e#119#120#0" expanded="false" />
+            <element signature="e#149#150#0" expanded="false" />
+            <element signature="e#172#173#0" expanded="false" />
+            <element signature="e#238#239#0" expanded="false" />
+            <element signature="e#283#284#0" expanded="false" />
+            <element signature="e#329#330#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -692,7 +1303,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
           <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="e#119#120#0" expanded="false" />
+            <element signature="e#149#150#0" expanded="false" />
+            <element signature="e#172#173#0" expanded="false" />
+            <element signature="e#238#239#0" expanded="false" />
+            <element signature="e#283#284#0" expanded="false" />
+            <element signature="e#329#330#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -704,21 +1322,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestableHuntTheWumpus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="644">
-          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">resources</node>
+            <node x="" y="">com</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">org</node>
+            <node x="" y="">oracle</node>
+            <node x="" y="">META-INF</node>
+            <node x="" y="">javafx</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">htw</node>
+            <node x="" y="">apple</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">java</node>
+            <node x="" y="">toolbarButtonGraphics</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="211.0" y="240.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/htw/HuntTheWumpus.java">
+    <entry file="uml://JAVA/htw.game">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>htw.game</OriginalElement>
+          <nodes>
+            <node x="" y="">htw.game.HuntTheWumpusGame.Connection</node>
+            <node x="" y="">htw.fixtures.TestContext</node>
+            <node x="" y="">htw.game.HuntTheWumpusGame.MoveCommand</node>
+            <node x="" y="">htw.game.HuntTheWumpusGame.RestCommand</node>
+            <node x="" y="">htw.game.HuntTheWumpusGame</node>
+            <node x="" y="">htw.game.HuntTheWumpusGame.ShootCommand</node>
+            <node x="" y="">htw.game.HuntTheWumpusGame.ShootCommand.ArrowTracker</node>
+            <node x="" y="">htw.game.HuntTheWumpusGame.GameCommand</node>
+            <node x="" y="">htw.fixtures.HtwFixture</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="278.0" y="188.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/console/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3484">
+          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4715#4716#0" expanded="true" />
+            <element signature="e#4774#4775#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -728,107 +1401,262 @@
           <ID>JAVA</ID>
           <OriginalElement>htw</OriginalElement>
           <nodes>
-            <node x="" y="">htw.HuntTheWumpus.Command</node>
-            <node x="" y="">htw.game.HuntTheWumpusGame</node>
-            <node x="" y="">htw.game.HuntTheWumpusGame.ShootCommand</node>
-            <node x="" y="">htw.game.HuntTheWumpusGame.ShootCommand.ArrowTracker</node>
-            <node x="" y="">htw.game.HuntTheWumpusGame.GameCommand</node>
-            <node x="" y="">htw.HtwMessageReceiver</node>
-            <node x="" y="">htw.game.HuntTheWumpusGame.Connection</node>
-            <node x="" y="">htw.game.HuntTheWumpusGame.MoveCommand</node>
-            <node x="" y="">htw.HuntTheWumpus</node>
-            <node x="" y="">htw.game.HuntTheWumpusGame.RestCommand</node>
-            <node x="" y="">htw.HuntTheWumpus.Direction</node>
+            <node x="680.5" y="370.0">htw.console</node>
+            <node x="0.0" y="548.62890625">htw.factory</node>
+            <node x="98.75" y="80.0">htw.HuntTheWumpus.Command</node>
+            <node x="195.46590909090915" y="370.0">htw.game.HuntTheWumpusGame</node>
+            <node x="433.5" y="250.0">htw.game.HuntTheWumpusGame.ShootCommand</node>
+            <node x="391.0700757575758" y="450.0">htw.fixtures</node>
+            <node x="481.7575757575758" y="160.0">htw.game.HuntTheWumpusGame.ShootCommand.ArrowTracker</node>
+            <node x="81.25" y="160.0">htw.game.HuntTheWumpusGame.GameCommand</node>
+            <node x="587.5" y="250.0">htw.HtwMessageReceiver</node>
+            <node x="307.5" y="250.0">htw.game.HuntTheWumpusGame.Connection</node>
+            <node x="190.68087121212122" y="0.0">htw.HuntTheWumpus</node>
+            <node x="156.50000000000003" y="250.0">htw.game.HuntTheWumpusGame.MoveCommand</node>
+            <node x="10.5" y="250.0">htw.game.HuntTheWumpusGame.RestCommand</node>
+            <node x="284.46117424242425" y="160.0">htw.HuntTheWumpus.Direction</node>
           </nodes>
           <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="326.5" y="230.0" />
+          <edges>
+            <edge source="htw.game.HuntTheWumpusGame.ShootCommand" target="htw.game.HuntTheWumpusGame.GameCommand">
+              <point x="-50.25" y="-15.0" />
+              <point x="450.25" y="220.0" />
+              <point x="197.625" y="220.0" />
+              <point x="49.875" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.ShootCommand" target="htw.game.HuntTheWumpusGame">
+              <point x="33.5" y="15.0" />
+              <point x="534.0" y="340.0" />
+              <point x="350.3409090909091" y="340.0" />
+              <point x="66.375" y="-15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.GameCommand" target="htw.HuntTheWumpus.Command">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.Connection" target="htw.game.HuntTheWumpusGame">
+              <point x="35.33333333333337" y="15.0" />
+              <point x="395.83333333333337" y="320.0" />
+              <point x="320.8409090909091" y="320.0" />
+              <point x="36.875" y="-15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.RestCommand" target="htw.game.HuntTheWumpusGame.GameCommand">
+              <point x="0.0" y="-15.0" />
+              <point x="73.0" y="230.0" />
+              <point x="97.875" y="230.0" />
+              <point x="-49.875" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.MoveCommand" target="htw.game.HuntTheWumpusGame.GameCommand">
+              <point x="-32.75" y="-15.0" />
+              <point x="189.25000000000003" y="230.0" />
+              <point x="164.375" y="230.0" />
+              <point x="16.625" y="15.0" />
+            </edge>
+            <edge source="htw.fixtures" target="htw.HtwMessageReceiver">
+              <point x="34.5" y="-15.0" />
+              <point x="494.5700757575758" y="425.0" />
+              <point x="670.0" y="425.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame" target="htw.game.HuntTheWumpusGame.RestCommand">
+              <point x="-66.375" y="-15.0" />
+              <point x="217.59090909090915" y="340.0" />
+              <point x="41.75" y="340.0" />
+              <point x="-31.25" y="15.0" />
+            </edge>
+            <edge source="htw.console" target="htw.HtwMessageReceiver">
+              <point x="-34.5" y="-15.0" />
+              <point x="715.0" y="350.0" />
+              <point x="725.0" y="350.0" />
+              <point x="55.0" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.MoveCommand" target="htw.game.HuntTheWumpusGame">
+              <point x="32.75" y="15.0" />
+              <point x="254.75000000000003" y="300.0" />
+              <point x="276.5909090909091" y="300.0" />
+              <point x="-7.375" y="-15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame" target="htw.game.HuntTheWumpusGame.ShootCommand">
+              <point x="51.625" y="-15.0" />
+              <point x="335.5909090909091" y="330.0" />
+              <point x="467.0" y="330.0" />
+              <point x="-33.5" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame" target="htw.HtwMessageReceiver">
+              <point x="81.125" y="-15.0" />
+              <point x="365.0909090909091" y="350.0" />
+              <point x="615.0" y="350.0" />
+              <point x="-55.0" y="15.0" />
+            </edge>
+            <edge source="htw.fixtures" target="htw.fixtures">
+              <point x="0.0" y="15.0" />
+              <point x="460.0700757575758" y="500.0" />
+              <point x="371.0700757575758" y="500.0" />
+              <point x="371.0700757575758" y="465.0" />
+              <point x="-69.0" y="-0.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.GameCommand" target="htw.game.HuntTheWumpusGame">
+              <point x="-16.625" y="15.0" />
+              <point x="131.125" y="230.0" />
+              <point x="146.00000000000003" y="230.0" />
+              <point x="146.00000000000003" y="320.0" />
+              <point x="247.09090909090915" y="320.0" />
+              <point x="-36.875" y="-15.0" />
+            </edge>
+            <edge source="htw.HuntTheWumpus.Direction" target="htw.HuntTheWumpus">
+              <point x="0.0" y="-15.0" />
+              <point x="330.46117424242425" y="60.0" />
+              <point x="279.43087121212125" y="60.0" />
+              <point x="17.75" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.ShootCommand" target="htw.game.HuntTheWumpusGame.ShootCommand.ArrowTracker">
+              <point x="16.75" y="-15.0" />
+              <point x="517.25" y="230.0" />
+              <point x="511.2575757575758" y="230.0" />
+              <point x="-29.5" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.ShootCommand" target="htw.HuntTheWumpus.Direction">
+              <point x="-16.75" y="-15.0" />
+              <point x="483.75" y="210.0" />
+              <point x="361.127840909091" y="210.0" />
+              <point x="30.666666666666686" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.RestCommand" target="htw.game.HuntTheWumpusGame">
+              <point x="31.25" y="15.0" />
+              <point x="104.25" y="330.0" />
+              <point x="232.34090909090915" y="330.0" />
+              <point x="-51.625" y="-15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.MoveCommand" target="htw.HuntTheWumpus.Direction">
+              <point x="32.75" y="-15.0" />
+              <point x="254.75000000000003" y="230.0" />
+              <point x="299.7945075757576" y="230.0" />
+              <point x="-30.666666666666657" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.ShootCommand.ArrowTracker" target="htw.game.HuntTheWumpusGame.ShootCommand">
+              <point x="29.5" y="15.0" />
+              <point x="570.2575757575758" y="230.0" />
+              <point x="550.75" y="230.0" />
+              <point x="50.25" y="-15.0" />
+            </edge>
+            <edge source="htw.fixtures" target="htw.game.HuntTheWumpusGame">
+              <point x="-34.5" y="-15.0" />
+              <point x="425.5700757575758" y="425.0" />
+              <point x="283.9659090909091" y="425.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="htw.console" target="htw.HuntTheWumpus">
+              <point x="34.5" y="-15.0" />
+              <point x="784.0" y="50.0" />
+              <point x="314.93087121212125" y="50.0" />
+              <point x="53.25" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame" target="htw.HuntTheWumpus">
+              <point x="-81.125" y="-15.0" />
+              <point x="202.84090909090915" y="350.0" />
+              <point x="0.0" y="350.0" />
+              <point x="0.0" y="50.0" />
+              <point x="208.43087121212122" y="50.0" />
+              <point x="-53.25" y="15.0" />
+            </edge>
+            <edge source="htw.HuntTheWumpus.Command" target="htw.HuntTheWumpus">
+              <point x="0.0" y="-15.0" />
+              <point x="147.75" y="60.0" />
+              <point x="243.93087121212122" y="60.0" />
+              <point x="-17.75" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame" target="htw.game.HuntTheWumpusGame.MoveCommand">
+              <point x="-22.125" y="-15.0" />
+              <point x="261.8409090909091" y="310.0" />
+              <point x="189.25000000000003" y="310.0" />
+              <point x="-32.75" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame.Connection" target="htw.HuntTheWumpus.Direction">
+              <point x="0.0" y="-15.0" />
+              <point x="360.5" y="230.0" />
+              <point x="330.46117424242425" y="230.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="htw.game.HuntTheWumpusGame" target="htw.game.HuntTheWumpusGame.Connection">
+              <point x="7.375" y="-15.0" />
+              <point x="291.3409090909091" y="300.0" />
+              <point x="325.16666666666674" y="300.0" />
+              <point x="-35.333333333333314" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.4000000000000004" x="100.92857142857153" y="149.1428571428572" />
           <SelectedNodes />
           <Categories>
             <Category>Inner Classes</Category>
           </Categories>
-          <SCOPE>Production</SCOPE>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/htw/console/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/htw/factory/HtwFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3546" max-vertical-offset="4480">
-          <caret line="151" column="28" selection-start-line="151" selection-start-column="28" selection-end-line="151" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3381#3382#0" expanded="true" />
-            <element signature="e#3424#3425#0" expanded="true" />
-            <element signature="e#3452#3453#0" expanded="true" />
-            <element signature="e#3502#3503#0" expanded="true" />
-            <element signature="e#3529#3530#0" expanded="true" />
-            <element signature="e#3575#3576#0" expanded="true" />
-            <element signature="e#3606#3607#0" expanded="true" />
-            <element signature="e#3664#3665#0" expanded="true" />
-            <element signature="e#3724#3725#0" expanded="true" />
-            <element signature="e#3786#3787#0" expanded="true" />
-            <element signature="e#3814#3815#0" expanded="true" />
-            <element signature="e#3865#3866#0" expanded="true" />
-            <element signature="e#3894#3895#0" expanded="true" />
-            <element signature="e#3933#3934#0" expanded="true" />
-            <element signature="e#3975#3976#0" expanded="true" />
-            <element signature="e#4037#4038#0" expanded="true" />
-            <element signature="e#4074#4075#0" expanded="true" />
-            <element signature="e#4128#4129#0" expanded="true" />
-            <element signature="e#4164#4165#0" expanded="true" />
-            <element signature="e#4214#4215#0" expanded="true" />
-            <element signature="e#4398#4399#0" expanded="true" />
-            <element signature="e#4448#4449#0" expanded="true" />
-            <element signature="e#4487#4488#0" expanded="true" />
-            <element signature="e#4566#4567#0" expanded="true" />
-            <element signature="e#4605#4606#0" expanded="true" />
-            <element signature="e#4662#4663#0" expanded="true" />
-            <element signature="e#4695#4696#0" expanded="true" />
-            <element signature="e#4754#4755#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/HuntTheWumpus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1023">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/htw/HtwMessageReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestContext.java">
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestableHuntTheWumpus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="1680">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6009" max-vertical-offset="6968">
+          <caret line="286" column="23" selection-start-line="286" selection-start-column="8" selection-end-line="286" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#3650#3651#0" expanded="true" />
+            <element signature="e#3693#3694#0" expanded="true" />
+            <element signature="e#6535#6536#0" expanded="true" />
+            <element signature="e#6575#6576#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.148148" vertical-offset="700" max-vertical-offset="3248">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="676" max-vertical-offset="3172">
+          <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java">
+    <entry file="file://$PROJECT_DIR$/test/htw/fixtures/TestContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5579809" vertical-offset="779" max-vertical-offset="8778">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.38686132" vertical-offset="227" max-vertical-offset="1612">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
           <folding>
-            <element signature="e#6535#6536#0" expanded="true" />
-            <element signature="e#6575#6576#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

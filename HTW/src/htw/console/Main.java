@@ -2,7 +2,7 @@ package htw.console;
 
 import htw.HtwMessageReceiver;
 import htw.HuntTheWumpus;
-import htw.game.HuntTheWumpusGame;
+import htw.factory.HtwFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,10 +11,10 @@ import java.io.InputStreamReader;
 import static htw.HuntTheWumpus.Direction.*;
 
 public class Main implements HtwMessageReceiver {
-  private static HuntTheWumpusGame game;
+  private static HuntTheWumpus game;
 
   public static void main(String[] args) throws IOException {
-    game = new HuntTheWumpusGame(new Main());
+    game = HtwFactory.makeGame("htw.game.HuntTheWumpusGame", new Main());
     createMap();
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     while (true) {
