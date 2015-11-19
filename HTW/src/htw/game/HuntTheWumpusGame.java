@@ -78,12 +78,12 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     wumpusChoices.add(wumpusCavern);
 
     int nChoices = wumpusChoices.size();
-    int choice = (int) (Math.random()*nChoices);
+    int choice = (int) (Math.random() * nChoices);
     wumpusCavern = wumpusChoices.get(choice);
   }
 
   private void randomlyTransportPlayer() {
-    Set<String>transportChoices = new HashSet<>(caverns);
+    Set<String> transportChoices = new HashSet<>(caverns);
     transportChoices.remove(playerCavern);
     int nChoices = transportChoices.size();
     int choice = (int) (Math.random() * nChoices);
@@ -128,6 +128,13 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     caverns.add(to);
   }
 
+  public String findDestination(String cavern, Direction direction) {
+    for (Connection c : connections)
+      if (c.from.equals(cavern) && c.direction == direction)
+        return c.to;
+    return null;
+  }
+
   public Command makeRestCommand() {
     return new RestCommand();
   }
@@ -157,7 +164,6 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
   }
 
-
   private class RestCommand extends GameCommand {
     public void processCommand() {
     }
@@ -185,7 +191,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
     private void incrementArrowsInCavern(String arrowCavern) {
       int arrows = getArrowsInCavern(arrowCavern);
-      arrowsIn.put(arrowCavern, arrows+1);
+      arrowsIn.put(arrowCavern, arrows + 1);
     }
 
     private class ArrowTracker {
@@ -273,11 +279,10 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     public boolean movePlayer(Direction direction) {
-      for (Connection c : connections) {
-        if (c.from.equals(playerCavern) && c.direction.equals(direction)) {
-          playerCavern = c.to;
-          return true;
-        }
+      String destination = findDestination(playerCavern, direction);
+      if (destination != null) {
+        playerCavern = destination;
+        return true;
       }
       return false;
     }

@@ -2,6 +2,7 @@ package htw.console;
 
 import htw.HtwMessageReceiver;
 import htw.HuntTheWumpus;
+import htw.HuntTheWumpus.Direction;
 import htw.factory.HtwFactory;
 
 import java.io.BufferedReader;
@@ -52,9 +53,9 @@ public class Main implements HtwMessageReceiver {
   }
 
   private static void createMap() {
-    int ncaverns = (int) (Math.random() * 50.0 + 10.0);
+    int ncaverns = (int) (Math.random() * 30.0 + 10.0);
     while (ncaverns-- > 0)
-      caverns.add("cavern " + ncaverns);
+      caverns.add(makeName());
 
     for (String cavern : caverns) {
       maybeConnectCavern(cavern, NORTH);
@@ -77,9 +78,22 @@ public class Main implements HtwMessageReceiver {
     game.setQuiver(5);
   }
 
-  private static void maybeConnectCavern(String cavern, HuntTheWumpus.Direction direction) {
-    if (Math.random() > .2)
-      game.connectCavern(cavern, anyOther(cavern), direction);
+  private static String makeName() {
+    return null;
+  }
+
+  private static void maybeConnectCavern(String cavern, Direction direction) {
+    if (Math.random() > .2) {
+      String other = anyOther(cavern);
+      connectIfAvailable(cavern, direction, other);
+      connectIfAvailable(other, direction.opposite(), cavern);
+    }
+  }
+
+  private static void connectIfAvailable(String from, Direction direction, String to) {
+    if (game.findDestination(from, direction) == null) {
+      game.connectCavern(from, to, direction);
+    }
   }
 
   private static String anyOther(String cavern) {
@@ -110,7 +124,7 @@ public class Main implements HtwMessageReceiver {
     System.out.println("There is a terrible smell.");
   }
 
-  public void passage(HuntTheWumpus.Direction direction) {
+  public void passage(Direction direction) {
     System.out.println("You can go " + direction.name());
   }
 
@@ -131,7 +145,6 @@ public class Main implements HtwMessageReceiver {
     System.out.println("You killed the Wumpus.");
     System.exit(0);
   }
-
 
   public void playerShootsWall() {
     System.out.println("You shot the wall and killed yourself.");
