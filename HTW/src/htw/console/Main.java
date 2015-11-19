@@ -16,6 +16,58 @@ import static htw.HuntTheWumpus.Direction.*;
 public class Main implements HtwMessageReceiver {
   private static HuntTheWumpus game;
   private static final List<String> caverns = new ArrayList<>();
+  private static final String[] environments = new String[]{
+    "bright",
+    "humid",
+    "dry",
+    "creepy",
+    "ugly",
+    "foggy",
+    "hot",
+    "cold",
+    "drafty",
+    "dreadful"
+  };
+
+  private static final String[] shapes = new String[] {
+    "round",
+    "square",
+    "oval",
+    "irregular",
+    "long",
+    "craggy",
+    "rough",
+    "tall",
+    "narrow"
+  };
+
+  private static final String[] cavernTypes = new String[] {
+    "cavern",
+    "room",
+    "chamber",
+    "catacomb",
+    "crevasse",
+    "cell",
+    "tunnel",
+    "passageway",
+    "hall",
+    "expanse"
+  };
+
+  private static final String[] adornments = new String[] {
+   "smelling of sulphur",
+    "with engravings on the walls",
+    "with a bumpy floor",
+    "",
+    "littered with garbage",
+    "spattered with guano",
+    "with piles of Wumpus droppings",
+    "with bones scattered around",
+    "with corpse on the floor",
+    "that seems to vibrate",
+    "that feels stuffy",
+    "that fills you with dread"
+  };
 
   public static void main(String[] args) throws IOException {
     game = HtwFactory.makeGame("htw.game.HuntTheWumpusGame", new Main());
@@ -79,7 +131,15 @@ public class Main implements HtwMessageReceiver {
   }
 
   private static String makeName() {
-    return null;
+
+    return "A " + chooseName(environments) + " " + chooseName(shapes) + " " +
+      chooseName(cavernTypes) + " " + chooseName(adornments);
+  }
+
+  private static String chooseName(String[] names) {
+    int n = names.length;
+    int choice = (int)(Math.random() * (double) n);
+    return names[choice];
   }
 
   private static void maybeConnectCavern(String cavern, Direction direction) {

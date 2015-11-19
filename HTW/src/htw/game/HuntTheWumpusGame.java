@@ -212,10 +212,11 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
       public ArrowTracker trackArrow(Direction direction) {
         String nextCavern;
-        while ((nextCavern = nextCavern(arrowCavern, direction)) != null) {
+        for (int count = 0; (nextCavern = nextCavern(arrowCavern, direction)) != null; count++) {
           arrowCavern = nextCavern;
           if (shotSelfInBack()) return this;
           if (shotWumpus()) return this;
+          if (count > 100) return this;
         }
         if (arrowCavern.equals(playerCavern))
           messageReceiver.playerShootsWall();
