@@ -7,89 +7,91 @@ import htw.factory.HtwFactory;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import static htw.HuntTheWumpus.Direction.*;
 
 public class Main implements HtwMessageReceiver {
   private static HuntTheWumpus game;
+  private static final List<String> caverns = new ArrayList<>();
 
   public static void main(String[] args) throws IOException {
     game = HtwFactory.makeGame("htw.game.HuntTheWumpusGame", new Main());
     createMap();
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    game.makeRestCommand().execute();
     while (true) {
+      System.out.println(game.getPlayerCavern());
       HuntTheWumpus.Command c = game.makeRestCommand();
       System.out.println(">");
       String command = br.readLine();
-      if (command.equalsIgnoreCase("east"))
+      if (command.equalsIgnoreCase("e"))
         c = game.makeMoveCommand(EAST);
-      else if (command.equalsIgnoreCase("west"))
+      else if (command.equalsIgnoreCase("w"))
         c = game.makeMoveCommand(WEST);
-      else if (command.equalsIgnoreCase("north"))
+      else if (command.equalsIgnoreCase("n"))
         c = game.makeMoveCommand(NORTH);
-      else if (command.equalsIgnoreCase("south"))
+      else if (command.equalsIgnoreCase("s"))
         c = game.makeMoveCommand(SOUTH);
-      else if (command.equalsIgnoreCase("rest"))
+      else if (command.equalsIgnoreCase("r"))
         c = game.makeRestCommand();
-      else if (command.equalsIgnoreCase("shoot west"))
+      else if (command.equalsIgnoreCase("sw"))
         c = game.makeShootCommand(WEST);
-      else if (command.equalsIgnoreCase("shoot east"))
+      else if (command.equalsIgnoreCase("se"))
         c = game.makeShootCommand(EAST);
-      else if (command.equalsIgnoreCase("shoot north"))
+      else if (command.equalsIgnoreCase("sn"))
         c = game.makeShootCommand(NORTH);
-      else if (command.equalsIgnoreCase("shoot south"))
+      else if (command.equalsIgnoreCase("ss"))
         c = game.makeShootCommand(SOUTH);
+      else if (command.equalsIgnoreCase("q"))
+        return;
 
       c.execute();
     }
   }
 
   private static void createMap() {
-    game.connectCavern("1", "7", NORTH);
-    game.connectCavern("1", "d", SOUTH);
-    game.connectCavern("2", "i", EAST);
-    game.connectCavern("2", "k", WEST);
-    game.connectCavern("3", "h", NORTH);
-    game.connectCavern("3", "j", SOUTH);
-    game.connectCavern("4", "b", EAST);
-    game.connectCavern("4", "i", WEST);
-    game.connectCavern("5", "d", NORTH);
-    game.connectCavern("5", "f", SOUTH);
-    game.connectCavern("6", "g", EAST);
-    game.connectCavern("6", "e", WEST);
-    game.connectCavern("7", "1", NORTH);
-    game.connectCavern("7", "f", SOUTH);
-    game.connectCavern("8", "g", EAST);
-    game.connectCavern("8", "k", WEST);
-    game.connectCavern("9", "b", NORTH);
-    game.connectCavern("9", "j", SOUTH);
-    game.connectCavern("a", "c", EAST);
-    game.connectCavern("a", "h", WEST);
-    game.connectCavern("b", "4", NORTH);
-    game.connectCavern("b", "9", SOUTH);
-    game.connectCavern("c", "2", EAST);
-    game.connectCavern("c", "a", WEST);
-    game.connectCavern("d", "1", NORTH);
-    game.connectCavern("d", "5", SOUTH);
-    game.connectCavern("e", "4", EAST);
-    game.connectCavern("e", "6", WEST);
-    game.connectCavern("f", "7", NORTH);
-    game.connectCavern("f", "c", SOUTH);
-    game.connectCavern("g", "6", EAST);
-    game.connectCavern("g", "8", WEST);
-    game.connectCavern("h", "3", NORTH);
-    game.connectCavern("h", "a", SOUTH);
-    game.connectCavern("i", "2", EAST);
-    game.connectCavern("i", "5", WEST);
-    game.connectCavern("j", "3", NORTH);
-    game.connectCavern("j", "9", SOUTH);
-    game.connectCavern("k", "8", EAST);
-    game.connectCavern("k", "e", WEST);
-    game.setPlayerCavern("1");
-    game.setWumpusCavern("c");
-    game.addBatCavern("h");
-    game.addPitCavern("8");
+    int ncaverns = (int) (Math.random() * 50.0 + 10.0);
+    while (ncaverns-- > 0)
+      caverns.add("cavern " + ncaverns);
+
+    for (String cavern : caverns) {
+      maybeConnectCavern(cavern, NORTH);
+      maybeConnectCavern(cavern, SOUTH);
+      maybeConnectCavern(cavern, EAST);
+      maybeConnectCavern(cavern, WEST);
+    }
+
+    String playerCavern = anyCavern();
+    game.setPlayerCavern(playerCavern);
+    game.setWumpusCavern(anyOther(playerCavern));
+    game.addBatCavern(anyOther(playerCavern));
+    game.addBatCavern(anyOther(playerCavern));
+    game.addBatCavern(anyOther(playerCavern));
+
+    game.addPitCavern(anyOther(playerCavern));
+    game.addPitCavern(anyOther(playerCavern));
+    game.addPitCavern(anyOther(playerCavern));
+
     game.setQuiver(5);
+  }
+
+  private static void maybeConnectCavern(String cavern, HuntTheWumpus.Direction direction) {
+    if (Math.random() > .2)
+      game.connectCavern(cavern, anyOther(cavern), direction);
+  }
+
+  private static String anyOther(String cavern) {
+    String otherCavern = cavern;
+    while (cavern.equals(otherCavern)) {
+      otherCavern = anyCavern();
+    }
+    return otherCavern;
+  }
+
+  private static String anyCavern() {
+    return caverns.get((int) (Math.random() * caverns.size()));
   }
 
   public void noPassage() {
@@ -122,14 +124,18 @@ public class Main implements HtwMessageReceiver {
 
   public void playerShootsSelfInBack() {
     System.out.println("You shot yourself in the back.");
+    System.exit(0);
   }
 
   public void playerKillsWumpus() {
     System.out.println("You killed the Wumpus.");
+    System.exit(0);
   }
 
+
   public void playerShootsWall() {
-    System.out.println("You shot the wall.");
+    System.out.println("You shot the wall and killed yourself.");
+    System.exit(0);
   }
 
   public void arrowsFound(Integer arrowsFound) {
@@ -138,14 +144,17 @@ public class Main implements HtwMessageReceiver {
 
   public void fellInPit() {
     System.out.println("You fell in a pit.");
+    System.exit(0);
   }
 
   public void playerMovesToWumpus() {
     System.out.println("You walked into the waiting arms of the Wumpus.");
+    System.exit(0);
   }
 
   public void wumpusMovesToPlayer() {
     System.out.println("The Wumpus has found you.");
+    System.exit(0);
   }
 
   public void batsTransport() {
