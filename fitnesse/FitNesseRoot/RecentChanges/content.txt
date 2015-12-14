@@ -1,4 +1,4 @@
-|HuntTheWumpus.ReleaseOne.HuntingWithArrows.PlayerKilledByShootingWall||18:01:20 lun, dic 14, 2015|
+|HuntTheWumpus.ReleaseOne.HuntingWithArrows.PlayerKilledByShootingWall||18:03:30 lun, dic 14, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.PlayerCanNotShootWithoutArrows||17:55:01 lun, dic 14, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowStopsWhenHittingWumpus||17:39:41 lun, dic 14, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowsAccumulateInFarthestCavern||17:28:01 lun, dic 14, 2015|

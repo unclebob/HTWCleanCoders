@@ -11,3 +11,9 @@
 |Given player in cavern when shooting then shoots the wall|
 |cavern|direction|
 |FarLeft|North|
+|FarLeft|West|
+|FarLeft|East|
+|FarLeft|West|
+|FarRight|East|
+|Top|North|
+|Bottom|South|
