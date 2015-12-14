@@ -1,4 +1,5 @@
-|HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowKillsWumpus||17:01:42 lun, dic 14, 2015|
+|HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowKillsWumpus||17:05:37 lun, dic 14, 2015|
+|HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowStopsWhenHittingWumpus||17:05:19 lun, dic 14, 2015|
 |HuntTheWumpus.ScenarioLibrary||13:46:54 Wed, Nov 11, 2015|
 |HuntTheWumpus.ReleaseOne.PlayerRecievesStatusAfterEachTurn.AvailablePassagesAreReported||11:59:47 Tue, Oct 13, 2015|
 |HuntTheWumpus.ReleaseOne.PitCaverns.PlayerIsInformedAboutFallingIntoPit||06:57:44 Tue, Oct 13, 2015|
