@@ -1,7 +1,7 @@
+|HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowsAccumulateInFarthestCavern||18:04:50 lun, dic 14, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.PlayerKilledByShootingWall||18:03:30 lun, dic 14, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.PlayerCanNotShootWithoutArrows||17:55:01 lun, dic 14, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowStopsWhenHittingWumpus||17:39:41 lun, dic 14, 2015|
-|HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowsAccumulateInFarthestCavern||17:28:01 lun, dic 14, 2015|
 |HuntTheWumpus.ScenarioLibrary||17:21:27 lun, dic 14, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowKillsWumpus||17:05:37 lun, dic 14, 2015|
 |HuntTheWumpus.ReleaseOne.PlayerRecievesStatusAfterEachTurn.AvailablePassagesAreReported||11:59:47 Tue, Oct 13, 2015|
