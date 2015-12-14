@@ -10,3 +10,6 @@
 |Then player can not shoot in|
 |direction|
 |East|
+|West|
+|North|
+|South|
