@@ -13,3 +13,6 @@
 !|Given player in cavern when shooting then arrows accumulate in|
 |cavern|direction|farthestCavern|
 |FarLeft|East|FarRight|
+|FarRight|West|FarLeft|
+|Top|South|Bottom|
+|Bottom|North|Top|
