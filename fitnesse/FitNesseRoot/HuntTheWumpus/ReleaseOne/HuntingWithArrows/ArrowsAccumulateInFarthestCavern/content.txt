@@ -1,11 +1,15 @@
--!|script|
+|scenario|Given player in cavern|cavern|when shooting|direction|then arrows accumulate in|farthestCavern|
 |Given Cross Map|
-|Given the player is in cavern FarLeft|
+|Given the player is in cavern @cavern|
 |Given the player has 3 arrows|
-|When the player shoots East|
-|Then there is 1 arrow in cavern FarRight|
-|When the player shoots East|
-|Then there are 2 arrows in cavern FarRight|
-|When the player shoots East|
-|Then there are 3 arrows in cavern FarRight|
+|When the player shoots @direction|
+|Then there is 1 arrow in cavern @farthestCavern|
+|When the player shoots @direction|
+|Then there are 2 arrows in cavern @farthestCavern|
+|When the player shoots @direction|
+|Then there are 3 arrows in cavern @farthestCavern|
 |Then the player has no arrows|
+
+!|Given player in cavern when shooting then arrows accumulate in|
+|cavern|direction|farthestCavern|
+|FarLeft|East|FarRight|
