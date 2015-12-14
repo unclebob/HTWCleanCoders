@@ -125,4 +125,9 @@ public class HtwFixture {
   public int arrowsInCavern(String cavern) {
     return game.getArrowsInCavern(cavern);
   }
+
+  public boolean clearMap() {
+    game.clearMap();
+    return true;
+  }
 }

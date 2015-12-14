@@ -110,6 +110,17 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       return integer.intValue();
   }
 
+  public void clearMap() {
+    playerCavern = "NONE";
+    wumpusCavern = "NONE";
+
+    connections.clear();
+    batCaverns.clear();
+    pitCaverns.clear();
+    arrowsIn.clear();
+    caverns.clear();
+  }
+
   private class Connection {
     String from;
     String to;

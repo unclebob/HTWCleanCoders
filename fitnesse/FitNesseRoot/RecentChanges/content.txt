@@ -1,6 +1,6 @@
+|HuntTheWumpus.ScenarioLibrary||17:21:27 lun, dic 14, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowKillsWumpus||17:05:37 lun, dic 14, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowStopsWhenHittingWumpus||17:05:19 lun, dic 14, 2015|
-|HuntTheWumpus.ScenarioLibrary||13:46:54 Wed, Nov 11, 2015|
 |HuntTheWumpus.ReleaseOne.PlayerRecievesStatusAfterEachTurn.AvailablePassagesAreReported||11:59:47 Tue, Oct 13, 2015|
 |HuntTheWumpus.ReleaseOne.PitCaverns.PlayerIsInformedAboutFallingIntoPit||06:57:44 Tue, Oct 13, 2015|
 |HuntTheWumpus.ReleaseOne.PitCaverns||06:55:37 Tue, Oct 13, 2015|
@@ -17,7 +17,6 @@
 |HuntTheWumpus.SetUp||09:21:04 Fri, Oct 09, 2015|
 |HuntTheWumpus.ReleaseOne.WumpusKillsPlayer.WumpusMovesToPlayer||09:16:17 Fri, Oct 09, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.AfterShootingPlayersArrowLeavesQuiverAndLandsInFarthestCavern||09:08:42 Fri, Oct 09, 2015|
-|HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowsAccumulateInFarthestCavern||09:07:49 Fri, Oct 09, 2015|
 |HuntTheWumpus.ReleaseOne.WumpusKillsPlayer.PlayerMovesIntoWumpus||09:04:35 Fri, Oct 09, 2015|
 |HuntTheWumpus.ReleaseOne.WumpusKillsPlayer||08:59:43 Fri, Oct 09, 2015|
 |HuntTheWumpus.WumpusKillsPlayer||08:58:56 Fri, Oct 09, 2015|
