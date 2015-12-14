@@ -1,13 +1,31 @@
-|scenario|Given Wumpus in Middle and player in cavern|cavern|when shooting|direction|then should kill the Wumpus and cavern|finalCavern|should have no arrows|
+!3 Arrow kills Wumpus
+
+|scenario|Given Wumpus in Middle and player in cavern|cavern|when shooting|direction|then should kill the Wumpus|
+|Given Cross Map|
+|Given the player is in cavern @cavern|
+|Given the wumpus is in cavern Middle|
+|Given the player has 1 arrow|
+|When the player shoots @direction|
+|Then a|WUMPUS_KILLED|message is given|
+
+!|Given Wumpus in Middle and player in cavern when shooting then should kill the Wumpus|
+|cavern|direction|
+|FarLeft|East|
+|FarRight|West|
+|Top|South|
+|Bottom|North|
+
+!3 Arrow stops when hitting Wumpus
+
+|scenario|Given Wumpus in Middle and player in cavern|cavern|when shooting|direction|then cavern|finalCavern|should have no arrows|
 |Given Cross Map|
 |Given the player is in cavern @cavern|
 |Given the wumpus is in cavern Middle|
 |Given the player has 1 arrow|
 |When the player shoots @direction|
 |Then there are 0 arrows in cavern @finalCavern|
-|Then a|WUMPUS_KILLED|message is given|
 
-!|Given Wumpus in Middle and player in cavern when shooting then should kill the Wumpus and cavern should have no arrows|
+!|Given Wumpus in Middle and player in cavern when shooting then cavern should have no arrows|
 |cavern|direction|finalCavern|
 |FarLeft|East|FarRight|
 |FarRight|West|FarLeft|
