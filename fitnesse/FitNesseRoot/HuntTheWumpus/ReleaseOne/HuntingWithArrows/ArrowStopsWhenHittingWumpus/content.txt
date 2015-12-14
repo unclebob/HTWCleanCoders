@@ -1,13 +1,13 @@
-|scenario|Given Wumpus in Middle and player in cavern|cavern|when shooting|direction|then cavern|finalCavern|should have no arrows|
+|scenario|Given Wumpus in Middle and player in cavern|cavern|when shooting|direction|then cavern|farthestCavern|should have no arrows|
 |Given Cross Map|
 |Given the player is in cavern @cavern|
 |Given the wumpus is in cavern Middle|
 |Given the player has 1 arrow|
 |When the player shoots @direction|
-|Then there are 0 arrows in cavern @finalCavern|
+|Then there are 0 arrows in cavern @farthestCavern|
 
 !|Given Wumpus in Middle and player in cavern when shooting then cavern should have no arrows|
-|cavern|direction|finalCavern|
+|cavern|direction|farthestCavern|
 |FarLeft|East|FarRight|
 |FarRight|West|FarLeft|
 |Top|South|Bottom|
