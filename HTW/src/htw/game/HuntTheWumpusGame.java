@@ -5,6 +5,7 @@ import htw.HuntTheWumpus;
 
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class HuntTheWumpusGame implements HuntTheWumpus {
   private List<Connection> connections = new ArrayList<>();
@@ -41,17 +42,21 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private boolean reportNearby(Predicate<Connection> nearTest) {
-    for (Connection c : connections)
-      if (playerCavern.equals(c.from) && nearTest.test(c))
-        return true;
-    return false;
+    return connections.stream()
+            .filter(c -> playerCavern.equals(c.from) && nearTest.test(c))
+            .findAny()
+            .isPresent();
   }
 
   private void reportAvailableDirections() {
-    for (Connection c : connections) {
-      if (playerCavern.equals(c.from))
-        messageReceiver.passage(c.direction);
-    }
+    connections.stream()
+            .filter(isFromPlayerCavern())
+            .map(c -> c.direction)
+            .forEach(messageReceiver::passage);
+  }
+
+  private Predicate<Connection> isFromPlayerCavern() {
+    return c -> playerCavern.equals(c.from);
   }
 
   public void addBatCavern(String cavern) {
@@ -71,24 +76,40 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   protected void moveWumpus() {
-    List<String> wumpusChoices = new ArrayList<>();
-    for (Connection c : connections)
-      if (wumpusCavern.equals(c.from))
-        wumpusChoices.add(c.to);
+    List<String> wumpusChoices = connections.stream()
+            .filter(isFromWumpusCavern())
+            .map(c -> c.to)
+            .collect(Collectors.toList());
     wumpusChoices.add(wumpusCavern);
 
-    int nChoices = wumpusChoices.size();
-    int choice = (int) (Math.random() * nChoices);
-    wumpusCavern = wumpusChoices.get(choice);
+    wumpusCavern = wumpusChoices.stream()
+            .skip(randomCavernIndex(wumpusChoices.size()))
+            .findFirst()
+            .get();
+  }
+
+  private Predicate<Connection> isFromWumpusCavern() {
+    return c -> wumpusCavern.equals(c.from);
+  }
+
+  private int randomCavernIndex() {
+    return randomCavernIndex(caverns.size() - 1);
+  }
+
+  private int randomCavernIndex(int size) {
+    return new Random().nextInt(size);
   }
 
   private void randomlyTransportPlayer() {
-    Set<String> transportChoices = new HashSet<>(caverns);
-    transportChoices.remove(playerCavern);
-    int nChoices = transportChoices.size();
-    int choice = (int) (Math.random() * nChoices);
-    String[] choices = new String[nChoices];
-    playerCavern = transportChoices.toArray(choices)[choice];
+    playerCavern = caverns.stream()
+            .filter(excludePlayerCavern())
+            .skip(randomCavernIndex())
+            .findFirst()
+            .get();
+  }
+
+  private Predicate<String> excludePlayerCavern() {
+    return c -> !playerCavern.equals(c);
   }
 
   public void setQuiver(int arrows) {
@@ -129,10 +150,15 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public String findDestination(String cavern, Direction direction) {
-    for (Connection c : connections)
-      if (c.from.equals(cavern) && c.direction == direction)
-        return c.to;
-    return null;
+    Connection destination = connections.stream()
+            .filter(isDestination(cavern, direction))
+            .findFirst()
+            .orElse(null);
+    return destination != null ? destination.to : null;
+  }
+
+  private Predicate<Connection> isDestination(String cavern, Direction direction) {
+    return c -> c.from.equals(cavern) && c.direction == direction;
   }
 
   public Command makeRestCommand() {
@@ -242,10 +268,15 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       private String nextCavern(String cavern, Direction direction) {
-        for (Connection c : connections)
-          if (cavern.equals(c.from) && direction.equals(c.direction))
-            return c.to;
-        return null;
+        Connection connection = connections.stream()
+                .filter(isFromDirection(cavern, direction))
+                .findFirst()
+                .orElse(null);
+        return connection != null ? connection.to : null;
+      }
+
+      private Predicate<Connection> isFromDirection(String cavern, Direction direction) {
+        return c -> cavern.equals(c.from) && direction.equals(c.direction);
       }
     }
   }
