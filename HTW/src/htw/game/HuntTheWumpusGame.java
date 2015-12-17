@@ -23,6 +23,10 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     this.messageReceiver = receiver;
   }
 
+  public void initializeArrowsIn() {
+    arrowsIn = new HashMap<>();
+  }
+
   public void setPlayerCavern(String playerCavern) {
     this.playerCavern = playerCavern;
   }
@@ -129,6 +133,26 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       return 0;
     else
       return integer.intValue();
+  }
+
+  public String farthestCavern(String startingCavern, Direction direction) {
+    String cavern = startingCavern;
+    String furthestCavern = null;
+    for (int count = 0; count < 100 && (cavern = nextCavern(cavern, direction)) != null; count++)
+      furthestCavern = cavern;
+    return furthestCavern;
+  }
+
+  private String nextCavern(String cavern, Direction direction) {
+    Connection connection = connections.stream()
+            .filter(isFromDirection(cavern, direction))
+            .findFirst()
+            .orElse(null);
+    return connection != null ? connection.to : null;
+  }
+
+  private Predicate<Connection> isFromDirection(String cavern, Direction direction) {
+    return c -> cavern.equals(c.from) && direction.equals(c.direction);
   }
 
   private class Connection {
