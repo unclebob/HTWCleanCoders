@@ -1,8 +1,38 @@
 -|script|
 |Given Cross map|
-|Given the player is in cavern Middle|
-|Given the player has no arrows|
-|When the player shoots East|
-|Then a message|NO_ARROWS|is given|
-'
 
+{{{
+Cross Map
+''Links are bidirectional''
+
+
+                 [ Top  ]
+
+                 [Above ]
+
+[FarLeft] [Left] [Middle] [Right] [FarRight]
+
+                 [Below ]
+
+                 [Bottom]
+
+}}}
+
+!|Can player shoot without arrows|
+|player cavern|shooting direction|no arrows message given?|
+|FarLeft|East|Yes|
+|Left|East|Yes|
+|Middle|East|Yes|
+|Right|East|Yes|
+|FarRight|West|Yes|
+|Right|West|Yes|
+|Middle|West|Yes|
+|Left|West|Yes|
+|Top|South|Yes|
+|Above|South|Yes|
+|Middle|South|Yes|
+|Below|South|Yes|
+|Bottom|North|Yes|
+|Below|North|Yes|
+|Middle|North|Yes|
+|Above|North|Yes|
