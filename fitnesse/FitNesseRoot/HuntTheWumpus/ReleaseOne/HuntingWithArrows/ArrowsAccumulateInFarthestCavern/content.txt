@@ -1,11 +1,38 @@
 -!|script|
 |Given Cross Map|
-|Given the player is in cavern FarLeft|
-|Given the player has 3 arrows|
-|When the player shoots East|
-|Then there is 1 arrow in cavern FarRight|
-|When the player shoots East|
-|Then there are 2 arrows in cavern FarRight|
-|When the player shoots East|
-|Then there are 3 arrows in cavern FarRight|
-|Then the player has no arrows|
+
+{{{
+Cross Map
+''Links are bidirectional''
+
+
+                 [ Top  ]
+
+                 [Above ]
+
+[FarLeft] [Left] [Middle] [Right] [FarRight]
+
+                 [Below ]
+
+                 [Bottom]
+
+}}}
+
+!|Do arrows accumulate in farthest cavern|
+|player cavern|arrow count|shooting direction|farthest cavern?|count after first shot?|count after second shot?|count after third shot?|
+|FarLeft|3|East|FarRight|1|2|3|
+|Left|3|East|FarRight|1|2|3|
+|Middle|3|East|FarRight|1|2|3|
+|Right|3|East|FarRight|1|2|3|
+|FarRight|3|West|FarLeft|1|2|3|
+|Right|3|West|FarLeft|1|2|3|
+|Middle|3|West|FarLeft|1|2|3|
+|Left|3|West|FarLeft|1|2|3|
+|Bottom|3|North|Top|1|2|3|
+|Below|3|North|Top|1|2|3|
+|Middle|3|North|Top|1|2|3|
+|Above|3|North|Top|1|2|3|
+|Top|3|South|Bottom|1|2|3|
+|Above|3|South|Bottom|1|2|3|
+|Middle|3|South|Bottom|1|2|3|
+|Below|3|South|Bottom|1|2|3|
