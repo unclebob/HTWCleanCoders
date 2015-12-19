@@ -130,4 +130,11 @@ public class HtwFixture {
     game.clearMap();
     return true;
   }
+
+  public boolean connectNumberedCavernsInOrderGoing(int numberOfCaverns, String direction) {
+    for (int i = 1; i < numberOfCaverns; i++) {
+      game.connectCavern(String.valueOf(i), String.valueOf(i+1), toDirection(direction));
+    }
+    return true;
+  }
 }
