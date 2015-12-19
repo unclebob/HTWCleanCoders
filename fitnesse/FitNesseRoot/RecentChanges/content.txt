@@ -1,7 +1,11 @@
+|HuntTheWumpus.ReleaseOne.PitCaverns.PlayerCanNotAddPitCoverOnceAdded||08:43:44 Sat, Dec 19, 2015|
+|HuntTheWumpus.ReleaseOne.PitCaverns.PlayerCanAddPitCoverToAdjacentCavern||08:42:24 Sat, Dec 19, 2015|
+|HuntTheWumpus.ReleaseOne.PitCaverns.PlayerVisitsAdjacentCavernWithPitAndPitCoverAndLives||02:16:26 Fri, Dec 18, 2015|
+|HuntTheWumpus.ReleaseOne.PitCaverns.PlayerCanNotAddPitCoverToNonAdjacentCavern||02:08:05 Fri, Dec 18, 2015|
+|HuntTheWumpus.ScenarioLibrary||02:06:27 Fri, Dec 18, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.PlayerCanNotShootWithoutArrows||22:27:02 Thu, Dec 17, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowsAccumulateInFarthestCavern||21:38:52 Thu, Dec 17, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowKillsWumpus||24:06:08 Thu, Dec 17, 2015|
-|HuntTheWumpus.ScenarioLibrary||13:46:54 Wed, Nov 11, 2015|
 |HuntTheWumpus.ReleaseOne.PlayerRecievesStatusAfterEachTurn.AvailablePassagesAreReported||11:59:47 Tue, Oct 13, 2015|
 |HuntTheWumpus.ReleaseOne.PitCaverns.PlayerIsInformedAboutFallingIntoPit||06:57:44 Tue, Oct 13, 2015|
 |HuntTheWumpus.ReleaseOne.PitCaverns||06:55:37 Tue, Oct 13, 2015|

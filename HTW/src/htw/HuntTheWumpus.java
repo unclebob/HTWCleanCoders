@@ -42,6 +42,7 @@ public interface HuntTheWumpus {
   HuntTheWumpusGame.Command makeRestCommand();
   HuntTheWumpusGame.Command makeShootCommand(Direction direction);
   HuntTheWumpusGame.Command makeMoveCommand(Direction direction);
+  HuntTheWumpusGame.Command makeAddPitCoverCommand(Direction direction);
 
   public interface Command {
     void execute();

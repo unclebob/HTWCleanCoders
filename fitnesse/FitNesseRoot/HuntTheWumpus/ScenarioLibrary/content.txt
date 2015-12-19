@@ -15,6 +15,9 @@
 |scenario|Given the _ cavern has a pit|cavern|
 |set cavern|@cavern|as pit|
 
+|scenario|When the player adds a pit cover to the|dir|
+|add pit cover|@dir|
+
 !3 Player Scenarios
 
 |scenario|Given the player is in cavern|c|

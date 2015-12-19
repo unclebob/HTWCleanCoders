@@ -99,6 +99,14 @@ public class Main implements HtwMessageReceiver {
         c = game.makeShootCommand(NORTH);
       else if (command.equalsIgnoreCase("ss"))
         c = game.makeShootCommand(SOUTH);
+      else if (command.equalsIgnoreCase("pce"))
+        c = game.makeAddPitCoverCommand(EAST);
+      else if (command.equalsIgnoreCase("pcw"))
+        c = game.makeAddPitCoverCommand(WEST);
+      else if (command.equalsIgnoreCase("pcn"))
+        c = game.makeAddPitCoverCommand(NORTH);
+      else if (command.equalsIgnoreCase("pcs"))
+        c = game.makeAddPitCoverCommand(SOUTH);
       else if (command.equalsIgnoreCase("q"))
         return;
 
@@ -234,6 +242,21 @@ public class Main implements HtwMessageReceiver {
 
   public void batsTransport() {
     System.out.println("Some bats carried you away.");
+  }
+
+  @Override
+  public void addPitCoverToAdjacentCavern(Direction direction) {
+    System.out.println("Pit cover added to cavern to the " + direction);
+  }
+
+  @Override
+  public void cavernNotAdjacentForPitCover() {
+    System.out.println("You cannot add a pit cover in that direction");
+  }
+
+  @Override
+  public void noPitCover() {
+    System.out.println("You have no more pit covers");
   }
 
   private void hit(int points) {

@@ -1,11 +1,13 @@
 package htw;
 
+import htw.HuntTheWumpus.Direction;
+
 public interface HtwMessageReceiver {
   void noPassage();
   void hearBats();
   void hearPit();
   void smellWumpus();
-  void passage(HuntTheWumpus.Direction direction);
+  void passage(Direction direction);
   void noArrows();
   void arrowShot();
   void playerShootsSelfInBack();
@@ -16,4 +18,7 @@ public interface HtwMessageReceiver {
   void playerMovesToWumpus();
   void wumpusMovesToPlayer();
   void batsTransport();
+  void addPitCoverToAdjacentCavern(Direction direction);
+  void cavernNotAdjacentForPitCover();
+  void noPitCover();
 }

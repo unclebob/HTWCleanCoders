@@ -1,5 +1,6 @@
 package htw.game;
 
+import com.sun.corba.se.spi.legacy.connection.GetEndPointInfoAgainException;
 import htw.HtwMessageReceiver;
 import htw.HuntTheWumpus;
 
@@ -18,6 +19,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   private String wumpusCavern = "NONE";
   private int quiver = 0;
   private Map<String, Integer> arrowsIn = new HashMap<>();
+  private String cavernWithPitCover = "NONE";
 
   public HuntTheWumpusGame(HtwMessageReceiver receiver) {
     this.messageReceiver = receiver;
@@ -197,6 +199,10 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     return new MoveCommand(direction);
   }
 
+  public Command makeAddPitCoverCommand(Direction direction) {
+    return new AddPitCoverCommand(direction);
+  }
+
   public abstract class GameCommand implements Command {
     public void execute() {
       processCommand();
@@ -344,7 +350,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     private void checkForPit() {
-      if (pitCaverns.contains(playerCavern))
+      if (pitCaverns.contains(playerCavern) && !cavernWithPitCover.equals(playerCavern))
         messageReceiver.fellInPit();
     }
 
@@ -354,6 +360,29 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
         messageReceiver.arrowsFound(arrowsFound);
       quiver += arrowsFound;
       arrowsIn.put(playerCavern, 0);
+    }
+  }
+
+  private class AddPitCoverCommand implements Command {
+    private Direction direction;
+
+    public AddPitCoverCommand(Direction direction) {
+      this.direction = direction;
+    }
+
+    public void execute() {
+      if (cavernWithPitCover.equals("NONE")) {
+        String destination = findDestination(playerCavern, direction);
+        if (destination != null) {
+          cavernWithPitCover = destination;
+          messageReceiver.addPitCoverToAdjacentCavern(direction);
+        } else {
+          messageReceiver.cavernNotAdjacentForPitCover();
+        }
+      }
+      else {
+        messageReceiver.noPitCover();
+      }
     }
   }
 }
