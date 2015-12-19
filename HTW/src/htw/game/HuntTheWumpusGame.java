@@ -5,6 +5,7 @@ import htw.HuntTheWumpus;
 
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class HuntTheWumpusGame implements HuntTheWumpus {
   private List<Connection> connections = new ArrayList<>();
@@ -41,29 +42,20 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private boolean reportNearby(Predicate<Connection> nearTest) {
-    String cavern = playerCavern;
-
-    for (Connection c : connectionsOf(cavern))
-      if (nearTest.test(c))
-        return true;
-    return false;
+    return connectionsOf(playerCavern).stream()
+        .anyMatch(nearTest::test);
   }
 
   private void reportAvailableDirections() {
-    String cavern = playerCavern;
-
-    for (Connection c : connectionsOf(cavern))
-      messageReceiver.passage(c.direction);
+    connectionsOf(playerCavern).stream()
+        .map(c -> c.direction)
+        .forEach(messageReceiver::passage);
   }
 
   private List<Connection> connectionsOf(String cavern) {
-    List<Connection> fromConnections = new ArrayList<>();
-    for (Connection c : connections) {
-      if (cavern.equals(c.from)) {
-        fromConnections.add(c);
-      }
-    }
-    return fromConnections;
+    return connections.stream()
+        .filter(c -> cavern.equals(c.from))
+        .collect(Collectors.toList());
   }
 
 
@@ -86,9 +78,9 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   protected void moveWumpus() {
     String cavern = wumpusCavern;
 
-    List<String> wumpusChoices = new ArrayList<>();
-    for (Connection c : connectionsOf(cavern))
-      wumpusChoices.add(c.to);
+    List<String> wumpusChoices = connectionsOf(cavern).stream()
+        .map(c -> c.to)
+        .collect(Collectors.toList());
 
     wumpusChoices.add(wumpusCavern);
 
@@ -122,7 +114,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     if (integer == null)
       return 0;
     else
-      return integer.intValue();
+      return integer;
   }
 
   public void clearMap() {
@@ -155,11 +147,11 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public String findDestination(String cavern, Direction direction) {
-    for (Connection c : connections)
-      if (c.from.equals(cavern))
-        if (c.direction == direction)
-          return c.to;
-    return null;
+    return connections.stream()
+        .filter(c -> c.from.equals(cavern) && c.direction.equals(direction))
+        .map(c -> c.to)
+        .findAny()
+        .orElse(null);
   }
 
   public Command makeRestCommand() {
@@ -269,10 +261,11 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       private String nextCavern(String cavern, Direction direction) {
-        for (Connection c : connectionsOf(cavern))
-          if (direction.equals(c.direction))
-            return c.to;
-        return null;
+        return connectionsOf(cavern).stream()
+            .filter(c -> c.direction.equals(direction))
+            .map(c -> c.to)
+            .findAny()
+            .orElse(null);
       }
     }
   }
