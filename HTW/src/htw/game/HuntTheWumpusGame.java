@@ -58,7 +58,6 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
         .collect(Collectors.toList());
   }
 
-
   public void addBatCavern(String cavern) {
     batCaverns.add(cavern);
   }
@@ -85,7 +84,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     wumpusChoices.add(wumpusCavern);
 
     int nChoices = wumpusChoices.size();
-    int choice = (int) (Math.random() * nChoices);
+    int choice = randomChoice(nChoices);
     wumpusCavern = wumpusChoices.get(choice);
   }
 
@@ -93,9 +92,13 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     Set<String> transportChoices = new HashSet<>(caverns);
     transportChoices.remove(playerCavern);
     int nChoices = transportChoices.size();
-    int choice = (int) (Math.random() * nChoices);
+    int choice = randomChoice(nChoices);
     String[] choices = new String[nChoices];
     playerCavern = transportChoices.toArray(choices)[choice];
+  }
+
+  private int randomChoice(int numberOfPossibleChoices) {
+    return (int) (Math.random() * numberOfPossibleChoices);
   }
 
   public void setQuiver(int arrows) {
