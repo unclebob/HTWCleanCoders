@@ -41,18 +41,31 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private boolean reportNearby(Predicate<Connection> nearTest) {
-    for (Connection c : connections)
-      if (playerCavern.equals(c.from) && nearTest.test(c))
+    String cavern = playerCavern;
+
+    for (Connection c : connectionsOf(cavern))
+      if (nearTest.test(c))
         return true;
     return false;
   }
 
   private void reportAvailableDirections() {
-    for (Connection c : connections) {
-      if (playerCavern.equals(c.from))
-        messageReceiver.passage(c.direction);
-    }
+    String cavern = playerCavern;
+
+    for (Connection c : connectionsOf(cavern))
+      messageReceiver.passage(c.direction);
   }
+
+  private List<Connection> connectionsOf(String cavern) {
+    List<Connection> fromConnections = new ArrayList<>();
+    for (Connection c : connections) {
+      if (cavern.equals(c.from)) {
+        fromConnections.add(c);
+      }
+    }
+    return fromConnections;
+  }
+
 
   public void addBatCavern(String cavern) {
     batCaverns.add(cavern);
@@ -71,10 +84,12 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   protected void moveWumpus() {
+    String cavern = wumpusCavern;
+
     List<String> wumpusChoices = new ArrayList<>();
-    for (Connection c : connections)
-      if (wumpusCavern.equals(c.from))
-        wumpusChoices.add(c.to);
+    for (Connection c : connectionsOf(cavern))
+      wumpusChoices.add(c.to);
+
     wumpusChoices.add(wumpusCavern);
 
     int nChoices = wumpusChoices.size();
@@ -141,8 +156,9 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
   public String findDestination(String cavern, Direction direction) {
     for (Connection c : connections)
-      if (c.from.equals(cavern) && c.direction == direction)
-        return c.to;
+      if (c.from.equals(cavern))
+        if (c.direction == direction)
+          return c.to;
     return null;
   }
 
@@ -253,8 +269,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       private String nextCavern(String cavern, Direction direction) {
-        for (Connection c : connections)
-          if (cavern.equals(c.from) && direction.equals(c.direction))
+        for (Connection c : connectionsOf(cavern))
+          if (direction.equals(c.direction))
             return c.to;
         return null;
       }
