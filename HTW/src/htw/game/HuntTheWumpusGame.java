@@ -13,7 +13,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   private Set<String> caverns = new HashSet<>();
   private Cavern playerCavern = cavern("NONE");
   private HtwMessageReceiver messageReceiver;
-  private Set<String> batCaverns = new HashSet<>();
+  private Set<Cavern> batCaverns = new HashSet<>();
   private Set<String> pitCaverns = new HashSet<>();
   private Cavern wumpusCavern = cavern("NONE");
   private int quiver = 0;
@@ -38,7 +38,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
   private void reportStatus() {
     reportAvailableDirections();
-    if (reportNearby(c -> batCaverns.contains(c.to)))
+    if (reportNearby(c -> batCaverns.contains(cavern(c.to))))
       messageReceiver.hearBats();
     if (reportNearby(c -> pitCaverns.contains(c.to)))
       messageReceiver.hearPit();
@@ -64,7 +64,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public void addBatCavern(String cavern) {
-    batCaverns.add(cavern);
+    batCaverns.add(cavern(cavern));
   }
 
   public void addPitCavern(String cavern) {
@@ -323,7 +323,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     private void checkForBats() {
-      if (batCaverns.contains(playerCavern.name)) {
+      if (batCaverns.contains(playerCavern)) {
         messageReceiver.batsTransport();
         randomlyTransportPlayer();
       }
