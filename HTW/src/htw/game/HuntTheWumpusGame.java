@@ -15,7 +15,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   private HtwMessageReceiver messageReceiver;
   private Set<String> batCaverns = new HashSet<>();
   private Set<String> pitCaverns = new HashSet<>();
-  private String wumpusCavern = "NONE";
+  private Cavern wumpusCavern = cavern("NONE");
   private int quiver = 0;
   private Map<String, Integer> arrowsIn = new HashMap<>();
 
@@ -42,7 +42,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       messageReceiver.hearBats();
     if (reportNearby(c -> pitCaverns.contains(c.to)))
       messageReceiver.hearPit();
-    if (reportNearby(c -> wumpusCavern.equals(c.to)))
+    if (reportNearby(c -> wumpusCavern.name.equals(c.to)))
       messageReceiver.smellWumpus();
   }
 
@@ -72,25 +72,25 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public void setWumpusCavern(String wumpusCavern) {
-    this.wumpusCavern = wumpusCavern;
+    this.wumpusCavern = cavern(wumpusCavern);
   }
 
   public String getWumpusCavern() {
-    return wumpusCavern;
+    return wumpusCavern.name;
   }
 
   protected void moveWumpus() {
-    String cavern = wumpusCavern;
+    String cavern = wumpusCavern.name;
 
     List<String> wumpusChoices = connectionsOf(cavern).stream()
         .map(c -> c.to)
         .collect(Collectors.toList());
 
-    wumpusChoices.add(wumpusCavern);
+    wumpusChoices.add(wumpusCavern.name);
 
     int nChoices = wumpusChoices.size();
     int choice = randomChoice(nChoices);
-    wumpusCavern = wumpusChoices.get(choice);
+    wumpusCavern = cavern(wumpusChoices.get(choice));
   }
 
   private void randomlyTransportPlayer() {
@@ -127,7 +127,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
   public void clearMap() {
     playerCavern = cavern("NONE");
-    wumpusCavern = "NONE";
+    wumpusCavern = cavern("NONE");
 
     connections.clear();
     batCaverns.clear();
@@ -205,7 +205,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     protected void checkWumpusMovedToPlayer() {
-      if (playerCavern.name.equals(wumpusCavern))
+      if (playerCavern.equals(wumpusCavern))
         messageReceiver.wumpusMovesToPlayer();
     }
 
@@ -273,7 +273,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       private boolean shotWumpus() {
-        if (arrowCavern.equals(wumpusCavern)) {
+        if (arrowCavern.equals(wumpusCavern.name)) {
           messageReceiver.playerKillsWumpus();
           hitSomething = true;
           return true;
@@ -318,7 +318,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     private void checkForWumpus() {
-      if (wumpusCavern.equals(playerCavern.name))
+      if (wumpusCavern.equals(playerCavern))
         messageReceiver.playerMovesToWumpus();
     }
 
