@@ -40,7 +40,7 @@ public abstract class GameCommand implements HuntTheWumpus.Command {
   }
 
   protected void checkWumpusMovedToPlayer() {
-    if (map.getPlayerCavern().equals(map.getWumpusCavern()))
+    if (map.playerIsInWumpusCavern())
       messageReceiver.wumpusMovesToPlayer();
   }
 

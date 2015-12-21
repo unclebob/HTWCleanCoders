@@ -65,6 +65,10 @@ public class HuntTheWumpusMap {
     return batCaverns.contains(playerCavern);
   }
 
+  public boolean playerIsInWumpusCavern() {
+    return playerCavern.equals(wumpusCavern);
+  }
+
   public boolean wumpusCavernIsNear() {
     return reportNearby(wumpusCavern::equals);
   }
@@ -125,5 +129,4 @@ public class HuntTheWumpusMap {
     arrowsIn.clear();
     caverns.clear();
   }
-
 }
