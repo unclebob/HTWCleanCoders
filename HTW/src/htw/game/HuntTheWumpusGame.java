@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class HuntTheWumpusGame implements HuntTheWumpus {
   private List<Connection> connections = new ArrayList<>();
 
-  private Set<String> caverns = new HashSet<>();
+  private Set<Cavern> caverns = new HashSet<>();
   private Cavern playerCavern = cavern("NONE");
   private HtwMessageReceiver messageReceiver;
   private Set<Cavern> batCaverns = new HashSet<>();
@@ -94,12 +94,12 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private void randomlyTransportPlayer() {
-    Set<String> transportChoices = new HashSet<>(caverns);
-    transportChoices.remove(playerCavern.name);
+    Set<Cavern> transportChoices = new HashSet<>(caverns);
+    transportChoices.remove(playerCavern);
     int nChoices = transportChoices.size();
     int choice = randomChoice(nChoices);
-    String[] choices = new String[nChoices];
-    playerCavern = cavern(transportChoices.toArray(choices)[choice]);
+    Cavern[] choices = new Cavern[nChoices];
+    playerCavern = transportChoices.toArray(choices)[choice];
   }
 
   private int randomChoice(int numberOfPossibleChoices) {
@@ -150,8 +150,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
   public void connectCavern(String from, String to, Direction direction) {
     connections.add(new Connection(from, to, direction));
-    caverns.add(from);
-    caverns.add(to);
+    caverns.add(cavern(from));
+    caverns.add(cavern(to));
   }
 
   public String findDestination(String cavern, Direction direction) {
