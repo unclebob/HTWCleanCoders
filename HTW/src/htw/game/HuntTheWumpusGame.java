@@ -5,20 +5,24 @@ import htw.HuntTheWumpus;
 
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class HuntTheWumpusGame implements HuntTheWumpus {
   private Set<Cavern> caverns = new HashSet<>();
-  private Cavern playerCavern = Cavern.NULL;
-  private Cavern wumpusCavern = Cavern.NULL;
   private Set<Cavern> batCaverns = new HashSet<>();
   private Set<Cavern> pitCaverns = new HashSet<>();
+  private Cavern playerCavern = Cavern.NULL;
+  private Cavern wumpusCavern = Cavern.NULL;
+
   private int quiver = 0;
   private Map<Cavern, Integer> arrowsIn = new HashMap<>();
+
   private HtwMessageReceiver messageReceiver;
-  private RandomChooser randomChooser = new RandomChooser();
+  private RandomChooser randomChooser;
 
   public HuntTheWumpusGame(HtwMessageReceiver receiver) {
     this.messageReceiver = receiver;
+    this.randomChooser = new RandomChooser();
   }
 
   private Cavern cavern(String cavernName) {
@@ -38,6 +42,18 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
   private void reportStatus() {
     reportAvailableDirections();
+    reportSpecialLocations();
+  }
+
+  private void reportAvailableDirections() {
+    availableDirections().forEach(messageReceiver::passage);
+  }
+
+  private Set<Direction> availableDirections() {
+    return playerCavern.availableDirections();
+  }
+
+  private void reportSpecialLocations() {
     if (reportNearby(batCaverns::contains))
       messageReceiver.hearBats();
     if (reportNearby(pitCaverns::contains))
@@ -47,13 +63,11 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private boolean reportNearby(Predicate<Cavern> nearTest) {
-    return playerCavern.connectedCaverns().stream()
-        .anyMatch(nearTest::test);
+    return nearCaverns().anyMatch(nearTest::test);
   }
 
-  private void reportAvailableDirections() {
-    playerCavern.availableDirections()
-        .forEach(messageReceiver::passage);
+  private Stream<Cavern> nearCaverns() {
+    return playerCavern.connectedCaverns().stream();
   }
 
   public void addBatCavern(String cavern) {
@@ -95,7 +109,11 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public Integer getArrowsInCavern(String cavern) {
-    return zeroIfNull(arrowsIn.get(cavern(cavern)));
+    return getArrowsInCavern(cavern(cavern));
+  }
+
+  private Integer getArrowsInCavern(Cavern cavern) {
+    return zeroIfNull(arrowsIn.get(cavern));
   }
 
   private int zeroIfNull(Integer integer) {
@@ -186,7 +204,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     private void incrementArrowsInCavern(Cavern arrowCavern) {
-      int arrows = getArrowsInCavern(arrowCavern.getName());
+      int arrows = getArrowsInCavern(arrowCavern);
       arrowsIn.put(arrowCavern, arrows + 1);
     }
 
