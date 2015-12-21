@@ -8,11 +8,11 @@ import java.util.function.Predicate;
 
 public class HuntTheWumpusGame implements HuntTheWumpus {
   private Set<Cavern> caverns = new HashSet<>();
-  private Cavern playerCavern = cavern("NONE");
+  private Cavern playerCavern = new NullCavern();
   private HtwMessageReceiver messageReceiver;
   private Set<Cavern> batCaverns = new HashSet<>();
   private Set<Cavern> pitCaverns = new HashSet<>();
-  private Cavern wumpusCavern = cavern("NONE");
+  private Cavern wumpusCavern = new NullCavern();
   private int quiver = 0;
   private Map<Cavern, Integer> arrowsIn = new HashMap<>();
 
@@ -116,8 +116,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public void clearMap() {
-    playerCavern = cavern("NONE");
-    wumpusCavern = cavern("NONE");
+    playerCavern = new NullCavern();
+    wumpusCavern = new NullCavern();
 
     batCaverns.clear();
     pitCaverns.clear();
@@ -136,10 +136,10 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
   public String findDestination(String cavern, Direction direction) {
     Cavern destination = cavern(cavern).findDestination(direction);
-    return destination == null ? null : destination.name;
+    return destination.isNull() ? null : destination.name;
   }
 
-  private class Cavern {
+  private static class Cavern {
     public String name;
     private Map<Direction, Cavern> connections = new HashMap<>();
 
@@ -163,7 +163,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     public Cavern findDestination(Direction direction) {
-      return connections.get(direction);
+      Cavern destination = connections.get(direction);
+      return destination != null ? destination : new NullCavern();
     }
 
     public Set<Direction> availableDirections() {
@@ -176,6 +177,20 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
     public void addConnection(Cavern to, Direction direction) {
       connections.put(direction, to);
+    }
+
+    public boolean isNull() {
+      return false;
+    }
+  }
+
+  private static class NullCavern extends Cavern {
+    public NullCavern() {
+      super("NONE");
+    }
+
+    public boolean isNull() {
+      return true;
     }
   }
 
@@ -256,7 +271,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
       public ArrowTracker trackArrow(Direction direction) {
         Cavern nextCavern;
-        for (int count = 0; (nextCavern = nextCavern(arrowCavern, direction)) != null; count++) {
+        for (int count = 0; !(nextCavern = arrowCavern.findDestination(direction)).isNull(); count++) {
           arrowCavern = nextCavern;
           if (shotSelfInBack()) return this;
           if (shotWumpus()) return this;
@@ -285,9 +300,6 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
         return false;
       }
 
-      private Cavern nextCavern(Cavern cavern, Direction direction) {
-        return cavern.findDestination(direction);
-      }
     }
   }
 
@@ -321,9 +333,9 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     public boolean movePlayer(Direction direction) {
-      String destination = findDestination(playerCavern.name, direction);
-      if (destination != null) {
-        playerCavern = cavern(destination);
+      Cavern destination = playerCavern.findDestination(direction);
+      if (!destination.isNull()) {
+        playerCavern = destination;
         return true;
       }
       return false;
