@@ -36,7 +36,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public String getPlayerCavern() {
-    return playerCavern.name;
+    return playerCavern.getName();
   }
 
   private void reportStatus() {
@@ -71,7 +71,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public String getWumpusCavern() {
-    return wumpusCavern.name;
+    return wumpusCavern.getName();
   }
 
   protected void moveWumpus() {
@@ -137,8 +137,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public String findDestination(String cavern, Direction direction) {
-    Cavern destination = cavern(cavern).findDestination(direction);
-    return destination.isNull() ? null : destination.name;
+    return cavern(cavern).findDestination(direction).getName();
   }
 
   public Command makeRestCommand() {
@@ -196,7 +195,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     private void incrementArrowsInCavern(Cavern arrowCavern) {
-      int arrows = getArrowsInCavern(arrowCavern.name);
+      int arrows = getArrowsInCavern(arrowCavern.getName());
       arrowsIn.put(arrowCavern, arrows + 1);
     }
 
@@ -295,7 +294,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     private void checkForArrows() {
-      Integer arrowsFound = getArrowsInCavern(playerCavern.name);
+      Integer arrowsFound = getArrowsInCavern(playerCavern.getName());
       if (arrowsFound > 0)
         messageReceiver.arrowsFound(arrowsFound);
       quiver += arrowsFound;

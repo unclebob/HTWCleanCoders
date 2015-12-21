@@ -5,8 +5,9 @@ import htw.HuntTheWumpus;
 import java.util.*;
 
 class Cavern {
-  public String name;
   public static final Cavern NULL = new NullCavern();
+
+  private String name;
   private Map<HuntTheWumpus.Direction, Cavern> connections = new HashMap<>();
 
   public Cavern(String name) {
@@ -42,7 +43,7 @@ class Cavern {
   public boolean equals(Object obj) {
     if (obj instanceof Cavern) {
       Cavern c = (Cavern) obj;
-      return name.equals(c.name);
+      return getName().equals(c.getName());
     }
 
     return false;
@@ -50,7 +51,11 @@ class Cavern {
 
   @Override
   public int hashCode() {
-    return name.hashCode();
+    return getName().hashCode();
+  }
+
+  public String getName() {
+    return name;
   }
 }
 
