@@ -101,9 +101,21 @@ public class Game {
     wumpusCavern = randomChooser.chooseFrom(wumpusChoices);
   }
 
+  public Cavern getPlayerDestinationGoing(Direction direction) {
+    return playerCavern.findDestination(direction);
+  }
+
   public void incrementArrowsIn(Cavern arrowCavern, int numberOfArrows) {
     int arrows = getArrowsInCavern(arrowCavern);
     arrowsIn.put(arrowCavern, arrows + numberOfArrows);
+  }
+
+  public void clearArrowsInPlayerCavern() {
+    arrowsIn.put(playerCavern, 0);
+  }
+
+  public int getArrowsInPlayerCavern() {
+    return getArrowsInCavern(playerCavern);
   }
 
   public Integer getArrowsInCavern(Cavern cavern) {
@@ -115,10 +127,6 @@ public class Game {
       return 0;
     else
       return integer;
-  }
-
-  public void clearArrowsInPlayerCavern() {
-    arrowsIn.put(playerCavern, 0);
   }
 
   public void clearMap() {

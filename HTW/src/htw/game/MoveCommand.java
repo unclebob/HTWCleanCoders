@@ -29,7 +29,7 @@ class MoveCommand extends GameCommand {
   }
 
   private void checkForWumpus() {
-    if (game.getWumpusCavern().equals(game.getPlayerCavern()))
+    if (game.playerIsInWumpusCavern())
       messageReceiver.playerMovesToWumpus();
   }
 
@@ -41,7 +41,7 @@ class MoveCommand extends GameCommand {
   }
 
   public void movePlayer(Direction direction) {
-    Cavern destination = game.getPlayerCavern().findDestination(direction);
+    Cavern destination = game.getPlayerDestinationGoing(direction);
     if (destination.isNull()) {
       throw new NoPassage();
     }
@@ -55,7 +55,7 @@ class MoveCommand extends GameCommand {
   }
 
   private void checkForArrows() {
-    int arrowsFound = game.getArrowsInCavern(game.getPlayerCavern());
+    int arrowsFound = game.getArrowsInPlayerCavern();
     if (arrowsFound > 0)
       messageReceiver.arrowsFound(arrowsFound);
     game.incrementQuiverBy(arrowsFound);
