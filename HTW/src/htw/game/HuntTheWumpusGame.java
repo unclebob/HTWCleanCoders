@@ -252,7 +252,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       else {
         messageReceiver.arrowShot();
         quiver--;
-        ArrowTracker arrowTracker = new ArrowTracker(playerCavern.name).trackArrow(direction);
+        ArrowTracker arrowTracker = new ArrowTracker(playerCavern).trackArrow(direction);
         if (arrowTracker.arrowHitSomething())
           return;
         incrementArrowsInCavern(arrowTracker.getArrowCavern());
@@ -268,8 +268,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       private boolean hitSomething = false;
       private String arrowCavern;
 
-      public ArrowTracker(String startingCavern) {
-        this.arrowCavern = startingCavern;
+      public ArrowTracker(Cavern startingCavern) {
+        this.arrowCavern = startingCavern.name;
       }
 
       boolean arrowHitSomething() {
