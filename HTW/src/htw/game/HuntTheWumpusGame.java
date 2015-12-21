@@ -155,11 +155,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public String findDestination(String cavern, Direction direction) {
-    return connections.stream()
-        .filter(c -> c.from.equals(cavern) && c.direction.equals(direction))
-        .map(c -> c.to)
-        .findAny()
-        .orElse(null);
+    return cavern(cavern).findDestination(direction);
   }
 
   private class Cavern {
@@ -187,6 +183,14 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       return connections.stream()
           .filter(c -> name.equals(c.from))
           .collect(Collectors.toList());
+    }
+
+    public String findDestination(Direction direction) {
+      return connections.stream()
+          .filter(c -> c.from.equals(name) && c.direction.equals(direction))
+          .map(c -> c.to)
+          .findAny()
+          .orElse(null);
     }
   }
 
