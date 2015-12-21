@@ -8,11 +8,11 @@ import java.util.function.Predicate;
 
 public class HuntTheWumpusGame implements HuntTheWumpus {
   private Set<Cavern> caverns = new HashSet<>();
-  private Cavern playerCavern = new NullCavern();
+  private Cavern playerCavern = Cavern.NULL;
   private HtwMessageReceiver messageReceiver;
   private Set<Cavern> batCaverns = new HashSet<>();
   private Set<Cavern> pitCaverns = new HashSet<>();
-  private Cavern wumpusCavern = new NullCavern();
+  private Cavern wumpusCavern = Cavern.NULL;
   private int quiver = 0;
   private Map<Cavern, Integer> arrowsIn = new HashMap<>();
 
@@ -116,8 +116,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public void clearMap() {
-    playerCavern = new NullCavern();
-    wumpusCavern = new NullCavern();
+    playerCavern = Cavern.NULL;
+    wumpusCavern = Cavern.NULL;
 
     batCaverns.clear();
     pitCaverns.clear();
@@ -137,65 +137,6 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   public String findDestination(String cavern, Direction direction) {
     Cavern destination = cavern(cavern).findDestination(direction);
     return destination.isNull() ? null : destination.name;
-  }
-
-  private static class Cavern {
-    public String name;
-    private Map<Direction, Cavern> connections = new HashMap<>();
-
-    public Cavern(String name) {
-      this.name = name;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-      if (obj instanceof Cavern) {
-        Cavern c = (Cavern) obj;
-        return name.equals(c.name);
-      }
-
-      return false;
-    }
-
-    @Override
-    public int hashCode() {
-      return name.hashCode();
-    }
-
-    public Cavern findDestination(Direction direction) {
-      Cavern destination = connections.get(direction);
-      return destination != null ? destination : new NullCavern();
-    }
-
-    public Set<Direction> availableDirections() {
-      return connections.keySet();
-    }
-
-    public List<Cavern> connectedCaverns() {
-      return new ArrayList<>(connections.values());
-    }
-
-    public void addConnection(Cavern to, Direction direction) {
-      connections.put(direction, to);
-    }
-
-    public boolean isNull() {
-      return false;
-    }
-
-    private boolean hasConnectionGoing(Direction direction) {
-      return !findDestination(direction).isNull();
-    }
-  }
-
-  private static class NullCavern extends Cavern {
-    public NullCavern() {
-      super("NONE");
-    }
-
-    public boolean isNull() {
-      return true;
-    }
   }
 
   public Command makeRestCommand() {
