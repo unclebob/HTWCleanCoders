@@ -17,7 +17,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   private Set<Cavern> pitCaverns = new HashSet<>();
   private Cavern wumpusCavern = cavern("NONE");
   private int quiver = 0;
-  private Map<String, Integer> arrowsIn = new HashMap<>();
+  private Map<Cavern, Integer> arrowsIn = new HashMap<>();
 
   public HuntTheWumpusGame(HtwMessageReceiver receiver) {
     this.messageReceiver = receiver;
@@ -115,7 +115,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public Integer getArrowsInCavern(String cavern) {
-    return zeroIfNull(arrowsIn.get(cavern));
+    return zeroIfNull(arrowsIn.get(cavern(cavern)));
   }
 
   private int zeroIfNull(Integer integer) {
@@ -240,7 +240,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
     private void incrementArrowsInCavern(String arrowCavern) {
       int arrows = getArrowsInCavern(arrowCavern);
-      arrowsIn.put(arrowCavern, arrows + 1);
+      arrowsIn.put(cavern(arrowCavern), arrows + 1);
     }
 
     private class ArrowTracker {
@@ -348,7 +348,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       if (arrowsFound > 0)
         messageReceiver.arrowsFound(arrowsFound);
       quiver += arrowsFound;
-      arrowsIn.put(playerCavern.name, 0);
+      arrowsIn.put(playerCavern, 0);
     }
   }
 }
