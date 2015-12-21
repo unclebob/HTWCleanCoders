@@ -137,4 +137,9 @@ public class HtwFixture {
     }
     return true;
   }
+
+  public String destinationGoing(String direction) {
+    String destination = game.findDestination(getPlayerCavern(), toDirection(direction));
+    return destination.isEmpty() ? "-" : destination;
+  }
 }

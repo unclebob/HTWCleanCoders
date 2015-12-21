@@ -6,7 +6,7 @@ import static htw.HuntTheWumpus.Direction;
 
 class NullCavern extends Cavern {
   public NullCavern() {
-    super("NONE");
+    super("");
   }
 
   public boolean isNull() {

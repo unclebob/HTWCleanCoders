@@ -153,7 +153,7 @@ public class Main implements HtwMessageReceiver {
   }
 
   private static void connectIfAvailable(String from, Direction direction, String to) {
-    if (game.findDestination(from, direction) == null) {
+    if (game.findDestination(from, direction).isEmpty()) {
       game.connectCavern(from, to, direction);
     }
   }

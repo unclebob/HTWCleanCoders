@@ -130,8 +130,8 @@ public class Game {
   }
 
   public void clearMap() {
-    setPlayerCavern(Cavern.NULL);
-    setWumpusCavern(Cavern.NULL);
+    playerCavern = Cavern.NULL;
+    wumpusCavern = Cavern.NULL;
 
     batCaverns.clear();
     pitCaverns.clear();

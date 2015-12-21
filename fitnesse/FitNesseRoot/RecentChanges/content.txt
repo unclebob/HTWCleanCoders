@@ -1,3 +1,4 @@
+|HuntTheWumpus.ReleaseOne.PlayerCanMoveThroughTheMap.CanFindDestinations||18:58:27 lun, dic 21, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowTravelAtMost103Caverns||03:39:03 sáb, dic 19, 2015|
 |HuntTheWumpus.ScenarioLibrary||03:37:18 sáb, dic 19, 2015|
 |HuntTheWumpus.ReleaseOne.HuntingWithArrows.ArrowTravelAtMost100Caverns||03:32:00 sáb, dic 19, 2015|
