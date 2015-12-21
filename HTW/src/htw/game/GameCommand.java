@@ -6,12 +6,10 @@ import htw.HuntTheWumpus;
 public abstract class GameCommand implements HuntTheWumpus.Command {
   protected HuntTheWumpusMap map = new HuntTheWumpusMap();
   protected HtwMessageReceiver messageReceiver;
-  protected HuntTheWumpusGame game;
 
-  public GameCommand(HuntTheWumpusGame game) {
-    this.game = game;
-    this.map = game.getMap();
-    this.messageReceiver = game.getMessageReceiver();
+  public GameCommand(HuntTheWumpusMap map, HtwMessageReceiver messageReceiver) {
+    this.map = map;
+    this.messageReceiver = messageReceiver;
   }
 
   public void execute() {

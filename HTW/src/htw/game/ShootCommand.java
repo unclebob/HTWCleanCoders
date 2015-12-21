@@ -1,5 +1,7 @@
 package htw.game;
 
+import htw.HtwMessageReceiver;
+
 import java.util.List;
 
 import static htw.HuntTheWumpus.Direction;
@@ -7,8 +9,8 @@ import static htw.HuntTheWumpus.Direction;
 class ShootCommand extends GameCommand {
   private Direction direction;
 
-  public ShootCommand(Direction direction, HuntTheWumpusGame game) {
-    super(game);
+  public ShootCommand(Direction direction, HuntTheWumpusMap map, HtwMessageReceiver messageReceiver) {
+    super(map, messageReceiver);
     this.direction = direction;
   }
 

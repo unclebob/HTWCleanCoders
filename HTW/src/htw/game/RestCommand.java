@@ -1,8 +1,11 @@
 package htw.game;
 
+import htw.HtwMessageReceiver;
+
 class RestCommand extends GameCommand {
-  public RestCommand(HuntTheWumpusGame game) {
-    super(game);
+
+  public RestCommand(HuntTheWumpusMap map, HtwMessageReceiver messageReceiver) {
+    super(map, messageReceiver);
   }
 
   public void processCommand() {

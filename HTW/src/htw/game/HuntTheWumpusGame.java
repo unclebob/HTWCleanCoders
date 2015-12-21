@@ -64,23 +64,15 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public Command makeRestCommand() {
-    return new RestCommand(this);
+    return new RestCommand(map, messageReceiver);
   }
 
   public Command makeShootCommand(Direction direction) {
-    return new ShootCommand(direction, this);
+    return new ShootCommand(direction, map, messageReceiver);
   }
 
   public Command makeMoveCommand(Direction direction) {
-    return new MoveCommand(direction, this);
-  }
-
-  HuntTheWumpusMap getMap() {
-    return map;
-  }
-
-  HtwMessageReceiver getMessageReceiver() {
-    return messageReceiver;
+    return new MoveCommand(direction, map, messageReceiver);
   }
 }
 

@@ -1,12 +1,14 @@
 package htw.game;
 
+import htw.HtwMessageReceiver;
+
 import static htw.HuntTheWumpus.Direction;
 
 class MoveCommand extends GameCommand {
   private Direction direction;
 
-  public MoveCommand(Direction direction, HuntTheWumpusGame game) {
-    super(game);
+  public MoveCommand(Direction direction, HuntTheWumpusMap map, HtwMessageReceiver messageReceiver) {
+    super(map, messageReceiver);
     this.direction = direction;
   }
 
@@ -53,7 +55,7 @@ class MoveCommand extends GameCommand {
   }
 
   private void checkForArrows() {
-    int arrowsFound = game.getArrowsInCavern(map.getPlayerCavern().getName());
+    int arrowsFound = map.getArrowsInCavern(map.getPlayerCavern());
     if (arrowsFound > 0)
       messageReceiver.arrowsFound(arrowsFound);
     map.incrementQuiverBy(arrowsFound);
