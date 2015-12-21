@@ -60,9 +60,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private void reportAvailableDirections() {
-    playerCavern.connections().stream()
-        .map(c -> c.direction)
-        .forEach(messageReceiver::passage);
+    playerCavern.availableDirections().forEach(messageReceiver::passage);
   }
 
   public void addBatCavern(String cavern) {
@@ -191,6 +189,12 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
           .map(c -> c.to)
           .findAny()
           .orElse(null);
+    }
+
+    public Set<Direction> availableDirections() {
+      return connections().stream()
+          .map(c -> c.direction)
+          .collect(Collectors.toSet());
     }
   }
 
