@@ -7,8 +7,6 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   protected HuntTheWumpusMap map = new HuntTheWumpusMap();
   private HtwMessageReceiver messageReceiver;
 
-  private int quiver = 0;
-
   public HuntTheWumpusGame(HtwMessageReceiver receiver) {
     this.messageReceiver = receiver;
   }
@@ -42,11 +40,11 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public void setQuiver(int arrows) {
-    this.quiver = arrows;
+    map.setQuiver(arrows);
   }
 
   public int getQuiver() {
-    return quiver;
+    return map.getQuiver();
   }
 
   public Integer getArrowsInCavern(String cavern) {
@@ -77,24 +75,12 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     return new MoveCommand(direction, this);
   }
 
-  public HuntTheWumpusMap getMap() {
+  HuntTheWumpusMap getMap() {
     return map;
   }
 
-  public HtwMessageReceiver getMessageReceiver() {
+  HtwMessageReceiver getMessageReceiver() {
     return messageReceiver;
-  }
-
-  void decrementQuiverBy(int arrowNumber) {
-    quiver -= arrowNumber;
-  }
-
-  boolean quiverEmpty() {
-    return quiver == 0;
-  }
-
-  public void incrementQuiverBy(int arrowNumber) {
-    quiver += arrowNumber;
   }
 }
 

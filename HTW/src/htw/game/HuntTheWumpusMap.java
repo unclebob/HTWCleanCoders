@@ -12,6 +12,7 @@ public class HuntTheWumpusMap {
 
   private Cavern playerCavern = Cavern.NULL;
   private Cavern wumpusCavern = Cavern.NULL;
+  private int quiver = 0;
 
   private Map<Cavern, Integer> arrowsIn = new HashMap<>();
   private RandomChooser randomChooser = new RandomChooser();
@@ -128,5 +129,25 @@ public class HuntTheWumpusMap {
     pitCaverns.clear();
     arrowsIn.clear();
     caverns.clear();
+  }
+
+  public int getQuiver() {
+    return quiver;
+  }
+
+  void setQuiver(int arrows) {
+    this.quiver = arrows;
+  }
+
+  public void decrementQuiverBy(int arrowNumber) {
+    quiver -= arrowNumber;
+  }
+
+  public boolean quiverEmpty() {
+    return quiver == 0;
+  }
+
+  public void incrementQuiverBy(int arrowNumber) {
+    quiver += arrowNumber;
   }
 }

@@ -56,7 +56,7 @@ class MoveCommand extends GameCommand {
     int arrowsFound = game.getArrowsInCavern(map.getPlayerCavern().getName());
     if (arrowsFound > 0)
       messageReceiver.arrowsFound(arrowsFound);
-    game.incrementQuiverBy(arrowsFound);
+    map.incrementQuiverBy(arrowsFound);
     map.clearArrowsInPlayerCavern();
   }
 

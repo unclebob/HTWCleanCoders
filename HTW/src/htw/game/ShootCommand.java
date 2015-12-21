@@ -13,7 +13,7 @@ class ShootCommand extends GameCommand {
   }
 
   public void processCommand() {
-    if (game.quiverEmpty())
+    if (map.quiverEmpty())
       messageReceiver.noArrows();
     else
       shootArrow();
@@ -21,7 +21,7 @@ class ShootCommand extends GameCommand {
 
   private void shootArrow() {
     messageReceiver.arrowShot();
-    game.decrementQuiverBy(1);
+    map.decrementQuiverBy(1);
     ArrowTracker arrowTracker = new ArrowTracker(map.getPlayerCavern()).trackArrow(direction);
     if (arrowTracker.arrowHitSomething())
       return;
