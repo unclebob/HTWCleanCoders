@@ -259,9 +259,9 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
     }
 
-    private void incrementArrowsInCavern(String arrowCavern) {
-      int arrows = getArrowsInCavern(arrowCavern);
-      arrowsIn.put(cavern(arrowCavern), arrows + 1);
+    private void incrementArrowsInCavern(Cavern arrowCavern) {
+      int arrows = getArrowsInCavern(arrowCavern.name);
+      arrowsIn.put(arrowCavern, arrows + 1);
     }
 
     private class ArrowTracker {
@@ -276,8 +276,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
         return hitSomething;
       }
 
-      public String getArrowCavern() {
-        return arrowCavern.name;
+      public Cavern getArrowCavern() {
+        return arrowCavern;
       }
 
       public ArrowTracker trackArrow(Direction direction) {
