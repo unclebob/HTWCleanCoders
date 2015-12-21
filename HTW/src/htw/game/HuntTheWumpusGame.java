@@ -166,11 +166,12 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
     @Override
     public boolean equals(Object obj) {
-      if (obj instanceof String)
-        return obj.equals(name);
+      if (obj instanceof Cavern) {
+        Cavern c = (Cavern) obj;
+        return name.equals(c.name);
+      }
 
-      Cavern c = (Cavern) obj;
-      return name.equals(c.name);
+      return false;
     }
 
     @Override
