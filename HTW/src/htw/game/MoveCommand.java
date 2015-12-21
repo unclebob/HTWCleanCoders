@@ -7,8 +7,8 @@ import static htw.HuntTheWumpus.Direction;
 class MoveCommand extends GameCommand {
   private Direction direction;
 
-  public MoveCommand(Direction direction, HuntTheWumpusMap map, HtwMessageReceiver messageReceiver) {
-    super(map, messageReceiver);
+  public MoveCommand(Direction direction, Game game, HtwMessageReceiver messageReceiver) {
+    super(game, messageReceiver);
     this.direction = direction;
   }
 
@@ -29,37 +29,37 @@ class MoveCommand extends GameCommand {
   }
 
   private void checkForWumpus() {
-    if (map.getWumpusCavern().equals(map.getPlayerCavern()))
+    if (game.getWumpusCavern().equals(game.getPlayerCavern()))
       messageReceiver.playerMovesToWumpus();
   }
 
   private void checkForBats() {
-    if (map.playerIsInBatsCavern()) {
+    if (game.playerIsInBatsCavern()) {
       messageReceiver.batsTransport();
-      map.randomlyTransportPlayer();
+      game.randomlyTransportPlayer();
     }
   }
 
   public void movePlayer(Direction direction) {
-    Cavern destination = map.getPlayerCavern().findDestination(direction);
+    Cavern destination = game.getPlayerCavern().findDestination(direction);
     if (destination.isNull()) {
       throw new NoPassage();
     }
 
-    map.setPlayerCavern(destination);
+    game.setPlayerCavern(destination);
   }
 
   private void checkForPit() {
-    if (map.playerIsInPitCavern())
+    if (game.playerIsInPitCavern())
       messageReceiver.fellInPit();
   }
 
   private void checkForArrows() {
-    int arrowsFound = map.getArrowsInCavern(map.getPlayerCavern());
+    int arrowsFound = game.getArrowsInCavern(game.getPlayerCavern());
     if (arrowsFound > 0)
       messageReceiver.arrowsFound(arrowsFound);
-    map.incrementQuiverBy(arrowsFound);
-    map.clearArrowsInPlayerCavern();
+    game.incrementQuiverBy(arrowsFound);
+    game.clearArrowsInPlayerCavern();
   }
 
   private class NoPassage extends RuntimeException {}

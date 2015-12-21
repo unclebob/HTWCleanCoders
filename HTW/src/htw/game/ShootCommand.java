@@ -9,13 +9,13 @@ import static htw.HuntTheWumpus.Direction;
 class ShootCommand extends GameCommand {
   private Direction direction;
 
-  public ShootCommand(Direction direction, HuntTheWumpusMap map, HtwMessageReceiver messageReceiver) {
-    super(map, messageReceiver);
+  public ShootCommand(Direction direction, Game game, HtwMessageReceiver messageReceiver) {
+    super(game, messageReceiver);
     this.direction = direction;
   }
 
   public void processCommand() {
-    if (map.quiverEmpty())
+    if (game.quiverEmpty())
       messageReceiver.noArrows();
     else
       shootArrow();
@@ -23,15 +23,15 @@ class ShootCommand extends GameCommand {
 
   private void shootArrow() {
     messageReceiver.arrowShot();
-    map.decrementQuiverBy(1);
-    ArrowTracker arrowTracker = new ArrowTracker(map.getPlayerCavern()).trackArrow(direction);
+    game.decrementQuiverBy(1);
+    ArrowTracker arrowTracker = new ArrowTracker(game.getPlayerCavern()).trackArrow(direction);
     if (arrowTracker.arrowHitSomething())
       return;
     incrementArrowsInCavern(arrowTracker.getArrowCavern());
   }
 
   private void incrementArrowsInCavern(Cavern arrowCavern) {
-    map.incrementArrowsIn(arrowCavern, 1);
+    game.incrementArrowsIn(arrowCavern, 1);
   }
 
   private class ArrowTracker {
@@ -80,7 +80,7 @@ class ShootCommand extends GameCommand {
     }
 
     private boolean shotWumpus() {
-      if (arrowCavern.equals(map.getWumpusCavern())) {
+      if (arrowCavern.equals(game.getWumpusCavern())) {
         messageReceiver.playerKillsWumpus();
         return true;
       }
@@ -88,7 +88,7 @@ class ShootCommand extends GameCommand {
     }
 
     private boolean shotSelfInBack() {
-      if (arrowCavern.equals(map.getPlayerCavern())) {
+      if (arrowCavern.equals(game.getPlayerCavern())) {
         messageReceiver.playerShootsSelfInBack();
         return true;
       }
@@ -96,7 +96,7 @@ class ShootCommand extends GameCommand {
     }
 
     private void checkWallShot() {
-      if (arrowCavern.equals(map.getPlayerCavern()))
+      if (arrowCavern.equals(game.getPlayerCavern()))
         messageReceiver.playerShootsWall();
     }
 

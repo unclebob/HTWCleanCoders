@@ -1,11 +1,11 @@
 package htw.game;
 
-import htw.HuntTheWumpus;
-
 import java.util.*;
 import java.util.function.Predicate;
 
-public class HuntTheWumpusMap {
+import static htw.HuntTheWumpus.Direction;
+
+public class Game {
   private Set<Cavern> caverns = new HashSet<>();
   private Set<Cavern> pitCaverns = new HashSet<>();
   private Set<Cavern> batCaverns = new HashSet<>();
@@ -24,13 +24,13 @@ public class HuntTheWumpusMap {
         .orElse(new Cavern(cavernName));
   }
 
-  public void connectCavern(Cavern from, Cavern to, HuntTheWumpus.Direction direction) {
+  public void connectCavern(Cavern from, Cavern to, Direction direction) {
     from.addConnection(to, direction);
     caverns.add(from);
     caverns.add(to);
   }
 
-  public Set<HuntTheWumpus.Direction> availableDirections() {
+  public Set<Direction> availableDirections() {
     return playerCavern.availableDirections();
   }
 
@@ -121,7 +121,7 @@ public class HuntTheWumpusMap {
     arrowsIn.put(playerCavern, 0);
   }
 
-  public void clear() {
+  public void clearMap() {
     setPlayerCavern(Cavern.NULL);
     setWumpusCavern(Cavern.NULL);
 
@@ -143,11 +143,11 @@ public class HuntTheWumpusMap {
     quiver -= arrowNumber;
   }
 
-  public boolean quiverEmpty() {
-    return quiver == 0;
-  }
-
   public void incrementQuiverBy(int arrowNumber) {
     quiver += arrowNumber;
+  }
+
+  public boolean quiverEmpty() {
+    return quiver == 0;
   }
 }

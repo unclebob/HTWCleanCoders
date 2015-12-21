@@ -4,8 +4,8 @@ import htw.HtwMessageReceiver;
 
 class RestCommand extends GameCommand {
 
-  public RestCommand(HuntTheWumpusMap map, HtwMessageReceiver messageReceiver) {
-    super(map, messageReceiver);
+  public RestCommand(Game game, HtwMessageReceiver messageReceiver) {
+    super(game, messageReceiver);
   }
 
   public void processCommand() {

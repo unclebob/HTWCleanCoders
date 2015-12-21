@@ -3,60 +3,60 @@ package htw.game;
 import htw.HtwMessageReceiver;
 import htw.HuntTheWumpus;
 
-public class HuntTheWumpusGame implements HuntTheWumpus {
-  protected HuntTheWumpusMap map = new HuntTheWumpusMap();
+public class HuntTheWumpusFacade implements HuntTheWumpus {
+  protected Game game = new Game();
   private HtwMessageReceiver messageReceiver;
 
-  public HuntTheWumpusGame(HtwMessageReceiver receiver) {
+  public HuntTheWumpusFacade(HtwMessageReceiver receiver) {
     this.messageReceiver = receiver;
   }
 
   private Cavern cavern(String cavernName) {
-    return map.getCavernNamed(cavernName);
+    return game.getCavernNamed(cavernName);
   }
 
   public void setPlayerCavern(String playerCavern) {
-    map.setPlayerCavern(cavern(playerCavern));
+    game.setPlayerCavern(cavern(playerCavern));
   }
 
   public String getPlayerCavern() {
-    return map.getPlayerCavern().getName();
+    return game.getPlayerCavern().getName();
   }
 
   public void addBatCavern(String cavern) {
-    map.addBatCavern(cavern(cavern));
+    game.addBatCavern(cavern(cavern));
   }
 
   public void addPitCavern(String cavern) {
-    map.addPitCavern(cavern(cavern));
+    game.addPitCavern(cavern(cavern));
   }
 
   public void setWumpusCavern(String wumpusCavern) {
-    map.setWumpusCavern(cavern(wumpusCavern));
+    game.setWumpusCavern(cavern(wumpusCavern));
   }
 
   public String getWumpusCavern() {
-    return map.getWumpusCavern().getName();
+    return game.getWumpusCavern().getName();
   }
 
   public void setQuiver(int arrows) {
-    map.setQuiver(arrows);
+    game.setQuiver(arrows);
   }
 
   public int getQuiver() {
-    return map.getQuiver();
+    return game.getQuiver();
   }
 
   public Integer getArrowsInCavern(String cavern) {
-    return map.getArrowsInCavern(cavern(cavern));
+    return game.getArrowsInCavern(cavern(cavern));
   }
 
   public void clearMap() {
-    map.clear();
+    game.clearMap();
   }
 
   public void connectCavern(String from, String to, Direction direction) {
-    map.connectCavern(cavern(from), cavern(to), direction);
+    game.connectCavern(cavern(from), cavern(to), direction);
   }
 
   public String findDestination(String cavern, Direction direction) {
@@ -64,15 +64,15 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public Command makeRestCommand() {
-    return new RestCommand(map, messageReceiver);
+    return new RestCommand(game, messageReceiver);
   }
 
   public Command makeShootCommand(Direction direction) {
-    return new ShootCommand(direction, map, messageReceiver);
+    return new ShootCommand(direction, game, messageReceiver);
   }
 
   public Command makeMoveCommand(Direction direction) {
-    return new MoveCommand(direction, map, messageReceiver);
+    return new MoveCommand(direction, game, messageReceiver);
   }
 }
 

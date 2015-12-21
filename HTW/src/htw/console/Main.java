@@ -71,7 +71,7 @@ public class Main implements HtwMessageReceiver {
   };
 
   public static void main(String[] args) throws IOException {
-    game = HtwFactory.makeGame("htw.game.HuntTheWumpusGame", new Main());
+    game = HtwFactory.makeGame("htw.game.HuntTheWumpusFacade", new Main());
     createMap();
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     game.makeRestCommand().execute();

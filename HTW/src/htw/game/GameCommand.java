@@ -3,19 +3,19 @@ package htw.game;
 import htw.HtwMessageReceiver;
 import htw.HuntTheWumpus;
 
-public abstract class GameCommand implements HuntTheWumpus.Command {
-  protected HuntTheWumpusMap map = new HuntTheWumpusMap();
+abstract class GameCommand implements HuntTheWumpus.Command {
+  protected Game game;
   protected HtwMessageReceiver messageReceiver;
 
-  public GameCommand(HuntTheWumpusMap map, HtwMessageReceiver messageReceiver) {
-    this.map = map;
+  public GameCommand(Game game, HtwMessageReceiver messageReceiver) {
+    this.game = game;
     this.messageReceiver = messageReceiver;
   }
 
   public void execute() {
     processCommand();
 
-    map.moveWumpus();
+    game.moveWumpus();
 
     reportStatus();
   }
@@ -28,17 +28,17 @@ public abstract class GameCommand implements HuntTheWumpus.Command {
   }
 
   private void reportAvailableDirections() {
-    map.availableDirections().forEach(messageReceiver::passage);
+    game.availableDirections().forEach(messageReceiver::passage);
   }
 
   private void reportSpecialLocations() {
-    if (map.playerIsInWumpusCavern())
+    if (game.playerIsInWumpusCavern())
       messageReceiver.wumpusMovesToPlayer();
-    if (map.batCavernIsNear())
+    if (game.batCavernIsNear())
       messageReceiver.hearBats();
-    if (map.pitCavernIsNear())
+    if (game.pitCavernIsNear())
       messageReceiver.hearPit();
-    if (map.wumpusCavernIsNear())
+    if (game.wumpusCavernIsNear())
       messageReceiver.smellWumpus();
   }
 
