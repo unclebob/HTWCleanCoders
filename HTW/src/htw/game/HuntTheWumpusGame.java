@@ -15,6 +15,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   private int quiver = 0;
   private Map<Cavern, Integer> arrowsIn = new HashMap<>();
   private HtwMessageReceiver messageReceiver;
+  private RandomChooser randomChooser = new RandomChooser();
 
   public HuntTheWumpusGame(HtwMessageReceiver receiver) {
     this.messageReceiver = receiver;
@@ -51,7 +52,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private void reportAvailableDirections() {
-    playerCavern.availableDirections().forEach(messageReceiver::passage);
+    playerCavern.availableDirections()
+        .forEach(messageReceiver::passage);
   }
 
   public void addBatCavern(String cavern) {
@@ -74,24 +76,14 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     List<Cavern> wumpusChoices = wumpusCavern.connectedCaverns();
     wumpusChoices.add(wumpusCavern);
 
-    wumpusCavern = randomChoiceFrom(wumpusChoices);
+    wumpusCavern = randomChooser.chooseFrom(wumpusChoices);
   }
 
   private void randomlyTransportPlayer() {
     List<Cavern> transportChoices = new ArrayList<>(caverns);
     transportChoices.remove(playerCavern);
 
-    playerCavern = randomChoiceFrom(transportChoices);
-  }
-
-  private Cavern randomChoiceFrom(List<Cavern> choices) {
-    int nChoices = choices.size();
-    int choice = randomChoice(nChoices);
-    return choices.get(choice);
-  }
-
-  private int randomChoice(int numberOfPossibleChoices) {
-    return (int) (Math.random() * numberOfPossibleChoices);
+    playerCavern = randomChooser.chooseFrom(transportChoices);
   }
 
   public void setQuiver(int arrows) {
@@ -298,3 +290,4 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
   }
 }
+
