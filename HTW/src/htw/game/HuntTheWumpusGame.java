@@ -172,14 +172,17 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     public void processCommand() {
       if (quiver == 0)
         messageReceiver.noArrows();
-      else {
-        messageReceiver.arrowShot();
-        quiver--;
-        ArrowTracker arrowTracker = new ArrowTracker(playerCavern).trackArrow(direction);
-        if (arrowTracker.arrowHitSomething())
-          return;
-        incrementArrowsInCavern(arrowTracker.getArrowCavern());
-      }
+      else
+        shootArrow();
+    }
+
+    private void shootArrow() {
+      messageReceiver.arrowShot();
+      quiver--;
+      ArrowTracker arrowTracker = new ArrowTracker(playerCavern).trackArrow(direction);
+      if (arrowTracker.arrowHitSomething())
+        return;
+      incrementArrowsInCavern(arrowTracker.getArrowCavern());
     }
 
     private void incrementArrowsInCavern(Cavern arrowCavern) {
@@ -192,7 +195,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       private Cavern arrowCavern;
 
       public ArrowTracker(Cavern startingCavern) {
-        this.arrowCavern = startingCavern;
+        arrowCavern = startingCavern;
       }
 
       boolean arrowHitSomething() {
@@ -267,13 +270,17 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     public void processCommand() {
-      if (movePlayer(direction)) {
-        checkForWumpus();
-        checkForPit();
-        checkForBats();
-        checkForArrows();
-      } else
+      if (movePlayer(direction))
+        checkNewCavern();
+      else
         messageReceiver.noPassage();
+    }
+
+    private void checkNewCavern() {
+      checkForWumpus();
+      checkForPit();
+      checkForBats();
+      checkForArrows();
     }
 
     private void checkForWumpus() {
@@ -303,7 +310,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     private void checkForArrows() {
-      Integer arrowsFound = getArrowsInCavern(playerCavern.getName());
+      int arrowsFound = getArrowsInCavern(playerCavern.getName());
       if (arrowsFound > 0)
         messageReceiver.arrowsFound(arrowsFound);
       quiver += arrowsFound;
