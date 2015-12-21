@@ -107,8 +107,8 @@ public class Main implements HtwMessageReceiver {
   }
 
   private static void createMap() {
-    int ncaverns = (int) (Math.random() * 30.0 + 10.0);
-    while (ncaverns-- > 0)
+    int nCaverns = (int) (Math.random() * 30.0 + 10.0);
+    while (nCaverns-- > 0)
       caverns.add(makeName());
 
     for (String cavern : caverns) {

@@ -43,7 +43,7 @@ public interface HuntTheWumpus {
   HuntTheWumpusGame.Command makeShootCommand(Direction direction);
   HuntTheWumpusGame.Command makeMoveCommand(Direction direction);
 
-  public interface Command {
+  interface Command {
     void execute();
   }
 }
