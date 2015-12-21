@@ -80,10 +80,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   protected void moveWumpus() {
-    List<Cavern> wumpusChoices = wumpusCavern.connections().stream()
-        .map(c -> c.to)
-        .collect(Collectors.toList());
-
+    List<Cavern> wumpusChoices = wumpusCavern.connectedCaverns();
     wumpusChoices.add(wumpusCavern);
 
     int nChoices = wumpusChoices.size();
@@ -199,6 +196,12 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       return connections().stream()
           .map(c -> c.direction)
           .collect(Collectors.toSet());
+    }
+
+    public List<Cavern> connectedCaverns() {
+      return connections().stream()
+          .map(c -> c.to)
+          .collect(Collectors.toList());
     }
   }
 
