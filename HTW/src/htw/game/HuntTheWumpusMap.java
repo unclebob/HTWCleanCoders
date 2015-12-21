@@ -5,7 +5,7 @@ import htw.HuntTheWumpus;
 import java.util.*;
 import java.util.function.Predicate;
 
-class HuntTheWumpusMap {
+public class HuntTheWumpusMap {
   private Set<Cavern> caverns = new HashSet<>();
   private Set<Cavern> pitCaverns = new HashSet<>();
   private Set<Cavern> batCaverns = new HashSet<>();
