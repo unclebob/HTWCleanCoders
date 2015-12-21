@@ -4,7 +4,7 @@ import htw.HtwMessageReceiver;
 import htw.HuntTheWumpus;
 
 public class HuntTheWumpusGame implements HuntTheWumpus {
-  private HuntTheWumpusMap map = new HuntTheWumpusMap();
+  protected HuntTheWumpusMap map = new HuntTheWumpusMap();
   private HtwMessageReceiver messageReceiver;
 
   private int quiver = 0;
@@ -25,7 +25,6 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     return map.getPlayerCavern().getName();
   }
 
-
   public void addBatCavern(String cavern) {
     map.addBatCavern(cavern(cavern));
   }
@@ -40,10 +39,6 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
   public String getWumpusCavern() {
     return map.getWumpusCavern().getName();
-  }
-
-  protected void moveWumpus() {
-    map.moveWumpus();
   }
 
   public void setQuiver(int arrows) {

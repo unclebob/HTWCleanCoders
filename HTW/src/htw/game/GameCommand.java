@@ -16,10 +16,13 @@ public abstract class GameCommand implements HuntTheWumpus.Command {
 
   public void execute() {
     processCommand();
-    game.moveWumpus();
-    checkWumpusMovedToPlayer();
+
+    map.moveWumpus();
+
     reportStatus();
   }
+
+  protected abstract void processCommand();
 
   private void reportStatus() {
     reportAvailableDirections();
@@ -31,6 +34,8 @@ public abstract class GameCommand implements HuntTheWumpus.Command {
   }
 
   private void reportSpecialLocations() {
+    if (map.playerIsInWumpusCavern())
+      messageReceiver.wumpusMovesToPlayer();
     if (map.batCavernIsNear())
       messageReceiver.hearBats();
     if (map.pitCavernIsNear())
@@ -38,12 +43,5 @@ public abstract class GameCommand implements HuntTheWumpus.Command {
     if (map.wumpusCavernIsNear())
       messageReceiver.smellWumpus();
   }
-
-  protected void checkWumpusMovedToPlayer() {
-    if (map.playerIsInWumpusCavern())
-      messageReceiver.wumpusMovesToPlayer();
-  }
-
-  protected abstract void processCommand();
 
 }
