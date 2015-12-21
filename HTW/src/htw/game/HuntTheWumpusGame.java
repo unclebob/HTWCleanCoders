@@ -9,26 +9,22 @@ import java.util.function.Predicate;
 public class HuntTheWumpusGame implements HuntTheWumpus {
   private Set<Cavern> caverns = new HashSet<>();
   private Cavern playerCavern = Cavern.NULL;
-  private HtwMessageReceiver messageReceiver;
+  private Cavern wumpusCavern = Cavern.NULL;
   private Set<Cavern> batCaverns = new HashSet<>();
   private Set<Cavern> pitCaverns = new HashSet<>();
-  private Cavern wumpusCavern = Cavern.NULL;
   private int quiver = 0;
   private Map<Cavern, Integer> arrowsIn = new HashMap<>();
+  private HtwMessageReceiver messageReceiver;
 
   public HuntTheWumpusGame(HtwMessageReceiver receiver) {
     this.messageReceiver = receiver;
   }
 
   private Cavern cavern(String cavernName) {
-    Cavern cavern = new Cavern(cavernName);
-    for (Cavern c : caverns) {
-      if (c.equals(cavern)) {
-        return c;
-      }
-    }
-
-    return cavern;
+    return caverns.stream()
+        .filter(c -> c.isNamed(cavernName))
+        .findAny()
+        .orElse(new Cavern(cavernName));
   }
 
   public void setPlayerCavern(String playerCavern) {

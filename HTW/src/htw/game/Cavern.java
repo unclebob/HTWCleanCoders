@@ -14,9 +14,17 @@ class Cavern {
     this.name = name;
   }
 
+  public String getName() {
+    return name;
+  }
+
+  public boolean isNamed(String name) {
+    return this.name.equals(name);
+  }
+
   public Cavern findDestination(HuntTheWumpus.Direction direction) {
     Cavern destination = connections.get(direction);
-    return destination != null ? destination : new NullCavern();
+    return (destination != null) ? destination : new NullCavern();
   }
 
   public Set<HuntTheWumpus.Direction> availableDirections() {
@@ -52,10 +60,6 @@ class Cavern {
   @Override
   public int hashCode() {
     return getName().hashCode();
-  }
-
-  public String getName() {
-    return name;
   }
 }
 
