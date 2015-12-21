@@ -78,18 +78,20 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     List<Cavern> wumpusChoices = wumpusCavern.connectedCaverns();
     wumpusChoices.add(wumpusCavern);
 
-    int nChoices = wumpusChoices.size();
-    int choice = randomChoice(nChoices);
-    wumpusCavern = wumpusChoices.get(choice);
+    wumpusCavern = randomChoiceFrom(wumpusChoices);
   }
 
   private void randomlyTransportPlayer() {
-    Set<Cavern> transportChoices = new HashSet<>(caverns);
+    List<Cavern> transportChoices = new ArrayList<>(caverns);
     transportChoices.remove(playerCavern);
-    int nChoices = transportChoices.size();
+
+    playerCavern = randomChoiceFrom(transportChoices);
+  }
+
+  private Cavern randomChoiceFrom(List<Cavern> choices) {
+    int nChoices = choices.size();
     int choice = randomChoice(nChoices);
-    Cavern[] choices = new Cavern[nChoices];
-    playerCavern = transportChoices.toArray(choices)[choice];
+    return choices.get(choice);
   }
 
   private int randomChoice(int numberOfPossibleChoices) {
