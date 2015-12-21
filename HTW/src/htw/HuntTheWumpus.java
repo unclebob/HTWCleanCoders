@@ -3,7 +3,7 @@ package htw;
 import htw.game.HuntTheWumpusGame;
 
 public interface HuntTheWumpus {
-  public enum Direction {
+  enum Direction {
     NORTH {
       public Direction opposite() {
         return SOUTH;
