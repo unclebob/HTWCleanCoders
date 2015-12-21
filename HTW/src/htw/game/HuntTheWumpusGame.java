@@ -185,8 +185,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     public Cavern findDestination(Direction direction) {
-      return connections.stream()
-          .filter(c -> c.from.equals(this) && c.direction.equals(direction))
+      return connections().stream()
+          .filter(c -> c.direction.equals(direction))
           .map(c -> c.to)
           .findAny()
           .orElse(null);
