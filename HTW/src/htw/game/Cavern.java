@@ -4,6 +4,8 @@ import htw.HuntTheWumpus;
 
 import java.util.*;
 
+import static htw.HuntTheWumpus.*;
+
 class Cavern {
   public static final Cavern NULL = new NullCavern();
 
@@ -22,7 +24,7 @@ class Cavern {
     return this.name.equals(name);
   }
 
-  public Cavern findDestination(HuntTheWumpus.Direction direction) {
+  public Cavern findDestination(Direction direction) {
     Cavern destination = connections.get(direction);
     return (destination != null) ? destination : new NullCavern();
   }
@@ -35,12 +37,25 @@ class Cavern {
     return new ArrayList<>(connections.values());
   }
 
-  public void addConnection(Cavern to, HuntTheWumpus.Direction direction) {
+  public void addConnection(Cavern to, Direction direction) {
     connections.put(direction, to);
   }
 
-  public boolean hasConnectionGoing(HuntTheWumpus.Direction direction) {
+  public boolean hasConnectionGoing(Direction direction) {
     return !findDestination(direction).isNull();
+  }
+
+  public List<Cavern> getCavernsGoing(Direction direction) {
+    List<Cavern> caverns = new ArrayList<>();
+    return findDestination(direction).accumulateCavernsGoing(direction, caverns, this);
+  }
+
+  protected List<Cavern> accumulateCavernsGoing(Direction direction, List<Cavern> caverns, Cavern initialCavern) {
+    caverns.add(this);
+    if (initialCavern.equals(this))
+      return caverns;
+
+    return findDestination(direction).accumulateCavernsGoing(direction, caverns, initialCavern);
   }
 
   public boolean isNull() {

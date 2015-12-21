@@ -204,23 +204,37 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       public ArrowTracker trackArrow(Direction direction) {
-        int count = 0;
-        while (arrowCavern.hasConnectionGoing(direction)) {
-          arrowCavern = arrowCavern.findDestination(direction);
-          if (shotSelfInBack()) return this;
-          if (shotWumpus()) return this;
-          if (count > 100) return this;
-          count++;
-        }
-        if (arrowCavern.equals(playerCavern))
-          messageReceiver.playerShootsWall();
+        checkHitSomething(direction);
+
+        if (!hitSomething)
+          checkWallShot();
+
         return this;
+      }
+
+      private void checkHitSomething(Direction direction) {
+        for (Cavern c : arrowPath(direction))
+          if (updateArrowCavernWith(c) && hitSomething())
+            return;
+      }
+
+      private List<Cavern> arrowPath(Direction direction) {
+        return take(103, arrowCavern.getCavernsGoing(direction));
+      }
+
+      private boolean updateArrowCavernWith(Cavern newArrowCavern) {
+        arrowCavern = newArrowCavern;
+        return true;
+      }
+
+      private boolean hitSomething() {
+        hitSomething = shotSelfInBack() || shotWumpus();
+        return hitSomething;
       }
 
       private boolean shotWumpus() {
         if (arrowCavern.equals(wumpusCavern)) {
           messageReceiver.playerKillsWumpus();
-          hitSomething = true;
           return true;
         }
         return false;
@@ -229,12 +243,19 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       private boolean shotSelfInBack() {
         if (arrowCavern.equals(playerCavern)) {
           messageReceiver.playerShootsSelfInBack();
-          hitSomething = true;
           return true;
         }
         return false;
       }
 
+      private void checkWallShot() {
+        if (arrowCavern.equals(playerCavern))
+          messageReceiver.playerShootsWall();
+      }
+
+      private <T> List<T> take(int nElements, List<T> list) {
+        return list.subList(0, Math.min(list.size(), nElements - 1));
+      }
     }
   }
 
