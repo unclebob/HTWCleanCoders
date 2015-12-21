@@ -25,7 +25,15 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
   private Cavern cavern(String cavernName) {
     if (cavernName == null) return null;
-    return new Cavern(cavernName);
+
+    Cavern cavern = new Cavern(cavernName);
+    for (Cavern c : caverns) {
+      if (c.equals(cavern)) {
+        return c;
+      }
+    }
+
+    return cavern;
   }
 
   public void setPlayerCavern(String playerCavern) {
