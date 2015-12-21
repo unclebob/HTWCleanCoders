@@ -46,11 +46,11 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
   private void reportStatus() {
     reportAvailableDirections();
-    if (reportNearby(c -> batCaverns.contains(cavern(c.to))))
+    if (reportNearby(c -> batCaverns.contains(c.to)))
       messageReceiver.hearBats();
-    if (reportNearby(c -> pitCaverns.contains(cavern(c.to))))
+    if (reportNearby(c -> pitCaverns.contains(c.to)))
       messageReceiver.hearPit();
-    if (reportNearby(c -> wumpusCavern.name.equals(c.to)))
+    if (reportNearby(c -> wumpusCavern.equals(c.to)))
       messageReceiver.smellWumpus();
   }
 
@@ -82,6 +82,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   protected void moveWumpus() {
     List<String> wumpusChoices = wumpusCavern.connections().stream()
         .map(c -> c.to)
+        .map(c -> c.name)
         .collect(Collectors.toList());
 
     wumpusChoices.add(wumpusCavern.name);
@@ -135,11 +136,11 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private class Connection {
-    String from;
-    String to;
+    Cavern from;
+    Cavern to;
     Direction direction;
 
-    public Connection(String from, String to, Direction direction) {
+    public Connection(Cavern from, Cavern to, Direction direction) {
       this.from = from;
       this.to = to;
       this.direction = direction;
@@ -147,13 +148,17 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public void connectCavern(String from, String to, Direction direction) {
-    connections.add(new Connection(from, to, direction));
-    caverns.add(cavern(from));
-    caverns.add(cavern(to));
+    Cavern fromCavern = cavern(from);
+    Cavern toCavern = cavern(to);
+
+    connections.add(new Connection(fromCavern, toCavern, direction));
+    caverns.add(fromCavern);
+    caverns.add(toCavern);
   }
 
   public String findDestination(String cavern, Direction direction) {
-    return cavern(cavern).findDestination(direction);
+    Cavern destination = cavern(cavern).findDestination(direction);
+    return destination == null ? null : destination.name;
   }
 
   private class Cavern {
@@ -179,13 +184,13 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
     private List<Connection> connections() {
       return connections.stream()
-          .filter(c -> name.equals(c.from))
+          .filter(c -> this.equals(c.from))
           .collect(Collectors.toList());
     }
 
-    public String findDestination(Direction direction) {
+    public Cavern findDestination(Direction direction) {
       return connections.stream()
-          .filter(c -> c.from.equals(name) && c.direction.equals(direction))
+          .filter(c -> c.from.equals(this) && c.direction.equals(direction))
           .map(c -> c.to)
           .findAny()
           .orElse(null);
@@ -308,6 +313,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
         return cavern(cavern).connections().stream()
             .filter(c -> c.direction.equals(direction))
             .map(c -> c.to)
+            .map(c -> c.name)
             .findAny()
             .orElse(null);
       }
