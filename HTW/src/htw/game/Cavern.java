@@ -41,10 +41,6 @@ class Cavern {
     connections.put(direction, to);
   }
 
-  public boolean hasConnectionGoing(Direction direction) {
-    return !findDestination(direction).isNull();
-  }
-
   public List<Cavern> getCavernsGoing(Direction direction) {
     List<Cavern> caverns = new ArrayList<>();
     return findDestination(direction).accumulateCavernsGoing(direction, caverns, this);
