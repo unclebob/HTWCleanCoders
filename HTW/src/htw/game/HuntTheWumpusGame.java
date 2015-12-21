@@ -266,10 +266,10 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
 
     private class ArrowTracker {
       private boolean hitSomething = false;
-      private String arrowCavern;
+      private Cavern arrowCavern;
 
       public ArrowTracker(Cavern startingCavern) {
-        this.arrowCavern = startingCavern.name;
+        this.arrowCavern = startingCavern;
       }
 
       boolean arrowHitSomething() {
@@ -277,24 +277,24 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       public String getArrowCavern() {
-        return arrowCavern;
+        return arrowCavern.name;
       }
 
       public ArrowTracker trackArrow(Direction direction) {
-        String nextCavern;
+        Cavern nextCavern;
         for (int count = 0; (nextCavern = nextCavern(arrowCavern, direction)) != null; count++) {
           arrowCavern = nextCavern;
           if (shotSelfInBack()) return this;
           if (shotWumpus()) return this;
           if (count > 100) return this;
         }
-        if (arrowCavern.equals(playerCavern.name))
+        if (arrowCavern.equals(playerCavern))
           messageReceiver.playerShootsWall();
         return this;
       }
 
       private boolean shotWumpus() {
-        if (arrowCavern.equals(wumpusCavern.name)) {
+        if (arrowCavern.equals(wumpusCavern)) {
           messageReceiver.playerKillsWumpus();
           hitSomething = true;
           return true;
@@ -303,7 +303,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       private boolean shotSelfInBack() {
-        if (arrowCavern.equals(playerCavern.name)) {
+        if (arrowCavern.equals(playerCavern)) {
           messageReceiver.playerShootsSelfInBack();
           hitSomething = true;
           return true;
@@ -311,13 +311,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
         return false;
       }
 
-      private String nextCavern(String cavern, Direction direction) {
-        return cavern(cavern).connections().stream()
-            .filter(c -> c.direction.equals(direction))
-            .map(c -> c.to)
-            .map(c -> c.name)
-            .findAny()
-            .orElse(null);
+      private Cavern nextCavern(Cavern cavern, Direction direction) {
+        return cavern.findDestination(direction);
       }
     }
   }
