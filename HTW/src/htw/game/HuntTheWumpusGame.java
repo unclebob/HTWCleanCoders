@@ -80,16 +80,15 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   protected void moveWumpus() {
-    List<String> wumpusChoices = wumpusCavern.connections().stream()
+    List<Cavern> wumpusChoices = wumpusCavern.connections().stream()
         .map(c -> c.to)
-        .map(c -> c.name)
         .collect(Collectors.toList());
 
-    wumpusChoices.add(wumpusCavern.name);
+    wumpusChoices.add(wumpusCavern);
 
     int nChoices = wumpusChoices.size();
     int choice = randomChoice(nChoices);
-    wumpusCavern = cavern(wumpusChoices.get(choice));
+    wumpusCavern = wumpusChoices.get(choice);
   }
 
   private void randomlyTransportPlayer() {
