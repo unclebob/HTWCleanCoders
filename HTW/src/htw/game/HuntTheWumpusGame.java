@@ -270,10 +270,12 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     public void processCommand() {
-      if (movePlayer(direction))
+      try {
+        movePlayer(direction);
         checkNewCavern();
-      else
+      } catch (NoPassage exception) {
         messageReceiver.noPassage();
+      }
     }
 
     private void checkNewCavern() {
@@ -295,13 +297,13 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
     }
 
-    public boolean movePlayer(Direction direction) {
+    public void movePlayer(Direction direction) {
       Cavern destination = playerCavern.findDestination(direction);
-      if (!destination.isNull()) {
-        playerCavern = destination;
-        return true;
+      if (destination.isNull()) {
+        throw new NoPassage();
       }
-      return false;
+
+      playerCavern = destination;
     }
 
     private void checkForPit() {
@@ -316,6 +318,8 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       quiver += arrowsFound;
       arrowsIn.put(playerCavern, 0);
     }
+
+    private class NoPassage extends RuntimeException {}
   }
 }
 
