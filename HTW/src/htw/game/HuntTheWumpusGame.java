@@ -47,19 +47,19 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private boolean reportNearby(Predicate<Connection> nearTest) {
-    return connectionsOf(playerCavern.name).stream()
+    return connectionsOf(playerCavern).stream()
         .anyMatch(nearTest::test);
   }
 
   private void reportAvailableDirections() {
-    connectionsOf(playerCavern.name).stream()
+    connectionsOf(playerCavern).stream()
         .map(c -> c.direction)
         .forEach(messageReceiver::passage);
   }
 
-  private List<Connection> connectionsOf(String cavern) {
+  private List<Connection> connectionsOf(Cavern cavern) {
     return connections.stream()
-        .filter(c -> cavern.equals(c.from))
+        .filter(c -> cavern.name.equals(c.from))
         .collect(Collectors.toList());
   }
 
@@ -80,9 +80,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   protected void moveWumpus() {
-    String cavern = wumpusCavern.name;
-
-    List<String> wumpusChoices = connectionsOf(cavern).stream()
+    List<String> wumpusChoices = connectionsOf(wumpusCavern).stream()
         .map(c -> c.to)
         .collect(Collectors.toList());
 
@@ -291,7 +289,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       private String nextCavern(String cavern, Direction direction) {
-        return connectionsOf(cavern).stream()
+        return connectionsOf(cavern(cavern)).stream()
             .filter(c -> c.direction.equals(direction))
             .map(c -> c.to)
             .findAny()
