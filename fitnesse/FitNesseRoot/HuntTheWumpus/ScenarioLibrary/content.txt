@@ -88,6 +88,9 @@
 |scenario|Then a _ message is not given|msg|
 |ensure|Message id|@msg|was not given|
 
+|scenario|Given no messages|
+|ensure|clearMessages|
+
 !3 Movement Scenarios
 
 |scenario|Moving _ ends in cavern _|direction,cavern|

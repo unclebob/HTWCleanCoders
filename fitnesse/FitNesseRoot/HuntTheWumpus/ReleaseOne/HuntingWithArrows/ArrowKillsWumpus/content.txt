@@ -1,8 +1,18 @@
 -!|script|
 |Given Cross Map|
-|Given the player is in cavern FarLeft|
-|Given the wumpus is in cavern Middle|
-|Given the player has 1 arrow|
-|When the player shoots East|
-|Then there are 0 arrows in cavern FarRight|
-|Then a|WUMPUS_KILLED|message is given|
+|Given the player has 4 arrows|
+
+|scenario|Shoot at Wumpus _ _ _ _|playerCavern,dir,wumpusCavern,farCavern|
+|Given the wumpus is in cavern @wumpusCavern|
+|Given the player is in cavern @playerCavern|
+|Given no messages|
+|When the player shoots @dir|
+|Then a WUMPUS_KILLED message is given|
+|Then there are 0 arrows in cavern @farCavern|
+
+!|Shoot at Wumpus|
+|playerCavern|dir|wumpusCavern|farCavern|
+|FarLeft|East|Middle|FarRight|
+|FarRight|West|Middle|FarLeft|
+|Bottom|North|Middle|Top|
+|Top|South|Middle|Bottom|
