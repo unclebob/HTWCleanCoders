@@ -4,40 +4,27 @@ import htw.HtwMessageReceiver;
 import htw.HuntTheWumpus;
 
 import java.util.*;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
 
 public class HuntTheWumpusGame implements HuntTheWumpus {
-  private Set<Cavern> caverns = new HashSet<>();
-  private Set<Cavern> batCaverns = new HashSet<>();
-  private Set<Cavern> pitCaverns = new HashSet<>();
-  private Cavern playerCavern = Cavern.NULL;
-  private Cavern wumpusCavern = Cavern.NULL;
+  private HuntTheWumpusMap map = new HuntTheWumpusMap();
+  private HtwMessageReceiver messageReceiver;
 
   private int quiver = 0;
-  private Map<Cavern, Integer> arrowsIn = new HashMap<>();
-
-  private HtwMessageReceiver messageReceiver;
-  private RandomChooser randomChooser;
 
   public HuntTheWumpusGame(HtwMessageReceiver receiver) {
     this.messageReceiver = receiver;
-    this.randomChooser = new RandomChooser();
   }
 
   private Cavern cavern(String cavernName) {
-    return caverns.stream()
-        .filter(c -> c.isNamed(cavernName))
-        .findAny()
-        .orElse(new Cavern(cavernName));
+    return map.getCavernNamed(cavernName);
   }
 
   public void setPlayerCavern(String playerCavern) {
-    this.playerCavern = cavern(playerCavern);
+    map.setPlayerCavern(cavern(playerCavern));
   }
 
   public String getPlayerCavern() {
-    return playerCavern.getName();
+    return map.getPlayerCavern().getName();
   }
 
   private void reportStatus() {
@@ -46,58 +33,36 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private void reportAvailableDirections() {
-    availableDirections().forEach(messageReceiver::passage);
-  }
-
-  private Set<Direction> availableDirections() {
-    return playerCavern.availableDirections();
+    map.availableDirections().forEach(messageReceiver::passage);
   }
 
   private void reportSpecialLocations() {
-    if (reportNearby(batCaverns::contains))
+    if (map.batCavernIsNear())
       messageReceiver.hearBats();
-    if (reportNearby(pitCaverns::contains))
+    if (map.pitCavernIsNear())
       messageReceiver.hearPit();
-    if (reportNearby(wumpusCavern::equals))
+    if (map.wumpusCavernIsNear())
       messageReceiver.smellWumpus();
   }
 
-  private boolean reportNearby(Predicate<Cavern> nearTest) {
-    return nearCaverns().anyMatch(nearTest::test);
-  }
-
-  private Stream<Cavern> nearCaverns() {
-    return playerCavern.connectedCaverns().stream();
-  }
-
   public void addBatCavern(String cavern) {
-    batCaverns.add(cavern(cavern));
+    map.addBatCavern(cavern(cavern));
   }
 
   public void addPitCavern(String cavern) {
-    pitCaverns.add(cavern(cavern));
+    map.addPitCavern(cavern(cavern));
   }
 
   public void setWumpusCavern(String wumpusCavern) {
-    this.wumpusCavern = cavern(wumpusCavern);
+    map.setWumpusCavern(cavern(wumpusCavern));
   }
 
   public String getWumpusCavern() {
-    return wumpusCavern.getName();
+    return map.getWumpusCavern().getName();
   }
 
   protected void moveWumpus() {
-    List<Cavern> wumpusChoices = wumpusCavern.connectedCaverns();
-    wumpusChoices.add(wumpusCavern);
-
-    wumpusCavern = randomChooser.chooseFrom(wumpusChoices);
-  }
-
-  private void randomlyTransportPlayer() {
-    List<Cavern> transportChoices = new ArrayList<>(caverns);
-    transportChoices.remove(playerCavern);
-
-    playerCavern = randomChooser.chooseFrom(transportChoices);
+    map.moveWumpus();
   }
 
   public void setQuiver(int arrows) {
@@ -109,37 +74,15 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public Integer getArrowsInCavern(String cavern) {
-    return getArrowsInCavern(cavern(cavern));
-  }
-
-  private Integer getArrowsInCavern(Cavern cavern) {
-    return zeroIfNull(arrowsIn.get(cavern));
-  }
-
-  private int zeroIfNull(Integer integer) {
-    if (integer == null)
-      return 0;
-    else
-      return integer;
+    return map.getArrowsInCavern(cavern(cavern));
   }
 
   public void clearMap() {
-    playerCavern = Cavern.NULL;
-    wumpusCavern = Cavern.NULL;
-
-    batCaverns.clear();
-    pitCaverns.clear();
-    arrowsIn.clear();
-    caverns.clear();
+    map.clear();
   }
 
   public void connectCavern(String from, String to, Direction direction) {
-    Cavern fromCavern = cavern(from);
-    Cavern toCavern = cavern(to);
-
-    fromCavern.addConnection(toCavern, direction);
-    caverns.add(fromCavern);
-    caverns.add(toCavern);
+    map.connectCavern(cavern(from), cavern(to), direction);
   }
 
   public String findDestination(String cavern, Direction direction) {
@@ -167,7 +110,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     protected void checkWumpusMovedToPlayer() {
-      if (playerCavern.equals(wumpusCavern))
+      if (map.getPlayerCavern().equals(map.getWumpusCavern()))
         messageReceiver.wumpusMovesToPlayer();
     }
 
@@ -197,15 +140,14 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     private void shootArrow() {
       messageReceiver.arrowShot();
       quiver--;
-      ArrowTracker arrowTracker = new ArrowTracker(playerCavern).trackArrow(direction);
+      ArrowTracker arrowTracker = new ArrowTracker(map.getPlayerCavern()).trackArrow(direction);
       if (arrowTracker.arrowHitSomething())
         return;
       incrementArrowsInCavern(arrowTracker.getArrowCavern());
     }
 
     private void incrementArrowsInCavern(Cavern arrowCavern) {
-      int arrows = getArrowsInCavern(arrowCavern);
-      arrowsIn.put(arrowCavern, arrows + 1);
+      map.incrementArrowsIn(arrowCavern, 1);
     }
 
     private class ArrowTracker {
@@ -254,7 +196,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       private boolean shotWumpus() {
-        if (arrowCavern.equals(wumpusCavern)) {
+        if (arrowCavern.equals(map.getWumpusCavern())) {
           messageReceiver.playerKillsWumpus();
           return true;
         }
@@ -262,7 +204,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       private boolean shotSelfInBack() {
-        if (arrowCavern.equals(playerCavern)) {
+        if (arrowCavern.equals(map.getPlayerCavern())) {
           messageReceiver.playerShootsSelfInBack();
           return true;
         }
@@ -270,7 +212,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       private void checkWallShot() {
-        if (arrowCavern.equals(playerCavern))
+        if (arrowCavern.equals(map.getPlayerCavern()))
           messageReceiver.playerShootsWall();
       }
 
@@ -304,37 +246,37 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     private void checkForWumpus() {
-      if (wumpusCavern.equals(playerCavern))
+      if (map.getWumpusCavern().equals(map.getPlayerCavern()))
         messageReceiver.playerMovesToWumpus();
     }
 
     private void checkForBats() {
-      if (batCaverns.contains(playerCavern)) {
+      if (map.playerIsInBatsCavern()) {
         messageReceiver.batsTransport();
-        randomlyTransportPlayer();
+        map.randomlyTransportPlayer();
       }
     }
 
     public void movePlayer(Direction direction) {
-      Cavern destination = playerCavern.findDestination(direction);
+      Cavern destination = map.getPlayerCavern().findDestination(direction);
       if (destination.isNull()) {
         throw new NoPassage();
       }
 
-      playerCavern = destination;
+      map.setPlayerCavern(destination);
     }
 
     private void checkForPit() {
-      if (pitCaverns.contains(playerCavern))
+      if (map.playerIsInPitCavern())
         messageReceiver.fellInPit();
     }
 
     private void checkForArrows() {
-      int arrowsFound = getArrowsInCavern(playerCavern.getName());
+      int arrowsFound = getArrowsInCavern(map.getPlayerCavern().getName());
       if (arrowsFound > 0)
         messageReceiver.arrowsFound(arrowsFound);
       quiver += arrowsFound;
-      arrowsIn.put(playerCavern, 0);
+      map.clearArrowsInPlayerCavern();
     }
 
     private class NoPassage extends RuntimeException {}
