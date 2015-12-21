@@ -182,6 +182,10 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     public boolean isNull() {
       return false;
     }
+
+    private boolean hasConnectionGoing(Direction direction) {
+      return !findDestination(direction).isNull();
+    }
   }
 
   private static class NullCavern extends Cavern {
@@ -270,12 +274,13 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       public ArrowTracker trackArrow(Direction direction) {
-        Cavern nextCavern;
-        for (int count = 0; !(nextCavern = arrowCavern.findDestination(direction)).isNull(); count++) {
-          arrowCavern = nextCavern;
+        int count = 0;
+        while (arrowCavern.hasConnectionGoing(direction)) {
+          arrowCavern = arrowCavern.findDestination(direction);
           if (shotSelfInBack()) return this;
           if (shotWumpus()) return this;
           if (count > 100) return this;
+          count++;
         }
         if (arrowCavern.equals(playerCavern))
           messageReceiver.playerShootsWall();
