@@ -69,6 +69,10 @@ class ShootCommand extends GameCommand {
       return take(103, arrowCavern.getCavernsGoing(direction));
     }
 
+    private <T> List<T> take(int nElements, List<T> list) {
+      return list.subList(0, Math.min(list.size(), nElements - 1));
+    }
+
     private boolean updateArrowCavernWith(Cavern newArrowCavern) {
       arrowCavern = newArrowCavern;
       return true;
@@ -98,10 +102,6 @@ class ShootCommand extends GameCommand {
     private void checkWallShot() {
       if (arrowCavern.equals(game.getPlayerCavern()))
         messageReceiver.playerShootsWall();
-    }
-
-    private <T> List<T> take(int nElements, List<T> list) {
-      return list.subList(0, Math.min(list.size(), nElements - 1));
     }
   }
 }
