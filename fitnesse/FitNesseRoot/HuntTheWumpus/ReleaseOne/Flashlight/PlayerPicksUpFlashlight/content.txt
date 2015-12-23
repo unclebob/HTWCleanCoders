@@ -1,0 +1,8 @@
+-!|script|
+|Given Cross Map|
+|Given the player is in cavern FarLeft|
+|Given the flashlight is in cavern Middle|
+|When the player moves East 2 times|
+|Then the player is in cavern Middle|
+|Then the player has found flashlight|
+|Then a FLASHLIGHT_FOUND message is given|
