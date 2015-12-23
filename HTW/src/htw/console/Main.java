@@ -14,70 +14,74 @@ import java.util.List;
 import static htw.HuntTheWumpus.Direction.*;
 
 public class Main implements HtwMessageReceiver {
+  private static boolean playing = true;
   private static HuntTheWumpus game;
   private static int hitPoints = 10;
   private static final List<String> caverns = new ArrayList<>();
   private static final String[] environments = new String[]{
-    "bright",
-    "humid",
-    "dry",
-    "creepy",
-    "ugly",
-    "foggy",
-    "hot",
-    "cold",
-    "drafty",
-    "dreadful"
+    " bright",
+    " clean",
+    " warm",
+    "n airy",
+    " crisp",
+    "",
+    " cool",
+    " stuffy",
+    " drafty",
+    " dreadful"
   };
 
   private static final String[] shapes = new String[] {
+    "small",
+    "tiny",
+    "rectangular",
     "round",
-    "square",
-    "oval",
-    "irregular",
-    "long",
-    "craggy",
-    "rough",
-    "tall",
-    "narrow"
+    "large",
+    "enormous",
+    "tilted",
+    "elegant",
+    "enchanting"
   };
 
   private static final String[] cavernTypes = new String[] {
-    "cavern",
-    "room",
-    "chamber",
-    "catacomb",
-    "crevasse",
-    "cell",
-    "tunnel",
-    "passageway",
-    "hall",
-    "expanse"
+    "kitchen",
+    "bedroom",
+    "closet",
+    "living room",
+    "dining room",
+    "foyer",
+    "hallway",
+    "wardrobe",
+    "suite",
+    "bath"
   };
 
   private static final String[] adornments = new String[] {
-   "smelling of sulphur",
-    "with engravings on the walls",
-    "with a bumpy floor",
+   "smelling of gingerbread.",
+    "with a beautifully decorated tree.",
+    "with an elf doll watching from a shelf.",
     "",
-    "littered with garbage",
-    "spattered with guano",
-    "with piles of Wumpus droppings",
-    "with bones scattered around",
-    "with a corpse on the floor",
-    "that seems to vibrate",
-    "that feels stuffy",
-    "that fills you with dread"
+    "filled with presents.",
+    "with a small table holding cookies and milk.",
+    "with a toy train running in circles.",
+    "with a partridge in a pear tree.",
+    "with four maids-a-milking. Why are they milking? Two words: egg. nog.",
+    "that is filled with Christmas music.",
+    "that is decked with boughs of holly.",
+    "that makes you feel jolly."
   };
 
   public static void main(String[] args) throws IOException {
     game = HtwFactory.makeGame("htw.game.HuntTheWumpusGame", new Main());
     createMap();
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    displayInstructions();
     game.makeRestCommand().execute();
-    while (true) {
-      System.out.println(game.getPlayerCavern());
-      System.out.println("Health: " + hitPoints + " arrows: " + game.getQuiver());
+    while (playing) {
+      System.out.println();
+      System.out.println("You are in " + game.getPlayerCavern());
+      System.out.println();
+      System.out.println("Health: " + hitPoints + " Candy canes: " + game.getQuiver() + " Flashlight?: " + (game.getPlayerHasFlashlight() ? "Yes" : "No"));
       HuntTheWumpus.Command c = game.makeRestCommand();
       System.out.println(">");
       String command = br.readLine();
@@ -104,6 +108,31 @@ public class Main implements HtwMessageReceiver {
 
       c.execute();
     }
+    displayResults();
+  }
+
+  private static void displayInstructions() throws IOException {
+    System.out.println("You must save Christmas!");
+    System.out.println("");
+    System.out.println("Maybe you weren't on your best behavior this year, but this is much worse than you expected.");
+    System.out.println("Krampus, the hairy, horned beast who punishes bad children at Christmas, has gotten into your house on Christmas Eve!");
+    System.out.println("For some reason, he manages to show up the same day your house gets infested by flying monkeys.");
+    System.out.println("You've got 10 candy canes you can shoot at Krampus to try to drive him away.");
+    System.out.println("There's a flashlight somewhere in the house - find it and maybe it will be helpful.");
+    System.out.println("Good luck! Only you can save Christmas! Of course, if you'd behaved better throughout the year, this wouldn't be happening, but never mind, you can be a flawed hero!");
+    System.out.println("");
+    System.out.println("Press <ENTER> when you're ready to start...");
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    br.readLine();
+  }
+
+  private static void displayResults() {
+    if (game.getKrampusDefeated()) {
+      System.out.println("Now the bad children will get the same gifts as the good children! Wait a minute, that can't be right...");
+      System.out.println("Nevermind - presents for everyone! Yay!");
+    } else {
+      System.out.println("Hopefully you've learned a lesson, and you'll behave well enough next year that Krampus won't visit you again.");
+    }
   }
 
   private static void createMap() {
@@ -119,7 +148,9 @@ public class Main implements HtwMessageReceiver {
     }
 
     String playerCavern = anyCavern();
+    String flashlightCavern = anyOther(playerCavern);
     game.setPlayerCavern(playerCavern);
+    game.setFlashlightCavern(flashlightCavern);
     game.setWumpusCavern(anyOther(playerCavern));
     game.addBatCavern(anyOther(playerCavern));
     game.addBatCavern(anyOther(playerCavern));
@@ -134,7 +165,7 @@ public class Main implements HtwMessageReceiver {
 
   private static String makeName() {
 
-    return "A " + chooseName(environments) + " " + chooseName(shapes) + " " +
+    return "a" + chooseName(environments) + " " + chooseName(shapes) + " " +
       chooseName(cavernTypes) + " " + chooseName(adornments);
   }
 
@@ -175,15 +206,15 @@ public class Main implements HtwMessageReceiver {
   }
 
   public void hearBats() {
-    System.out.println("You hear chirping.");
+    System.out.println("You hear screeching.");
   }
 
   public void hearPit() {
-    System.out.println("You hear wind.");
+    System.out.println("You hear creaking.");
   }
 
   public void smellWumpus() {
-    System.out.println("There is a terrible smell.");
+    System.out.println("There is a terrible smell. It smells like sulphur and disappointment.");
   }
 
   public void passage(Direction direction) {
@@ -191,11 +222,11 @@ public class Main implements HtwMessageReceiver {
   }
 
   public void noArrows() {
-    System.out.println("You have no arrows.");
+    System.out.println("You have no candy canes to fire.");
   }
 
   public void arrowShot() {
-    System.out.println("Thwang!");
+    System.out.println("Thwang! Take that, cavity prevention!");
   }
 
   public void playerShootsSelfInBack() {
@@ -204,8 +235,8 @@ public class Main implements HtwMessageReceiver {
   }
 
   public void playerKillsWumpus() {
-    System.out.println("You killed the Wumpus.");
-    System.exit(0);
+    System.out.println("Your candy cane hits Krampus and drives him away!");
+    playing=false;
   }
 
   public void playerShootsWall() {
@@ -214,33 +245,37 @@ public class Main implements HtwMessageReceiver {
   }
 
   public void arrowsFound(Integer arrowsFound) {
-    System.out.println("You found " + arrowsFound + " arrow" + (arrowsFound == 1 ? "" : "s") + ".");
+    System.out.println("You found " + arrowsFound + " candy cane" + (arrowsFound == 1 ? "" : "s") + ".");
+  }
+
+  public void flashlightFound() {
+    System.out.println("You found a flashlight! Flying monkeys are afraid of the light, maybe this will be useful.");
   }
 
   public void fellInPit() {
-    System.out.println("You fell in a pit and hurt yourself.");
+    System.out.println("You fell down some stairs and hurt yourself.");
     hit(4);
   }
 
   public void playerMovesToWumpus() {
-    System.out.println("You walked into the waiting arms of the Wumpus.");
-    System.exit(0);
+    System.out.println("You walked into the waiting arms of Krampus. He knows of your bad behavior, and has coal for you instead of presents.");
+    playing = false;
   }
 
   public void wumpusMovesToPlayer() {
-    System.out.println("The Wumpus has found you.");
-    System.exit(0);
+    System.out.println("Krampus has found you. You have been given coal and birch branches as punishment for your bad behavior.");
+    playing = false;
   }
 
   public void batsTransport() {
-    System.out.println("Some bats carried you away.");
+    System.out.println("Some flying monkeys carried you away. They kept asking about Dorothy.");
   }
 
   private void hit(int points) {
     hitPoints -= points;
     if (hitPoints <= 0) {
-      System.out.println("You have died of your wounds.");
-      System.exit(0);
+      System.out.println("You are rendered unconscious. You sleep through Christmas and don't get any presents.");
+      playing = false;
     }
   }
 }

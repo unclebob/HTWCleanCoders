@@ -14,8 +14,11 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   private HtwMessageReceiver messageReceiver;
   private Set<String> batCaverns = new HashSet<>();
   private Set<String> pitCaverns = new HashSet<>();
+  private String flashlightCavern = "NONE";
   private String wumpusCavern = "NONE";
   private int quiver = 0;
+  private boolean playerHasFlashlight = false;
+  private boolean krampusDefeated = false;
   private Map<String, Integer> arrowsIn = new HashMap<>();
 
   public HuntTheWumpusGame(HtwMessageReceiver receiver) {
@@ -26,18 +29,28 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     this.playerCavern = playerCavern;
   }
 
+  public void setFlashlightCavern(String flashlightCavern) { this.flashlightCavern = flashlightCavern; }
+
+  @Override
+  public boolean getKrampusDefeated() {
+    return krampusDefeated;
+  }
+
   public String getPlayerCavern() {
     return playerCavern;
   }
+  public String getFlashlightCavern() { return flashlightCavern; }
 
   private void reportStatus() {
-    reportAvailableDirections();
-    if (reportNearby(c -> batCaverns.contains(c.to)))
-      messageReceiver.hearBats();
-    if (reportNearby(c -> pitCaverns.contains(c.to)))
-      messageReceiver.hearPit();
-    if (reportNearby(c -> wumpusCavern.equals(c.to)))
-      messageReceiver.smellWumpus();
+    if (!wumpusCavern.equals(playerCavern)) {
+      reportAvailableDirections();
+      if (reportNearby(c -> batCaverns.contains(c.to)))
+        messageReceiver.hearBats();
+      if (reportNearby(c -> pitCaverns.contains(c.to)))
+        messageReceiver.hearPit();
+      if (reportNearby(c -> wumpusCavern.equals(c.to)))
+        messageReceiver.smellWumpus();
+    }
   }
 
   private boolean reportNearby(Predicate<Connection> nearTest) {
@@ -98,6 +111,9 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   public int getQuiver() {
     return quiver;
   }
+
+  public boolean getPlayerHasFlashlight() { return playerHasFlashlight; }
+  public void setPlayerHasFlashlight(boolean hasFlashlight) { playerHasFlashlight = hasFlashlight; }
 
   public Integer getArrowsInCavern(String cavern) {
     return zeroIfNull(arrowsIn.get(cavern));
@@ -226,6 +242,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       private boolean shotWumpus() {
         if (arrowCavern.equals(wumpusCavern)) {
           messageReceiver.playerKillsWumpus();
+          krampusDefeated = true;
           hitSomething = true;
           return true;
         }
@@ -263,6 +280,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
         checkForPit();
         checkForBats();
         checkForArrows();
+        checkForFlashlight();
       } else
         messageReceiver.noPassage();
     }
@@ -273,7 +291,7 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     }
 
     private void checkForBats() {
-      if (batCaverns.contains(playerCavern)) {
+      if (batCaverns.contains(playerCavern) && (!playerHasFlashlight)) {
         messageReceiver.batsTransport();
         randomlyTransportPlayer();
       }
@@ -299,6 +317,14 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
         messageReceiver.arrowsFound(arrowsFound);
       quiver += arrowsFound;
       arrowsIn.put(playerCavern, 0);
+    }
+
+    private void checkForFlashlight() {
+      if (flashlightCavern.equals(playerCavern)) {
+        messageReceiver.flashlightFound();
+        playerHasFlashlight = true;
+        flashlightCavern = "NONE";
+      }
     }
   }
 }

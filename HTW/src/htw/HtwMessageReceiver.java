@@ -12,6 +12,7 @@ public interface HtwMessageReceiver {
   void playerKillsWumpus();
   void playerShootsWall();
   void arrowsFound(Integer arrowsFound);
+  void flashlightFound();
   void fellInPit();
   void playerMovesToWumpus();
   void wumpusMovesToPlayer();

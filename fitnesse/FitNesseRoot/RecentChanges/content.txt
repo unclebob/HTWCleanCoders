@@ -1,4 +1,9 @@
-|HuntTheWumpus.ScenarioLibrary||13:46:54 Wed, Nov 11, 2015|
+|HuntTheWumpus.ReleaseOne.Flashlight.PlayerWithFlashlightImmuneToBats||20:01:26 Tue, Dec 22, 2015|
+|HuntTheWumpus.ScenarioLibrary||19:55:33 Tue, Dec 22, 2015|
+|HuntTheWumpus.ReleaseOne.Flashlight.PlayerPicksUpFlashlight||19:45:18 Tue, Dec 22, 2015|
+|HuntTheWumpus.ReleaseOne.Flashlight.FlashlightRandomlyPlaced||23:48:41 Mon, Dec 21, 2015|
+|HuntTheWumpus.ReleaseOne.Flashlight.FlashlightNeverStartsWithPlayer||23:48:00 Mon, Dec 21, 2015|
+|HuntTheWumpus.ReleaseOne.Flashlight||23:46:54 Mon, Dec 21, 2015|
 |HuntTheWumpus.ReleaseOne.PlayerRecievesStatusAfterEachTurn.AvailablePassagesAreReported||11:59:47 Tue, Oct 13, 2015|
 |HuntTheWumpus.ReleaseOne.PitCaverns.PlayerIsInformedAboutFallingIntoPit||06:57:44 Tue, Oct 13, 2015|
 |HuntTheWumpus.ReleaseOne.PitCaverns||06:55:37 Tue, Oct 13, 2015|

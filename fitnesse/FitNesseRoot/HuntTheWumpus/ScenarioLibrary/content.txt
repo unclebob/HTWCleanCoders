@@ -67,6 +67,22 @@
 |scenario|Then there are _ arrows in cavern _|arrows,cavern|
 |check|arrows in cavern|@cavern|@arrows|
 
+!3 Flashlight Scenarios
+
+|scenario|When the player moves _ 2 times|direction|
+|move player|@direction|
+|move player|@direction|
+
+|scenario|Given that the player has the flashlight|
+|give player the flashlight|
+|check|get player has flashlight|true|
+
+|scenario|Given the flashlight is in cavern|c|
+|put flashlight in cavern|@c|
+|$flashlightCavern=|get flashlight cavern|
+
+|scenario|Then the player has found flashlight|
+|check|get player has flashlight|true|
 
 !3 Wumpus Scenarios
 
