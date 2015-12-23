@@ -28,14 +28,19 @@ public interface HuntTheWumpus {
 
   }
   void setPlayerCavern(String playerCavern);
+  void setFlashlightCavern(String flashlightCavern);
+  boolean getKrampusDefeated();
 
   String getPlayerCavern();
+  String getFlashlightCavern();
+
   void addBatCavern(String cavern);
   void addPitCavern(String cavern);
   void setWumpusCavern(String wumpusCavern);
   String getWumpusCavern();
   void setQuiver(int arrows);
   int getQuiver();
+  boolean getPlayerHasFlashlight();
   Integer getArrowsInCavern(String cavern);
   void connectCavern(String from, String to, Direction direction);
   String findDestination(String cavern, Direction direction);

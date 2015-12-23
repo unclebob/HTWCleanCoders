@@ -1,0 +1,9 @@
+-!|script|
+|Given Cross Map|
+|Given the player is in cavern Left|
+|Given that the player has the flashlight|
+|Given the Middle cavern has bats|
+|When the player goes East|
+|Then the player is in cavern Middle|
+|Then a BAT_TRANSPORT message is not given|
+

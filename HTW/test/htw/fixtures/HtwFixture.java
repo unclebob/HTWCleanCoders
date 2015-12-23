@@ -25,15 +25,27 @@ public class HtwFixture {
   public String getPlayerCavern() {
     return game.getPlayerCavern();
   }
+  public boolean getPlayerHasFlashlight() { return game.getPlayerHasFlashlight(); }
+
+  public void givePlayerTheFlashlight() {
+    game.setPlayerHasFlashlight(true);
+  }
 
   public boolean putWumpusInCavern(String c) {
     game.setWumpusCavern(c);
     return true;
   }
 
+  public boolean putFlashlightInCavern(String c) {
+    game.setFlashlightCavern(c);
+    return true;
+  }
+
   public String getWumpusCavern() {
     return game.getWumpusCavern();
   }
+
+  public String getFlashlightCavern() { return game.getFlashlightCavern(); }
 
   public boolean freezeWumpus() {
     game.freezeWumpus();

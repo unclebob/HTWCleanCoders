@@ -60,6 +60,8 @@ public class TestContext implements HtwMessageReceiver {
     messages.add(String.format("%d_ARROW_FOUND", arrowsFound));
   }
 
+  public void flashlightFound() { messages.add("FLASHLIGHT_FOUND"); }
+
   public void passage(HuntTheWumpus.Direction direction) {
     messages.add(direction.name() + "_PASSAGE");
   }
