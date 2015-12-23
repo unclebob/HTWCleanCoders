@@ -2,331 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5de7465-a520-4e1e-ad47-220a3d954579" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006120238.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006120910.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006121004.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006121045.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006121158.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006121245.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006121354.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006121501.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006121620.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006122951.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006123156.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006124150.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006124552.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006130531.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006130541.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006130833.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151006130959.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008103100.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008103323.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008103355.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008113935.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008114046.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008114150.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008114410.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008124124.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008124329.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008124425.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008124616.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008124704.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008125347.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008125449.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008130916.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008131059.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151008131150.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009083225.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009084545.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009084852.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009084927.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009085035.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009085252.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009085452.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009085514.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009090551.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009091538.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009091706.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009112253.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009123445.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/20151009141916.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006115427.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006115534.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120001.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120028.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120133.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120223.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120238.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120551.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120626.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120726.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120743.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120858.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120910.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006120937.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006121004.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006121032.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006121045.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006121158.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006121245.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006121354.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006121501.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006121620.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006122951.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006123054.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006123156.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006123745.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006123811.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006123913.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006124015.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006124033.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006124120.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006124150.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006124233.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006124315.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006124422.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006124459.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006124552.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006124820.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006125804.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006130310.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006130331.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006130422.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006130531.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006130541.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006130833.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006130959.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151006131719.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008102527.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008102655.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008102819.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008102958.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008103019.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008103100.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008103143.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008103238.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008103323.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008103355.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008103638.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008103702.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008103742.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008103759.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008104606.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008104856.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008105120.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008105250.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008112051.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008112412.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008112707.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008113537.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008113622.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008113642.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008113656.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008113716.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008113734.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008113814.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008113935.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008114046.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008114150.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008114217.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008114410.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008124021.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008124124.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008124329.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008124425.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008124616.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008124624.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008124704.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008125347.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008125359.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008125449.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008125756.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008125825.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008130405.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008130537.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008130814.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008130850.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008130916.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008130933.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008131038.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008131059.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008131150.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151008131202.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009082837.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009083142.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009083225.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009083304.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009083409.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009083552.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009083816.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009083835.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009083851.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009083921.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009084030.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009084118.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009084155.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009084512.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009084545.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009084852.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009084927.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009085035.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009085252.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009085439.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009085452.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009085514.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009085856.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009085918.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009085943.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009085957.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090009.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090153.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090204.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090303.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090320.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090348.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090435.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090513.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090551.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090637.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090749.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090805.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009090842.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009091350.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009091538.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009091617.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009091706.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009092104.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009095856.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009111957.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009112253.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009113154.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009113219.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009113846.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009123445.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009124758.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009131157.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009131617.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009131733.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009131748.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009131811.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009131913.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009131927.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009141654.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009141817.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009141916.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009141928.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009141946.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009143214.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009143628.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009145111.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009150225.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009150249.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009150456.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009150802.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009151310.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151009151418.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151012161543.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151012161637.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151012161711.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013064745.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013064925.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013065029.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013065156.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013065228.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013065537.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013065636.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013065744.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013115800.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013115821.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013115920.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/20151013115947.zip" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/htw/HtwMessageReceiver.java" afterPath="$PROJECT_DIR$/src/htw/HtwMessageReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/htw/HuntTheWumpus.java" afterPath="$PROJECT_DIR$/src/htw/HuntTheWumpus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/htw/console/Main.java" afterPath="$PROJECT_DIR$/src/htw/console/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java" afterPath="$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java" afterPath="$PROJECT_DIR$/test/htw/fixtures/HtwFixture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/htw/fixtures/TestContext.java" afterPath="$PROJECT_DIR$/test/htw/fixtures/TestContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/LoginWithOneFailure/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/LoginWithOneFailure/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/LoginWithOneFailure/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/LoginWithOneFailure/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/LoginWithThreeFailures/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/LoginWithThreeFailures/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/LoginWithThreeFailures/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/LoginWithThreeFailures/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/SuccessfulLogin/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/SuccessfulLogin/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/SuccessfulLogin/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/SuccessfulLogin/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/IterationOne/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/AutomatedTellerMachine/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/AngelaBrooks/AlexisBrooks/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/AngelaBrooks/AlexisBrooks/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/AngelaBrooks/AlexisBrooks/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/AngelaBrooks/AlexisBrooks/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/AngelaBrooks/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/AngelaBrooks/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/AngelaBrooks/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/AngelaBrooks/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/BobMartin/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/BatTransportRandomly/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/BatTransportRandomly/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/BatTransportRandomly/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/BatTransportRandomly/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/FallInPit/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/FallInPit/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/FallInPit/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/FallInPit/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/HearBats/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/HearBats/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/HearBats/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/HearBats/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/HearPit/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/HearPit/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/HearPit/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/HearPit/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/KillWumpus/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/KillWumpus/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/KillWumpus/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/KillWumpus/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCanMoveThroughMap/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCanMoveThroughMap/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCanMoveThroughMap/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCanMoveThroughMap/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCanRest/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCanRest/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCanRest/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCanRest/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCantMoveOutOfMap/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCantMoveOutOfMap/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCantMoveOutOfMap/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCantMoveOutOfMap/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCommandAbbreviations/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCommandAbbreviations/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCommandAbbreviations/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestCommandAbbreviations/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestInvalidCommand/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestInvalidCommand/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestInvalidCommand/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestInvalidCommand/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestPossibleDirectionsAreReported/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestPossibleDirectionsAreReported/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestPossibleDirectionsAreReported/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/TestPossibleDirectionsAreReported/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/NavigatePlayer/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/PickUpArrow/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/PickUpArrow/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/PickUpArrow/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/PickUpArrow/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestAbbreviationsOfShootCommand/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestAbbreviationsOfShootCommand/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestAbbreviationsOfShootCommand/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestAbbreviationsOfShootCommand/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestCanShootWhenThereAreArrows/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestCanShootWhenThereAreArrows/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestCanShootWhenThereAreArrows/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestCanShootWhenThereAreArrows/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestCannotShootWhenThereAreNoArrows/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestCannotShootWhenThereAreNoArrows/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestCannotShootWhenThereAreNoArrows/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestCannotShootWhenThereAreNoArrows/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestLongDistanceKill/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestLongDistanceKill/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestLongDistanceKill/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestLongDistanceKill/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestPlayerDiesWhenArrowBouncesOffWallInSameCavern/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestPlayerDiesWhenArrowBouncesOffWallInSameCavern/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestPlayerDiesWhenArrowBouncesOffWallInSameCavern/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/ShootArrow/TestPlayerDiesWhenArrowBouncesOffWallInSameCavern/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/SmellWumpus/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/SmellWumpus/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/SmellWumpus/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/SmellWumpus/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationOne/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTrap/FindWumpusTrap/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTrap/FindWumpusTrap/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTrap/FindWumpusTrap/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTrap/FindWumpusTrap/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTreats/TestWumpusEatsTreatInsteadOfPlayer/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTreats/TestWumpusEatsTreatInsteadOfPlayer/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTreats/TestWumpusEatsTreatInsteadOfPlayer/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTreats/TestWumpusEatsTreatInsteadOfPlayer/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTreats/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTreats/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTreats/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationThree/WumpusTreats/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationTwo/BatsMoveWumpus/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationTwo/BatsMoveWumpus/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationTwo/BatsMoveWumpus/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationTwo/BatsMoveWumpus/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationTwo/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationTwo/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationTwo/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/IterationTwo/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/AllRequirements/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/CrossMap/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/CrossMap/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/CrossMap/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/CrossMap/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/DonutMap/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/DonutMap/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/DonutMap/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/DonutMap/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/SetUp/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/SetUp/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/SetUp/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/SetUp/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/HuntTheWumpus/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/JunkPage/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/JunkPage/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/JunkPage/properties.xml" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/FrontPage/JunkPage/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/HuntTheWumpus/ScenarioLibrary/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/content.txt" afterPath="$PROJECT_DIR$/../fitnesse/FitNesseRoot/RecentChanges/content.txt" />
     </list>
     <ignored path="HTW.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -401,8 +77,8 @@
       <file leaf-file-name="HuntTheWumpusGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5769645">
-              <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.77483445">
+              <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
               <folding>
                 <element signature="e#1105#1106#0" expanded="true" />
                 <element signature="e#1137#1138#0" expanded="true" />
@@ -1040,6 +716,13 @@
       <workItem from="1447925177324" duration="88000" />
       <workItem from="1448101581443" duration="1063000" />
     </task>
+    <task id="LOCAL-00001" summary="Converted game over to Krampus">
+      <created>1450836418462</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1450836418462</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1055,7 +738,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296146" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29310346" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1106,6 +789,12 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Converted game over to Krampus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Converted game over to Krampus" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1621,8 +1310,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/htw/game/HuntTheWumpusGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5769645">
-          <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.77483445">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
           <folding>
             <element signature="e#1105#1106#0" expanded="true" />
             <element signature="e#1137#1138#0" expanded="true" />
