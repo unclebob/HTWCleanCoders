@@ -1,0 +1,7 @@
+-!|script|
+|Given Cross Map|
+|Given the player is in cavern Middle|
+|When the player adds a pit cover to the East|
+|Then a PIT_COVER_ADDED_TO_CAVERN_EAST message is given|
+|When the player adds a pit cover to the West|
+|Then a NO_PIT_COVER message is given|

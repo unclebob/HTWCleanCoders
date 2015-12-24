@@ -1,0 +1,5 @@
+-!|script|
+|Given Cross Map|
+|Given the player is in cavern FarLeft|
+|When the player adds a pit cover to the West|
+|Then a CAVERN_NOT_ADJACENT_FOR_PIT_COVER message is given|

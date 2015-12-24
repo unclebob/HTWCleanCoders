@@ -1,7 +1,7 @@
 package htw.fixtures;
 
 import htw.HtwMessageReceiver;
-import htw.HuntTheWumpus;
+import htw.HuntTheWumpus.Direction;
 import htw.factory.HtwFactory;
 
 import java.util.HashMap;
@@ -60,7 +60,7 @@ public class TestContext implements HtwMessageReceiver {
     messages.add(String.format("%d_ARROW_FOUND", arrowsFound));
   }
 
-  public void passage(HuntTheWumpus.Direction direction) {
+  public void passage(Direction direction) {
     messages.add(direction.name() + "_PASSAGE");
   }
 
@@ -82,5 +82,20 @@ public class TestContext implements HtwMessageReceiver {
 
   public void playerShootsWall() {
     messages.add("PLAYER_SHOOTS_WALL");
+  }
+
+  @Override
+  public void addPitCoverToAdjacentCavern(Direction cavern) {
+    messages.add("PIT_COVER_ADDED_TO_CAVERN_"  + cavern.name());
+  }
+
+  @Override
+  public void cavernNotAdjacentForPitCover() {
+    messages.add("CAVERN_NOT_ADJACENT_FOR_PIT_COVER");
+  }
+
+  @Override
+  public void noPitCover() {
+    messages.add("NO_PIT_COVER");
   }
 }

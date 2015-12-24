@@ -1,8 +1,72 @@
 -!|script|
 |Given Cross Map|
-|Given the player is in cavern FarLeft|
-|Given the wumpus is in cavern Middle|
-|Given the player has 1 arrow|
-|When the player shoots East|
-|Then there are 0 arrows in cavern FarRight|
-|Then a|WUMPUS_KILLED|message is given|
+
+{{{
+Cross Map
+''Links are bidirectional''
+
+
+                 [ Top  ]
+
+                 [Above ]
+
+[FarLeft] [Left] [Middle] [Right] [FarRight]
+
+                 [Below ]
+
+                 [Bottom]
+
+}}}
+
+!|Does arrow kill wumpus|
+|player cavern|wumpus cavern|arrows for player|shooting direction|farthest cavern?|arrows in farthest cavern?|wumpus killed message?|
+|FarLeft|Left|1|East|FarRight|0|Yes|
+|FarLeft|Middle|1|East|FarRight|0|Yes|
+|FarLeft|Right|1|East|FarRight|0|Yes|
+|FarLeft|FarRight|1|East|FarRight|0|Yes|
+|FarLeft|Top|1|East|FarRight|1|No|
+|FarRight|Right|1|West|FarLeft|0|Yes|
+|FarRight|Middle|1|West|FarLeft|0|Yes|
+|FarRight|Left|1|West|FarLeft|0|Yes|
+|FarRight|FarLeft|1|West|FarLeft|0|Yes|
+|FarRight|Bottom|1|West|FarLeft|1|No|
+|Top|Above|1|South|Bottom|0|Yes|
+|Top|Middle|1|South|Bottom|0|Yes|
+|Top|Below|1|South|Bottom|0|Yes|
+|Top|Bottom|1|South|Bottom|0|Yes|
+|Top|FarLeft|1|South|Bottom|1|No|
+|Bottom|Below|1|North|Top|0|Yes|
+|Bottom|Middle|1|North|Top|0|Yes|
+|Bottom|Above|1|North|Top|0|Yes|
+|Bottom|Top|1|North|Top|0|Yes|
+|Bottom|FarRight|1|North|Top|1|No|
+
+-!|script|
+|Given Donut Map|
+
+{{{
+Donut Map
+
+[3]<-[2]<-[1]
+ |         A
+ V         |
+[4]       [8]
+ |         A
+ V         |
+[5]->[6]->[7]
+}}}
+
+!|Does arrow kill wumpus|
+|player cavern|wumpus cavern|arrows for player|shooting direction|farthest cavern?|arrows in farthest cavern?|wumpus killed message?|
+|1|2|1|West|3|0|Yes|
+|1|3|1|West|3|0|Yes|
+|1|5|1|West|3|1|No|
+|3|4|1|South|5|0|Yes|
+|3|5|1|South|5|0|Yes|
+|3|7|1|South|5|1|No|
+|5|6|1|East|7|0|Yes|
+|5|7|1|East|7|0|Yes|
+|5|8|1|East|7|1|No|
+|7|8|1|North|1|0|Yes|
+|7|1|1|North|1|0|Yes|
+|7|3|1|North|1|1|No|

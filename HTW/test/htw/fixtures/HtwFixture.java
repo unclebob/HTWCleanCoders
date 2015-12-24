@@ -125,4 +125,9 @@ public class HtwFixture {
   public int arrowsInCavern(String cavern) {
     return game.getArrowsInCavern(cavern);
   }
+
+  public boolean addPitCover(String dir) {
+    game.makeAddPitCoverCommand(toDirection(dir)).execute();
+    return true;
+  }
 }
