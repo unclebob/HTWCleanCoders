@@ -1,6 +1,5 @@
 package htw.game;
 
-import com.sun.corba.se.spi.legacy.connection.GetEndPointInfoAgainException;
 import htw.HtwMessageReceiver;
 import htw.HuntTheWumpus;
 
