@@ -1,0 +1,28 @@
+If the Wumpus stops the arrow, there are no arrows left in farthest cavern
+|scenario|Given Wumpus in Middle and player in cavern|cavern|when shooting|direction|then cavern|farthestCavern|should have no arrows|
+|Given Cross Map|
+|Given the player is in cavern @cavern|
+|Given the wumpus is in cavern Middle|
+|Given the player has 1 arrow|
+|When the player shoots @direction|
+|Then there are 0 arrows in cavern @farthestCavern|
+
+!|Given Wumpus in Middle and player in cavern when shooting then cavern should have no arrows|
+|cavern|direction|farthestCavern|
+|FarLeft|East|FarRight|
+|FarRight|West|FarLeft|
+|Top|South|Bottom|
+|Bottom|North|Top|
+
+
+If the Wumpus stops the arrow, the player is not killed by shooting in circle:
+-!|script|
+|Given cavern A connects to cavern B going East|
+|Given cavern B connects to cavern C going East|
+|Given cavern C connects to cavern D going East|
+|Given cavern D connects to cavern A going East|
+|Given the player has 1 arrow|
+|Given the player is in cavern A|
+|Given the wumpus is in cavern C|
+|When the player shoots East|
+|Then a PLAYER_SHOOTS_SELF_IN_BACK message is not given|

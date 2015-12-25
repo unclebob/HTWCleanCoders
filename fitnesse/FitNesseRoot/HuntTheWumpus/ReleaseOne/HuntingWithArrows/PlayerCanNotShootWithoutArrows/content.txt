@@ -1,8 +1,15 @@
+|scenario|Then player can not shoot in |direction|
+|When the player shoots @direction|
+|Then a message|NO_ARROWS|is given|
+
 -|script|
 |Given Cross map|
 |Given the player is in cavern Middle|
 |Given the player has no arrows|
-|When the player shoots East|
-|Then a message|NO_ARROWS|is given|
-'
 
+|Then player can not shoot in|
+|direction|
+|East|
+|West|
+|North|
+|South|

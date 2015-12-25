@@ -5,6 +5,7 @@ import htw.HuntTheWumpus;
 
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class HuntTheWumpusGame implements HuntTheWumpus {
   private List<Connection> connections = new ArrayList<>();
@@ -41,17 +42,20 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   private boolean reportNearby(Predicate<Connection> nearTest) {
-    for (Connection c : connections)
-      if (playerCavern.equals(c.from) && nearTest.test(c))
-        return true;
-    return false;
+    return connectionsOf(playerCavern).stream()
+        .anyMatch(nearTest::test);
   }
 
   private void reportAvailableDirections() {
-    for (Connection c : connections) {
-      if (playerCavern.equals(c.from))
-        messageReceiver.passage(c.direction);
-    }
+    connectionsOf(playerCavern).stream()
+        .map(c -> c.direction)
+        .forEach(messageReceiver::passage);
+  }
+
+  private List<Connection> connectionsOf(String cavern) {
+    return connections.stream()
+        .filter(c -> cavern.equals(c.from))
+        .collect(Collectors.toList());
   }
 
   public void addBatCavern(String cavern) {
@@ -71,14 +75,16 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   protected void moveWumpus() {
-    List<String> wumpusChoices = new ArrayList<>();
-    for (Connection c : connections)
-      if (wumpusCavern.equals(c.from))
-        wumpusChoices.add(c.to);
+    String cavern = wumpusCavern;
+
+    List<String> wumpusChoices = connectionsOf(cavern).stream()
+        .map(c -> c.to)
+        .collect(Collectors.toList());
+
     wumpusChoices.add(wumpusCavern);
 
     int nChoices = wumpusChoices.size();
-    int choice = (int) (Math.random() * nChoices);
+    int choice = randomChoice(nChoices);
     wumpusCavern = wumpusChoices.get(choice);
   }
 
@@ -86,9 +92,13 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     Set<String> transportChoices = new HashSet<>(caverns);
     transportChoices.remove(playerCavern);
     int nChoices = transportChoices.size();
-    int choice = (int) (Math.random() * nChoices);
+    int choice = randomChoice(nChoices);
     String[] choices = new String[nChoices];
     playerCavern = transportChoices.toArray(choices)[choice];
+  }
+
+  private int randomChoice(int numberOfPossibleChoices) {
+    return (int) (Math.random() * numberOfPossibleChoices);
   }
 
   public void setQuiver(int arrows) {
@@ -107,7 +117,18 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
     if (integer == null)
       return 0;
     else
-      return integer.intValue();
+      return integer;
+  }
+
+  public void clearMap() {
+    playerCavern = "NONE";
+    wumpusCavern = "NONE";
+
+    connections.clear();
+    batCaverns.clear();
+    pitCaverns.clear();
+    arrowsIn.clear();
+    caverns.clear();
   }
 
   private class Connection {
@@ -129,10 +150,11 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
   }
 
   public String findDestination(String cavern, Direction direction) {
-    for (Connection c : connections)
-      if (c.from.equals(cavern) && c.direction == direction)
-        return c.to;
-    return null;
+    return connections.stream()
+        .filter(c -> c.from.equals(cavern) && c.direction.equals(direction))
+        .map(c -> c.to)
+        .findAny()
+        .orElse(null);
   }
 
   public Command makeRestCommand() {
@@ -242,10 +264,11 @@ public class HuntTheWumpusGame implements HuntTheWumpus {
       }
 
       private String nextCavern(String cavern, Direction direction) {
-        for (Connection c : connections)
-          if (cavern.equals(c.from) && direction.equals(c.direction))
-            return c.to;
-        return null;
+        return connectionsOf(cavern).stream()
+            .filter(c -> c.direction.equals(direction))
+            .map(c -> c.to)
+            .findAny()
+            .orElse(null);
       }
     }
   }

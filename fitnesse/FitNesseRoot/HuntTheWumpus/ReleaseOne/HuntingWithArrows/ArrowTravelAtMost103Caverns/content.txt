@@ -1,0 +1,21 @@
+-!|script|
+|Given Linear Map of size |102|
+|Given the player is in cavern 1|
+|Given the player has 1 arrow|
+|When the player shoots East|
+|Then there is 1 arrow in cavern 102|
+
+-!|script|
+|Given Linear Map of size |103|
+|Given the player is in cavern 1|
+|Given the player has 1 arrow|
+|When the player shoots East|
+|Then there is 1 arrow in cavern 103|
+
+-!|script|
+|Given Linear Map of size |104|
+|Given the player is in cavern 1|
+|Given the player has 1 arrow|
+|When the player shoots East|
+|Then there is 1 arrow in cavern 103|
+|Then there are 0 arrows in cavern 104|
