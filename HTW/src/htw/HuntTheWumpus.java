@@ -1,9 +1,7 @@
 package htw;
 
-import htw.game.HuntTheWumpusGame;
-
 public interface HuntTheWumpus {
-  public enum Direction {
+  enum Direction {
     NORTH {
       public Direction opposite() {
         return SOUTH;
@@ -39,11 +37,11 @@ public interface HuntTheWumpus {
   Integer getArrowsInCavern(String cavern);
   void connectCavern(String from, String to, Direction direction);
   String findDestination(String cavern, Direction direction);
-  HuntTheWumpusGame.Command makeRestCommand();
-  HuntTheWumpusGame.Command makeShootCommand(Direction direction);
-  HuntTheWumpusGame.Command makeMoveCommand(Direction direction);
+  Command makeRestCommand();
+  Command makeShootCommand(Direction direction);
+  Command makeMoveCommand(Direction direction);
 
-  public interface Command {
+  interface Command {
     void execute();
   }
 }

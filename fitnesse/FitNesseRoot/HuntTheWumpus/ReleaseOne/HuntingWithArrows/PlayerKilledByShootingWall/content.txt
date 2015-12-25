@@ -1,6 +1,19 @@
+|scenario|Given player in cavern|cavern|when shooting|direction|then shoots the wall|
+|Given the player is in cavern @cavern|
+|Given the player has 1 arrow|
+|When the player shoots @direction|
+|Then a|PLAYER_SHOOTS_WALL|message is given|
+
+
 -!|script|
 |Given Cross Map|
-|Given the player is in cavern FarLeft|
-|Given the player has 1 arrow|
-|When the player shoots North|
-|Then a|PLAYER_SHOOTS_WALL|message is given|
+
+|Given player in cavern when shooting then shoots the wall|
+|cavern|direction|
+|FarLeft|North|
+|FarLeft|West|
+|FarLeft|East|
+|FarLeft|West|
+|FarRight|East|
+|Top|North|
+|Bottom|South|

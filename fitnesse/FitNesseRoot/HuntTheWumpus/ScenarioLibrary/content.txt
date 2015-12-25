@@ -110,6 +110,7 @@ Donut Map
 }}}
 
 |scenario|Given Donut Map|
+|clear map|
 |Connect Cavern|1|to|2|going|West|
 |Connect Cavern|2|to|3|going|West|
 |Connect Cavern|3|to|4|going|South|
@@ -136,6 +137,7 @@ Cross Map
 
 }}}
 !|scenario|Given Cross Map|
+|clear map|
 |Connect Cavern|FarLeft|to|Left|going|East|
 |Connect Cavern|Left|to|FarLeft|going|West|
 |Connect Cavern|Left|to|Middle|going|East|
@@ -153,6 +155,15 @@ Cross Map
 |Connect Cavern|Bottom|to|Below|going|North|
 |Connect Cavern|Below|to|Bottom|going|South|
 
+{{{
+Linear Map (of size n)
 
+[1] -> [2] -> ... -> [n]
+
+}}}
+
+|scenario|Given Linear Map of size |n|
+|clear map|
+|connect |@n| numbered caverns in order going |East|
 
 

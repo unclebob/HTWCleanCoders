@@ -125,4 +125,21 @@ public class HtwFixture {
   public int arrowsInCavern(String cavern) {
     return game.getArrowsInCavern(cavern);
   }
+
+  public boolean clearMap() {
+    game.clearMap();
+    return true;
+  }
+
+  public boolean connectNumberedCavernsInOrderGoing(int numberOfCaverns, String direction) {
+    for (int i = 1; i < numberOfCaverns; i++) {
+      game.connectCavern(String.valueOf(i), String.valueOf(i+1), toDirection(direction));
+    }
+    return true;
+  }
+
+  public String destinationGoing(String direction) {
+    String destination = game.findDestination(getPlayerCavern(), toDirection(direction));
+    return destination.isEmpty() ? "-" : destination;
+  }
 }

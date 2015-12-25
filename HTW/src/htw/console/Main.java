@@ -71,7 +71,7 @@ public class Main implements HtwMessageReceiver {
   };
 
   public static void main(String[] args) throws IOException {
-    game = HtwFactory.makeGame("htw.game.HuntTheWumpusGame", new Main());
+    game = HtwFactory.makeGame("htw.game.HuntTheWumpusFacade", new Main());
     createMap();
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     game.makeRestCommand().execute();
@@ -107,8 +107,8 @@ public class Main implements HtwMessageReceiver {
   }
 
   private static void createMap() {
-    int ncaverns = (int) (Math.random() * 30.0 + 10.0);
-    while (ncaverns-- > 0)
+    int nCaverns = (int) (Math.random() * 30.0 + 10.0);
+    while (nCaverns-- > 0)
       caverns.add(makeName());
 
     for (String cavern : caverns) {
@@ -153,7 +153,7 @@ public class Main implements HtwMessageReceiver {
   }
 
   private static void connectIfAvailable(String from, Direction direction, String to) {
-    if (game.findDestination(from, direction) == null) {
+    if (game.findDestination(from, direction).isEmpty()) {
       game.connectCavern(from, to, direction);
     }
   }

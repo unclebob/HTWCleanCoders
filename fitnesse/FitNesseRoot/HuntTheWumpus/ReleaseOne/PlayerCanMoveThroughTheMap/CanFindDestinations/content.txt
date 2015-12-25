@@ -1,0 +1,11 @@
+| scenario | Then the player destination going | dir | is | cavern |
+| check | destination going | @dir | @cavern |
+
+| scenario | Then the player has no destination going | dir |
+| check | destination going | @dir | - |
+
+-|script|
+|Given cavern A connects to cavern B going east|
+|Given the player is in cavern A|
+|Then the player destination going east is B|
+|Then the player has no destination going north|

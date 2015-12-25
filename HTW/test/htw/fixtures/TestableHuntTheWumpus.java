@@ -1,21 +1,26 @@
 package htw.fixtures;
 
 import htw.HtwMessageReceiver;
-import htw.game.HuntTheWumpusGame;
+import htw.game.HuntTheWumpusFacade;
+import htw.game.Game;
 
-public class TestableHuntTheWumpus extends HuntTheWumpusGame {
+public class TestableHuntTheWumpus extends HuntTheWumpusFacade {
   private boolean wumpusFrozen = false;
-
-  protected void moveWumpus() {
-    if (!wumpusFrozen)
-      super.moveWumpus();
-  }
 
   public TestableHuntTheWumpus(HtwMessageReceiver receiver) {
     super(receiver);
+    game = new TestableMap();
   }
 
   public void freezeWumpus() {
     wumpusFrozen = true;
+  }
+
+  private class TestableMap extends Game {
+    @Override
+    public void moveWumpus() {
+      if (!wumpusFrozen)
+        super.moveWumpus();
+    }
   }
 }
